@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+#popsicle {
+  height: 400pt;
+}
+
 #announcement {
   font-family: monospace;
   font-size: 40pt;
