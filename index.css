@@ -1,0 +1,9 @@
+#wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+#announcement {
+  font-family: monospace;
+  font-size: 40pt;
+}
