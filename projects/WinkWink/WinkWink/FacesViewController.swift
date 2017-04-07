@@ -28,7 +28,6 @@ class FacesViewController: UIViewController {
     }
     
     func didSwipeLeft() {
-        print("didSwipeLeft from FacesViewController")
         delegate?.didSwipeLeft()
     }
 

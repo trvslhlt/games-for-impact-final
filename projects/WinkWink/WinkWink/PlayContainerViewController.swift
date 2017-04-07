@@ -15,6 +15,7 @@ protocol ContentViewControllerDelegate: class {
 class PlayContainerViewController: UIViewController {
     
     @IBOutlet weak var childContainer: UIView!
+    var childViewController: UIViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class PlayContainerViewController: UIViewController {
         let facesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FacesViewController") as! FacesViewController
         facesViewController.delegate = self
         add(asChildViewController: facesViewController)
+        childViewController = facesViewController
     }
 
     @IBAction func backTapped(_ sender: Any) {
@@ -36,12 +38,20 @@ class PlayContainerViewController: UIViewController {
         viewController.didMove(toParentViewController: self)
     }
     
+    func remove(acChildViewControler viewController: UIViewController) {
+        viewController.willMove(toParentViewController: nil)
+        viewController.view.removeFromSuperview()
+        viewController.removeFromParentViewController()
+    }
 }
 
 extension PlayContainerViewController: ContentViewControllerDelegate {
     
     func didSwipeLeft() {
-        print("didSwipeLeft")
+        if let child = childViewController {
+            remove(acChildViewControler: child)
+        }
+        
     }
     
 }
