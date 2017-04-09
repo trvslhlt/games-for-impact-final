@@ -16,6 +16,7 @@ class TrashScene: SKScene {
     
     override func didMove(to view: SKView) {
         trash.position = randomPositionOffScreen()
+        backgroundColor = Configuration.color.backgroundPrimary
         let move = SKAction.move(to: CGPoint(x: size.width * 0.1, y: size.height * 0.5), duration: 1)
         trash.name = "trash"
         trash.color = currentColor

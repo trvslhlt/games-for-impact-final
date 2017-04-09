@@ -8,16 +8,16 @@
 
 import UIKit
 
-class MainMenuViewController: UIViewController {
+class MainMenuViewController: AppViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Configuration.color.backgroundMain
+        view.backgroundColor = Configuration.color.backgroundPrimary
     }
 
     @IBAction func playTapped(_ sender: Any) {
-        let playViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlayViewController") as! PlayViewController
-        present(playViewController, animated: true, completion: nil)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LevelListViewController") as! LevelListViewController
+        present(vc, animated: true, completion: nil)
     }
     
 }

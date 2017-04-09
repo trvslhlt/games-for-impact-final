@@ -17,13 +17,13 @@ class Configuration: NSObject {
 
 class ColorPalette {
     
-    let backgroundMain = UIColor(colorLiteralRed: 180 / 255.0, green: 220 / 255.0, blue: 220 / 255.0, alpha: 1)
+    let backgroundPrimary = UIColor(colorLiteralRed: 180 / 255.0, green: 220 / 255.0, blue: 220 / 255.0, alpha: 1)
     
 }
 
 class TimePalette {
     
-    let defaultDuration: TimeInterval = 2
+    let defaultDuration: TimeInterval = 0.5
     
 }
 

@@ -11,9 +11,10 @@ import SpriteKit
 import GameplayKit
 
 
-class PlayViewController: UIViewController {
+class PlayViewController: AppViewController {
         
     @IBOutlet weak var playContainer: SKView!
+    var score: (scored: Float, possible: Float) = (0, 0)
 
     var firstScene: VaginaScene {
         let scene = VaginaScene(size: playContainer.bounds.size)
@@ -31,7 +32,7 @@ class PlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        playContainer.backgroundColor = Configuration.color.backgroundMain
+        playContainer.backgroundColor = Configuration.color.backgroundPrimary
         playContainer.showsFPS = true
         playContainer.showsNodeCount = true
         playContainer.ignoresSiblingOrder = true
@@ -46,7 +47,7 @@ class PlayViewController: UIViewController {
     
     func swipedLeft() {
         print("swipe")
-        let transition = SKTransition.crossFade(withDuration: 2)
+        let transition = SKTransition.crossFade(withDuration: Configuration.time.defaultDuration)
         currentScene.view?.presentScene(secondScene, transition: transition)
     }
     
@@ -54,16 +55,17 @@ class PlayViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
 }
 
 extension PlayViewController: SceneDelegate {
 
     func sceneDone(scene: SKScene) {
-        let transition = SKTransition.fade(with: Configuration.color.backgroundMain, duration: 2)
+        let transition = SKTransition.fade(with: Configuration.color.backgroundPrimary, duration: Configuration.time.defaultDuration)
         currentScene.view?.presentScene(secondScene, transition: transition)
+    }
+    
+    func pointsScored(points: Float, ofPossible possible: Float) {
+        self.score = (self.score.scored + points, self.score.possible + possible)
     }
     
 }

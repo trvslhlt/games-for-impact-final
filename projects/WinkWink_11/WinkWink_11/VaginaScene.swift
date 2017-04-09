@@ -10,64 +10,78 @@ import SpriteKit
 
 protocol SceneDelegate: class {
     func sceneDone(scene: SKScene)
+    func pointsScored(points: Float, ofPossible possible: Float)
 }
 
 class VaginaScene: SKScene {
     
-    let vulva = SKSpriteNode(imageNamed: "vulvaDrawing")
-    let vagina = SKSpriteNode()
-    let text = SKLabelNode(text: "Tap the vagina.")
+    let challengeNode = SKSpriteNode()
+    let resultNode = SKSpriteNode()
+    let vagina = "vagina"
+    let vulva = "vulva"
+    let possiblePoints: Float = 10
     weak var sceneDelegate: SceneDelegate?
     
     override func didMove(to view: SKView) {
-        backgroundColor = Configuration.color.backgroundMain
-        vulva.position = view.center
-        vulva.name = "vulva"
-        vulva.size = CGSize(width: 200, height: 200)
-        addChild(vulva)
+        backgroundColor = Configuration.color.backgroundPrimary
+        showChallenge(view: view)
+    }
+    
+    func showChallenge(view: SKView) {
+        challengeNode.size = view.bounds.size
+        challengeNode.position = view.center
+        addChild(challengeNode)
         
-        vagina.name = "vagina"
-        vagina.size = CGSize(width: 40, height: 40)
-        vagina.position = CGPoint(x: vagina.position.x, y: vagina.position.y - 40)
-        vulva.addChild(vagina)
+        let vulvaNode = SKSpriteNode(imageNamed: "vulvaDrawing")
+        vulvaNode.position = CGPoint.zero
+        vulvaNode.name = vulva
+        vulvaNode.size = CGSize(width: 200, height: 200)
+        vulvaNode.color = .white
+        challengeNode.addChild(vulvaNode)
         
-        text.position = CGPoint(x: view.bounds.midX, y: view.bounds.midY + 200)
-        addChild(text)
+        let vaginaNode = SKSpriteNode()
+        vaginaNode.name = vagina
+        vaginaNode.size = CGSize(width: 40, height: 40)
+        vaginaNode.position = CGPoint(x: vulvaNode.position.x, y: vulvaNode.position.y - 40)
+        vulvaNode.addChild(vaginaNode)
+
+        let textNode = SKLabelNode(text: "Tap the vagina.")
+        textNode.position = CGPoint(x: 0, y: 200)
+        challengeNode.addChild(textNode)
+    }
+    
+    func handleSubmission(correct: Bool) {
+        sceneDelegate?.pointsScored(points: correct ? possiblePoints : 0, ofPossible: possiblePoints)
+        challengeNode.removeFromParent()
+        showResult(view: self.view!, correct: correct)
+    }
+    
+    func showResult(view: SKView, correct: Bool) {
+        resultNode.size = view.bounds.size
+        resultNode.position = view.center
+        addChild(resultNode)
+        
+        let successText = SKLabelNode(text: correct ? "GREAT!" : "NOPE")
+        successText.fontSize = 150
+        successText.position = CGPoint.zero
+        resultNode.addChild(successText)
+        transitionToNext()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let positionInScene = touch.location(in: self)
         if let touchedNode = nodes(at: positionInScene).first, let name = touchedNode.name {
-            if name == vagina.name {
-                showCorrect()
-            } else if name == vulva.name {
-                showWrong()
+            if name == vagina {
+                handleSubmission(correct: true)
+            } else if name == vulva {
+                handleSubmission(correct: false)
             }
         }
     }
     
-    func showCorrect() {
-        let successText = SKLabelNode(text: "GREAT!")
-        successText.fontSize = 150
-        successText.position = vulva.position
-        addChild(successText)
-        vulva.removeFromParent()
-        transitionToNext()
-    }
-    
-    func showWrong() {
-        let failureText = SKLabelNode(text: "NOPE")
-        failureText.fontSize = 150
-        failureText.position = vulva.position
-        addChild(failureText)
-        vulva.removeFromParent()
-        transitionToNext()
-    }
-    
     func transitionToNext() {
-        let when = DispatchTime.now() + 2
-        DispatchQueue.main.asyncAfter(deadline: when) {
+        delay(duration: Configuration.time.defaultDuration) { 
             self.sceneDelegate?.sceneDone(scene: self)
         }
     }
