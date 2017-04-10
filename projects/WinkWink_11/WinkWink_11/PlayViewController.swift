@@ -15,7 +15,8 @@ class PlayViewController: AppViewController {
         
     @IBOutlet weak var playContainer: SKView!
     var score: (scored: Float, possible: Float) = (0, 0)
-    var scenes: [PlayScene] = [VaginaScene()]
+    var scenes: [PlayScene] = [VaginaScene(), BoobsNameScene()]
+    var currentScene: PlayScene?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,16 +33,19 @@ class PlayViewController: AppViewController {
     
     func showNextScene(transition: SKTransition?) {
         guard scenes.count > 0 else {
+            currentScene = nil
             showLevelResult()
             return
         }
-        let scene = scenes.remove(at: 0)
-        scene.size = playContainer.bounds.size
-        scene.playSceneDelegate = self
-        if let trans = transition {
-            playContainer.presentScene(scene, transition: trans)
-        } else {
-            playContainer.presentScene(scene)
+        self.currentScene = scenes.remove(at: 0)
+        if let currentScene = self.currentScene {
+            currentScene.size = playContainer.bounds.size
+            currentScene.playSceneDelegate = self
+            if let trans = transition {
+                playContainer.presentScene(currentScene, transition: trans)
+            } else {
+                playContainer.presentScene(currentScene)
+            }
         }
     }
     
@@ -52,8 +56,8 @@ class PlayViewController: AppViewController {
     }
     
     func swipedLeft() {
-        if scenes.count > 0 {
-            showNextScene(transition: Configuration.transition.defaultTransition)
+        if let currentScene = self.currentScene {
+            currentScene.didReceiveSubmissionEvent()
         }
     }
     

@@ -30,6 +30,7 @@ class LevelListViewController: AppViewController {
 extension LevelListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let playViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlayViewController") as! PlayViewController
         present(playViewController, animated: true, completion: nil)
     }
@@ -41,6 +42,7 @@ extension LevelListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "\(levels[indexPath.row])"
+        cell.textLabel?.textColor = Configuration.color.textPrimary
         cell.backgroundColor = .clear
         return cell
     }

@@ -12,6 +12,7 @@ class VaginaScene: PlayScene {
 
     let vagina = "vagina"
     let vulva = "vulva"
+    var correctGuess = false
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -42,10 +43,10 @@ class VaginaScene: PlayScene {
         challengeNode.addChild(textNode)
     }
     
-    func handleSubmission(correct: Bool) {
-        playSceneDelegate?.playScenePointsScored(points: correct ? possiblePoints : 0, ofPossible: possiblePoints)
+    override func didReceiveSubmissionEvent() {
+        playSceneDelegate?.playScenePointsScored(points: correctGuess ? possiblePoints : 0, ofPossible: possiblePoints)
         challengeNode.removeFromParent()
-        showResult(view: self.view!, correct: correct)
+        showResult(view: self.view!, correct: correctGuess)
     }
     
     func showResult(view: SKView, correct: Bool) {
@@ -63,12 +64,16 @@ class VaginaScene: PlayScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let positionInScene = touch.location(in: self)
-        if let touchedNode = nodes(at: positionInScene).first, let name = touchedNode.name {
+        if let touchedNode = nodes(at: positionInScene).first as? SKSpriteNode, let name = touchedNode.name {
             run(Configuration.sound.defaultSound)
             if name == vagina {
-                handleSubmission(correct: true)
+                correctGuess = true
+                touchedNode.color = .green
+                touchedNode.colorBlendFactor = 0.5
             } else if name == vulva {
-                handleSubmission(correct: false)
+                correctGuess = false
+                touchedNode.color = .green
+                touchedNode.colorBlendFactor = 0.5
             }
         }
     }

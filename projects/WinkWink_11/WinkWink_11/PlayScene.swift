@@ -26,4 +26,6 @@ class PlayScene: SKScene {
         backgroundColor = Configuration.color.backgroundPrimary
     }
     
+    func didReceiveSubmissionEvent() {}
+    
 }
