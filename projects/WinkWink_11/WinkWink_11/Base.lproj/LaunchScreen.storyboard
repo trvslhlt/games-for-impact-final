@@ -21,16 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_trash" translatesAutoresizingMaskIntoConstraints="NO" id="ldq-mO-dbv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_animation.gif" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-yF-Wtz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.8666666666666667" green="0.0" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ldq-mO-dbv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="9Nl-v1-9D6"/>
-                            <constraint firstItem="ldq-mO-dbv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Lno-XP-dvY"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ldq-mO-dbv" secondAttribute="bottom" id="SIN-0O-h5t"/>
-                            <constraint firstAttribute="trailing" secondItem="ldq-mO-dbv" secondAttribute="trailing" id="otD-7k-oEf"/>
+                            <constraint firstAttribute="trailing" secondItem="E0m-yF-Wtz" secondAttribute="trailing" id="Etq-Me-3eT"/>
+                            <constraint firstItem="E0m-yF-Wtz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="g7L-IB-VcJ"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="E0m-yF-Wtz" secondAttribute="bottom" id="nca-oM-Vta"/>
+                            <constraint firstItem="E0m-yF-Wtz" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="tzu-2M-yce"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,6 +41,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash_trash" width="724" height="668"/>
+        <image name="splash_animation.gif" width="757" height="756"/>
     </resources>
 </document>

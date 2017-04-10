@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rjW-bc-fq4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ee7-NN-6WY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="Dnl-jZ-J0c">
+            <objects>
+                <viewController id="ee7-NN-6WY" customClass="SplashViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Zj-J4-p1u"/>
+                        <viewControllerLayoutGuide type="bottom" id="HII-VZ-EiD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lBj-vh-Iup">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_animation.gif" translatesAutoresizingMaskIntoConstraints="NO" id="7MB-vw-0ii">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.8666666666666667" green="0.0" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7MB-vw-0ii" firstAttribute="leading" secondItem="lBj-vh-Iup" secondAttribute="leading" id="Aix-yA-UOd"/>
+                            <constraint firstItem="HII-VZ-EiD" firstAttribute="top" secondItem="7MB-vw-0ii" secondAttribute="bottom" id="Kpk-SV-uPy"/>
+                            <constraint firstAttribute="trailing" secondItem="7MB-vw-0ii" secondAttribute="trailing" id="XEh-8f-seh"/>
+                            <constraint firstItem="7MB-vw-0ii" firstAttribute="top" secondItem="lBj-vh-Iup" secondAttribute="top" id="uqm-Yq-vp3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="7MB-vw-0ii" id="c8U-L6-fFt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ht9-7l-eBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1362.4000000000001" y="136.28185907046478"/>
+        </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="LRC-Ov-BN7">
             <objects>
-                <viewController id="rjW-bc-fq4" customClass="MainMenuViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenuViewController" id="rjW-bc-fq4" customClass="MainMenuViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s1r-rg-9Gk"/>
                         <viewControllerLayoutGuide type="bottom" id="g3c-ch-pYp"/>
@@ -138,4 +171,7 @@
             <point key="canvasLocation" x="737" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash_animation.gif" width="757" height="756"/>
+    </resources>
 </document>
