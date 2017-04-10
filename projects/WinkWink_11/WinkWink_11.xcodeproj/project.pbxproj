@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		88924A131E984490004B4998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A121E984490004B4998 /* AppDelegate.swift */; };
-		88924A151E984491004B4998 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88924A141E984491004B4998 /* GameScene.sks */; };
 		88924A171E984491004B4998 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88924A161E984491004B4998 /* Actions.sks */; };
 		88924A191E984491004B4998 /* TrashScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A181E984491004B4998 /* TrashScene.swift */; };
 		88924A1B1E984491004B4998 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A1A1E984491004B4998 /* PlayViewController.swift */; };
@@ -23,12 +22,14 @@
 		88924A3B1E99FAE3004B4998 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A3A1E99FAE2004B4998 /* AppViewController.swift */; };
 		88924A411E9A05AC004B4998 /* ObjectTiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88924A401E9A05AC004B4998 /* ObjectTiles.sks */; };
 		88924A671E9AA188004B4998 /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A661E9AA188004B4998 /* AppUtilities.swift */; };
+		88924A691E9AC3B1004B4998 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A681E9AC3B1004B4998 /* PlayScene.swift */; };
+		88924A6B1E9B4CD9004B4998 /* LevelResultScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88924A6A1E9B4CD9004B4998 /* LevelResultScene.sks */; };
+		88924A6D1E9B4EAE004B4998 /* LevelResultScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A6C1E9B4EAE004B4998 /* LevelResultScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		88924A0F1E984490004B4998 /* WinkWink_11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkWink_11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88924A121E984490004B4998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88924A141E984491004B4998 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		88924A161E984491004B4998 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		88924A181E984491004B4998 /* TrashScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashScene.swift; sourceTree = "<group>"; };
 		88924A1A1E984491004B4998 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +45,9 @@
 		88924A3A1E99FAE2004B4998 /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		88924A401E9A05AC004B4998 /* ObjectTiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ObjectTiles.sks; sourceTree = "<group>"; };
 		88924A661E9AA188004B4998 /* AppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtilities.swift; sourceTree = "<group>"; };
+		88924A681E9AC3B1004B4998 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScene.swift; sourceTree = "<group>"; };
+		88924A6A1E9B4CD9004B4998 /* LevelResultScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LevelResultScene.sks; sourceTree = "<group>"; };
+		88924A6C1E9B4EAE004B4998 /* LevelResultScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelResultScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +80,13 @@
 		88924A111E984490004B4998 /* WinkWink_11 */ = {
 			isa = PBXGroup;
 			children = (
-				88924A3F1E9A0589004B4998 /* TileSets */,
 				88924A3C1E99FFF1004B4998 /* Extensions */,
-				88924A331E99C8A8004B4998 /* Scenes */,
-				88924A301E99B013004B4998 /* Utilities */,
-				88924A2D1E99810D004B4998 /* ViewControllers */,
+				88924A6E1E9BCF0F004B4998 /* Services */,
 				88924A2A1E997ED0004B4998 /* Sounds */,
+				88924A3F1E9A0589004B4998 /* TileSets */,
+				88924A301E99B013004B4998 /* Utilities */,
+				88924A331E99C8A8004B4998 /* Scenes */,
+				88924A2D1E99810D004B4998 /* ViewControllers */,
 				88924A121E984490004B4998 /* AppDelegate.swift */,
 				88924A1C1E984491004B4998 /* Main.storyboard */,
 				88924A1F1E984491004B4998 /* Assets.xcassets */,
@@ -122,8 +127,10 @@
 		88924A331E99C8A8004B4998 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				88924A141E984491004B4998 /* GameScene.sks */,
 				88924A161E984491004B4998 /* Actions.sks */,
+				88924A6C1E9B4EAE004B4998 /* LevelResultScene.swift */,
+				88924A6A1E9B4CD9004B4998 /* LevelResultScene.sks */,
+				88924A681E9AC3B1004B4998 /* PlayScene.swift */,
 				88924A181E984491004B4998 /* TrashScene.swift */,
 				88924A341E99CBB3004B4998 /* VaginaScene.swift */,
 			);
@@ -143,6 +150,13 @@
 				88924A401E9A05AC004B4998 /* ObjectTiles.sks */,
 			);
 			name = TileSets;
+			sourceTree = "<group>";
+		};
+		88924A6E1E9BCF0F004B4998 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +219,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88924A6B1E9B4CD9004B4998 /* LevelResultScene.sks in Resources */,
 				88924A2C1E997EE7004B4998 /* beep.wav in Resources */,
 				88924A1E1E984491004B4998 /* Main.storyboard in Resources */,
-				88924A151E984491004B4998 /* GameScene.sks in Resources */,
 				88924A201E984491004B4998 /* Assets.xcassets in Resources */,
 				88924A411E9A05AC004B4998 /* ObjectTiles.sks in Resources */,
 				88924A231E984491004B4998 /* LaunchScreen.storyboard in Resources */,
@@ -224,10 +238,12 @@
 			files = (
 				88924A2F1E998123004B4998 /* MainMenuViewController.swift in Sources */,
 				88924A671E9AA188004B4998 /* AppUtilities.swift in Sources */,
+				88924A6D1E9B4EAE004B4998 /* LevelResultScene.swift in Sources */,
 				88924A321E99B035004B4998 /* Configuration.swift in Sources */,
 				88924A3B1E99FAE3004B4998 /* AppViewController.swift in Sources */,
 				88924A351E99CBB3004B4998 /* VaginaScene.swift in Sources */,
 				88924A391E99ED6F004B4998 /* LevelListViewController.swift in Sources */,
+				88924A691E9AC3B1004B4998 /* PlayScene.swift in Sources */,
 				88924A191E984491004B4998 /* TrashScene.swift in Sources */,
 				88924A1B1E984491004B4998 /* PlayViewController.swift in Sources */,
 				88924A131E984490004B4998 /* AppDelegate.swift in Sources */,

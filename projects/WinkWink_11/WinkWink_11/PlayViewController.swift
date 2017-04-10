@@ -15,20 +15,7 @@ class PlayViewController: AppViewController {
         
     @IBOutlet weak var playContainer: SKView!
     var score: (scored: Float, possible: Float) = (0, 0)
-
-    var firstScene: VaginaScene {
-        let scene = VaginaScene(size: playContainer.bounds.size)
-        scene.scaleMode = .resizeFill
-        return scene
-    }
-    
-    var secondScene: SKScene {
-        let scene = TrashScene(size: view.bounds.size)
-        scene.scaleMode = .resizeFill
-        return scene
-    }
-    
-    var currentScene: SKScene!
+    var scenes: [PlayScene] = [VaginaScene()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,19 +23,38 @@ class PlayViewController: AppViewController {
         playContainer.showsFPS = true
         playContainer.showsNodeCount = true
         playContainer.ignoresSiblingOrder = true
-        let scene = firstScene
-        scene.sceneDelegate = self
-        playContainer.presentScene(scene)
-        currentScene = scene
+
         let swipe = UISwipeGestureRecognizer(target: self, action: #selector(PlayViewController.swipedLeft))
         swipe.direction = .left
         view.addGestureRecognizer(swipe)
+        showNextScene(transition: nil)
+    }
+    
+    func showNextScene(transition: SKTransition?) {
+        guard scenes.count > 0 else {
+            showLevelResult()
+            return
+        }
+        let scene = scenes.remove(at: 0)
+        scene.size = playContainer.bounds.size
+        scene.playSceneDelegate = self
+        if let trans = transition {
+            playContainer.presentScene(scene, transition: trans)
+        } else {
+            playContainer.presentScene(scene)
+        }
+    }
+    
+    func showLevelResult() {
+        let scene = SKScene(fileNamed: "LevelResultScene")!
+        scene.size = playContainer.bounds.size
+        playContainer.presentScene(scene, transition: Configuration.transition.defaultTransition)
     }
     
     func swipedLeft() {
-        print("swipe")
-        let transition = SKTransition.crossFade(withDuration: Configuration.time.defaultDuration)
-        currentScene.view?.presentScene(secondScene, transition: transition)
+        if scenes.count > 0 {
+            showNextScene(transition: Configuration.transition.defaultTransition)
+        }
     }
     
     @IBAction func exitTapped(_ sender: Any) {
@@ -57,14 +63,13 @@ class PlayViewController: AppViewController {
     
 }
 
-extension PlayViewController: SceneDelegate {
+extension PlayViewController: PlaySceneDelegate {
 
-    func sceneDone(scene: SKScene) {
-        let transition = SKTransition.fade(with: Configuration.color.backgroundPrimary, duration: Configuration.time.defaultDuration)
-        currentScene.view?.presentScene(secondScene, transition: transition)
+    func playSceneDone(scene: SKScene) {
+        showNextScene(transition: Configuration.transition.defaultTransition)
     }
     
-    func pointsScored(points: Float, ofPossible possible: Float) {
+    func playScenePointsScored(points: Float, ofPossible possible: Float) {
         self.score = (self.score.scored + points, self.score.possible + possible)
     }
     
