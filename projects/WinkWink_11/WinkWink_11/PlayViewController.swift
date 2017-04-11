@@ -14,6 +14,7 @@ import GameplayKit
 class PlayViewController: AppViewController {
         
     @IBOutlet weak var playContainer: SKView!
+    var level = 0
     var score: (scored: Float, possible: Float) = (0, 0)
     var scenes: [PlayScene] = [VaginaScene(), BoobsNameScene()]
     var currentScene: PlayScene?
@@ -50,7 +51,9 @@ class PlayViewController: AppViewController {
     }
     
     func showLevelResult() {
-        let scene = SKScene(fileNamed: "LevelResultScene")!
+        let scene = LevelResultScene()
+        scene.level = "\(level)"
+        scene.score = "\(score.scored) / \(score.possible)"
         scene.size = playContainer.bounds.size
         playContainer.presentScene(scene, transition: Configuration.transition.defaultTransition)
     }

@@ -8,13 +8,23 @@
 
 import SpriteKit
 
-class LevelResultScene: SKScene {
+class LevelResultScene: AppScene {
+    
+    var level = "<???>"
+    var score = "??? / ???"
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        backgroundColor = Configuration.color.backgroundPrimary
-        let levelLabel = childNode(withName: "levelNode") as! SKLabelNode
-        levelLabel.text = "Level: 1000"
+        
+        let levelLabel = AppLabelNode()
+        levelLabel.text = "Level: " + level
+        levelLabel.position = view.center.offset(x: 0, y: 50)
+        addChild(levelLabel)
+        
+        let scoreLabel = AppLabelNode()
+        scoreLabel.text = "Score: " + score
+        scoreLabel.position = view.center.offset(x: 0, y: -50)
+        addChild(scoreLabel)
     }
 
 }

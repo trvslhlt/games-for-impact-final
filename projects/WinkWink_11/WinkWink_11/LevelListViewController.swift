@@ -32,6 +32,7 @@ extension LevelListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let playViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlayViewController") as! PlayViewController
+        playViewController.level = levels[indexPath.row]
         present(playViewController, animated: true, completion: nil)
     }
     

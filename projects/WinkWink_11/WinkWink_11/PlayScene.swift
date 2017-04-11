@@ -13,18 +13,12 @@ protocol PlaySceneDelegate: class {
     func playScenePointsScored(points: Float, ofPossible possible: Float)
 }
 
-class PlayScene: SKScene {
+class PlayScene: AppScene {
 
     let challengeNode = SKSpriteNode()
     let resultNode = SKSpriteNode()
     var possiblePoints: Float = 0
     weak var playSceneDelegate: PlaySceneDelegate?
-    
-    override func didMove(to view: SKView) {
-        super.didMove(to: view)
-        self.scaleMode = .resizeFill
-        backgroundColor = Configuration.color.backgroundPrimary
-    }
     
     func didReceiveSubmissionEvent() {}
     
