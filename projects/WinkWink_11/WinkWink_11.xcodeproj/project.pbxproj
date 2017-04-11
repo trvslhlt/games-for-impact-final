@@ -32,6 +32,7 @@
 		88924A6D1E9B4EAE004B4998 /* LevelResultScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A6C1E9B4EAE004B4998 /* LevelResultScene.swift */; };
 		88AA54EB1E9C3AA10074BD23 /* BoobsPreferenceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA54EA1E9C3AA10074BD23 /* BoobsPreferenceScene.swift */; };
 		88AA54ED1E9C46540074BD23 /* BoobsNameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA54EC1E9C46540074BD23 /* BoobsNameScene.swift */; };
+		88AA54EF1E9C5EA50074BD23 /* AppSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA54EE1E9C5EA50074BD23 /* AppSpriteNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		88924A6C1E9B4EAE004B4998 /* LevelResultScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelResultScene.swift; sourceTree = "<group>"; };
 		88AA54EA1E9C3AA10074BD23 /* BoobsPreferenceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoobsPreferenceScene.swift; sourceTree = "<group>"; };
 		88AA54EC1E9C46540074BD23 /* BoobsNameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoobsNameScene.swift; sourceTree = "<group>"; };
+		88AA54EE1E9C5EA50074BD23 /* AppSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSpriteNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				880E109C1E9C366B00F54142 /* AppLabelNode.swift */,
+				88AA54EE1E9C5EA50074BD23 /* AppSpriteNode.swift */,
 			);
 			name = Nodes;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				880E10971E9C2F7200F54142 /* SplashViewController.swift in Sources */,
 				88924A3B1E99FAE3004B4998 /* AppViewController.swift in Sources */,
 				88924A351E99CBB3004B4998 /* VaginaScene.swift in Sources */,
+				88AA54EF1E9C5EA50074BD23 /* AppSpriteNode.swift in Sources */,
 				88924A391E99ED6F004B4998 /* LevelListViewController.swift in Sources */,
 				880E10931E9C288500F54142 /* SplashView.swift in Sources */,
 				88924A691E9AC3B1004B4998 /* PlayScene.swift in Sources */,

@@ -25,11 +25,14 @@ class VaginaScene: PlayScene {
         challengeNode.position = view.center
         addChild(challengeNode)
         
-        let vulvaNode = SKSpriteNode(imageNamed: "vulvaDrawing")
+        let vulvaNode = AppSpriteNode(imageNamed: "vulvaDrawing")
         vulvaNode.position = CGPoint.zero
         vulvaNode.name = vulva
         vulvaNode.size = CGSize(width: 200, height: 200)
         vulvaNode.color = .white
+        vulvaNode.didTap = {
+            print("didTap Vulva!")
+        }
         challengeNode.addChild(vulvaNode)
         
         let vaginaNode = SKSpriteNode()
