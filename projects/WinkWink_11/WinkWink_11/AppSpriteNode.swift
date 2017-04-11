@@ -15,11 +15,20 @@ class AppSpriteNode: SKSpriteNode {
     init(imageNamed name: String) {
         let texture = SKTexture(imageNamed: name)
         super.init(texture: texture, color: UIColor.clear, size: texture.size())
-        isUserInteractionEnabled = true
+        commonInit()
+    }
+    
+    init() {
+        super.init(texture: nil, color: .clear, size: CGSize.zero)
+        commonInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func commonInit() {
+        isUserInteractionEnabled = true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

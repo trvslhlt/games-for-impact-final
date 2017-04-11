@@ -31,16 +31,24 @@ class VaginaScene: PlayScene {
         vulvaNode.size = CGSize(width: 200, height: 200)
         vulvaNode.color = .white
         vulvaNode.didTap = {
-            print("didTap Vulva!")
+            self.correctGuess = false
+            vulvaNode.color = .green
+            vulvaNode.colorBlendFactor = 0.5
+            self.run(Configuration.sound.defaultSound)
         }
         challengeNode.addChild(vulvaNode)
         
-        let vaginaNode = SKSpriteNode()
+        let vaginaNode = AppSpriteNode()
         vaginaNode.name = vagina
         vaginaNode.size = CGSize(width: 40, height: 40)
         vaginaNode.position = CGPoint(x: vulvaNode.position.x, y: vulvaNode.position.y - 40)
+        vaginaNode.didTap = {
+            self.correctGuess = true
+            vaginaNode.color = .green
+            vaginaNode.colorBlendFactor = 0.5
+            self.run(Configuration.sound.defaultSound)
+        }
         vulvaNode.addChild(vaginaNode)
-
         let textNode = SKLabelNode(text: "Tap the vagina.")
         textNode.position = CGPoint(x: 0, y: 200)
         challengeNode.addChild(textNode)
@@ -61,28 +69,7 @@ class VaginaScene: PlayScene {
         successText.fontSize = 150
         successText.position = CGPoint.zero
         resultNode.addChild(successText)
-        done()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else { return }
-        let positionInScene = touch.location(in: self)
-        if let touchedNode = nodes(at: positionInScene).first as? SKSpriteNode, let name = touchedNode.name {
-            run(Configuration.sound.defaultSound)
-            if name == vagina {
-                correctGuess = true
-                touchedNode.color = .green
-                touchedNode.colorBlendFactor = 0.5
-            } else if name == vulva {
-                correctGuess = false
-                touchedNode.color = .green
-                touchedNode.colorBlendFactor = 0.5
-            }
-        }
-    }
-    
-    func done() {
-        delay(duration: Configuration.time.defaultDuration) { 
+        delay(duration: Configuration.time.defaultDuration) {
             self.playSceneDelegate?.playSceneDone(scene: self)
         }
     }
