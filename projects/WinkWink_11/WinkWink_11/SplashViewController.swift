@@ -16,8 +16,8 @@ class SplashViewController: AppViewController {
         super.viewDidLoad()
         imageView.loadGif(name: "splash_animation")
         imageView.tintColor = .green
-        delay(duration: 3) { 
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainMenuViewController") as! MainMenuViewController
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainMenuViewController") as! MainMenuViewController
+        delay(duration: 3) {
             self.present(vc, animated: true, completion: nil)
         }
     }

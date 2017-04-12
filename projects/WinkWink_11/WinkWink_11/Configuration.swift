@@ -20,8 +20,8 @@ class Configuration: NSObject {
 
 class ColorPalette {
     
-    let backgroundPrimary = UIColor(colorLiteralRed: 80 / 255.0, green: 120 / 255.0, blue: 120 / 255.0, alpha: 1)
-    let textPrimary = UIColor.white
+    let backgroundPrimary = UIColor(colorLiteralRed: 250 / 255.0, green: 252 / 255.0, blue: 245 / 255.0, alpha: 1)
+    let textPrimary = UIColor.black
     
 }
 

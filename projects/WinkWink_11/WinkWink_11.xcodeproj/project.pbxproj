@@ -14,6 +14,7 @@
 		880E109D1E9C366B00F54142 /* AppLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880E109C1E9C366B00F54142 /* AppLabelNode.swift */; };
 		886D6FED1E9D53EB00A834E5 /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEC1E9D53EB00A834E5 /* AppScene.swift */; };
 		886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */; };
+		886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FF01E9DA57B00A834E5 /* CancelButton.swift */; };
 		88924A131E984490004B4998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A121E984490004B4998 /* AppDelegate.swift */; };
 		88924A171E984491004B4998 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88924A161E984491004B4998 /* Actions.sks */; };
 		88924A191E984491004B4998 /* TrashScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A181E984491004B4998 /* TrashScene.swift */; };
@@ -44,6 +45,7 @@
 		880E109C1E9C366B00F54142 /* AppLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLabelNode.swift; sourceTree = "<group>"; };
 		886D6FEC1E9D53EB00A834E5 /* AppScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScene.swift; sourceTree = "<group>"; };
 		886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		886D6FF01E9DA57B00A834E5 /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
 		88924A0F1E984490004B4998 /* WinkWink_11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkWink_11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88924A121E984490004B4998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88924A161E984491004B4998 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				880E10921E9C288500F54142 /* SplashView.swift */,
+				886D6FF01E9DA57B00A834E5 /* CancelButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				88924A6D1E9B4EAE004B4998 /* LevelResultScene.swift in Sources */,
 				886D6FED1E9D53EB00A834E5 /* AppScene.swift in Sources */,
 				88924A321E99B035004B4998 /* Configuration.swift in Sources */,
+				886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */,
 				880E10971E9C2F7200F54142 /* SplashViewController.swift in Sources */,
 				88924A3B1E99FAE3004B4998 /* AppViewController.swift in Sources */,
 				88924A351E99CBB3004B4998 /* VaginaScene.swift in Sources */,

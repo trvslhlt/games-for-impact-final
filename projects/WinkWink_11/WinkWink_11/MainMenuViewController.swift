@@ -10,9 +10,12 @@ import UIKit
 
 class MainMenuViewController: AppViewController {
 
+    @IBOutlet weak var levelsButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Configuration.color.backgroundPrimary
+        levelsButton.setTitleColor(Configuration.color.textPrimary, for: .normal)
     }
 
     @IBAction func playTapped(_ sender: Any) {
