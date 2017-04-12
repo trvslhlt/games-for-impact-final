@@ -23,9 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_animation.gif" translatesAutoresizingMaskIntoConstraints="NO" id="7MB-vw-0ii">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7MB-vw-0ii">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.8666666666666667" green="0.0" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="138.98050974512745"/>
         </scene>
-        <!--Play View Controller-->
+        <!--Level View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController storyboardIdentifier="PlayViewController" id="BV1-FR-VrT" customClass="PlayViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LevelViewController" id="BV1-FR-VrT" customClass="LevelViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -150,38 +150,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19L-7a-C1K" customClass="SKView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="593"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imU-wO-Nby" customClass="CancelButton" customModule="WinkWink_11" customModuleProvider="target">
-                                <rect key="frame" x="319" y="20" width="40" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-Ir-yJq" customClass="NavigationView" customModule="WinkWink_11" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="1P5-7f-a8V"/>
-                                    <constraint firstAttribute="width" secondItem="imU-wO-Nby" secondAttribute="height" multiplier="1:1" id="qhD-Ku-Tu0"/>
+                                    <constraint firstAttribute="height" constant="74" id="ejk-FR-SMd"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="exitTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="5kq-7s-4FX"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="19L-7a-C1K" secondAttribute="trailing" id="5qH-QV-teX"/>
-                            <constraint firstItem="19L-7a-C1K" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="LmI-MY-I52"/>
+                            <constraint firstItem="19L-7a-C1K" firstAttribute="top" secondItem="yH7-Ir-yJq" secondAttribute="bottom" id="6KK-9d-I2H"/>
                             <constraint firstItem="19L-7a-C1K" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="N1D-hs-x5e"/>
+                            <constraint firstItem="yH7-Ir-yJq" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="RK5-Sf-TEL"/>
+                            <constraint firstItem="yH7-Ir-yJq" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="VdB-QA-Hwf"/>
                             <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="19L-7a-C1K" secondAttribute="bottom" id="amT-rK-Y58"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="imU-wO-Nby" secondAttribute="trailing" id="gGk-Lw-pVf"/>
-                            <constraint firstItem="imU-wO-Nby" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" id="sQ5-Fi-Gc8"/>
+                            <constraint firstAttribute="trailing" secondItem="yH7-Ir-yJq" secondAttribute="trailing" id="vhx-Fi-342"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="playContainer" destination="19L-7a-C1K" id="JnA-wd-FkI"/>
+                        <outlet property="sceneView" destination="19L-7a-C1K" id="pOa-Z0-qmV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737" y="139"/>
+            <point key="canvasLocation" x="736.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="splash_animation.gif" width="757" height="756"/>
-    </resources>
 </document>

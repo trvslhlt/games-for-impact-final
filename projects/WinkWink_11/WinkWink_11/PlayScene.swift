@@ -8,18 +8,17 @@
 
 import SpriteKit
 
-protocol PlaySceneDelegate: class {
-    func playSceneDone(scene: SKScene)
-    func playScenePointsScored(points: Float, ofPossible possible: Float)
-}
-
 class PlayScene: AppScene {
 
-    let challengeNode = SKSpriteNode()
-    let resultNode = SKSpriteNode()
-    var possiblePoints: Float = 0
-    weak var playSceneDelegate: PlaySceneDelegate?
+    private let challengeNodes: [ChallengeNode]
     
-    func didReceiveSubmissionEvent() {}
+    init(challengeNodes: [ChallengeNode], size: CGSize) {
+        self.challengeNodes = challengeNodes
+        super.init(size: size)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 }

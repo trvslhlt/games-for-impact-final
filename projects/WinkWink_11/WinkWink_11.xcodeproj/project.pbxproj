@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		880E10901E9C281400F54142 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880E108F1E9C281400F54142 /* UIKitExtensions.swift */; };
-		880E10931E9C288500F54142 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880E10921E9C288500F54142 /* SplashView.swift */; };
-		880E10951E9C2C4100F54142 /* splash_animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 880E10941E9C2C4100F54142 /* splash_animation.gif */; };
 		880E10971E9C2F7200F54142 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880E10961E9C2F7200F54142 /* SplashViewController.swift */; };
 		880E109D1E9C366B00F54142 /* AppLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880E109C1E9C366B00F54142 /* AppLabelNode.swift */; };
+		884624F01E9E80CA0003D556 /* splash_animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 884624EF1E9E80CA0003D556 /* splash_animation.gif */; };
 		886D6FED1E9D53EB00A834E5 /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEC1E9D53EB00A834E5 /* AppScene.swift */; };
 		886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */; };
 		886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FF01E9DA57B00A834E5 /* CancelButton.swift */; };
+		886D6FF31E9DAC7A00A834E5 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FF21E9DAC7A00A834E5 /* NavigationView.swift */; };
+		886D6FF51E9DB2E500A834E5 /* ChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FF41E9DB2E500A834E5 /* ChallengeNode.swift */; };
+		886D6FF81E9DB4D100A834E5 /* TapTheVaginaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FF71E9DB4D100A834E5 /* TapTheVaginaNode.swift */; };
 		88924A131E984490004B4998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A121E984490004B4998 /* AppDelegate.swift */; };
 		88924A171E984491004B4998 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88924A161E984491004B4998 /* Actions.sks */; };
-		88924A191E984491004B4998 /* TrashScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A181E984491004B4998 /* TrashScene.swift */; };
-		88924A1B1E984491004B4998 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A1A1E984491004B4998 /* PlayViewController.swift */; };
+		88924A1B1E984491004B4998 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A1A1E984491004B4998 /* LevelViewController.swift */; };
 		88924A1E1E984491004B4998 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88924A1C1E984491004B4998 /* Main.storyboard */; };
 		88924A201E984491004B4998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88924A1F1E984491004B4998 /* Assets.xcassets */; };
 		88924A231E984491004B4998 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88924A211E984491004B4998 /* LaunchScreen.storyboard */; };
@@ -39,18 +40,19 @@
 
 /* Begin PBXFileReference section */
 		880E108F1E9C281400F54142 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
-		880E10921E9C288500F54142 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		880E10941E9C2C4100F54142 /* splash_animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash_animation.gif; sourceTree = "<group>"; };
 		880E10961E9C2F7200F54142 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		880E109C1E9C366B00F54142 /* AppLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLabelNode.swift; sourceTree = "<group>"; };
+		884624EF1E9E80CA0003D556 /* splash_animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash_animation.gif; sourceTree = "<group>"; };
 		886D6FEC1E9D53EB00A834E5 /* AppScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScene.swift; sourceTree = "<group>"; };
 		886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
 		886D6FF01E9DA57B00A834E5 /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
+		886D6FF21E9DAC7A00A834E5 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		886D6FF41E9DB2E500A834E5 /* ChallengeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeNode.swift; sourceTree = "<group>"; };
+		886D6FF71E9DB4D100A834E5 /* TapTheVaginaNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapTheVaginaNode.swift; sourceTree = "<group>"; };
 		88924A0F1E984490004B4998 /* WinkWink_11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkWink_11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88924A121E984490004B4998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88924A161E984491004B4998 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		88924A181E984491004B4998 /* TrashScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashScene.swift; sourceTree = "<group>"; };
-		88924A1A1E984491004B4998 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		88924A1A1E984491004B4998 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		88924A1D1E984491004B4998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88924A1F1E984491004B4998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88924A221E984491004B4998 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,8 +86,8 @@
 		880E10911E9C285D00F54142 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				880E10921E9C288500F54142 /* SplashView.swift */,
 				886D6FF01E9DA57B00A834E5 /* CancelButton.swift */,
+				886D6FF21E9DAC7A00A834E5 /* NavigationView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -103,10 +105,32 @@
 		880E109B1E9C362700F54142 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
+				886D6FF61E9DB4AC00A834E5 /* ChallengeNodes */,
 				880E109C1E9C366B00F54142 /* AppLabelNode.swift */,
 				88AA54EE1E9C5EA50074BD23 /* AppSpriteNode.swift */,
+				886D6FF41E9DB2E500A834E5 /* ChallengeNode.swift */,
 			);
 			name = Nodes;
+			sourceTree = "<group>";
+		};
+		884624F11E9E80D00003D556 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				88924A241E984491004B4998 /* Info.plist */,
+				88924A1F1E984491004B4998 /* Assets.xcassets */,
+				88924A1C1E984491004B4998 /* Main.storyboard */,
+				88924A211E984491004B4998 /* LaunchScreen.storyboard */,
+				884624EF1E9E80CA0003D556 /* splash_animation.gif */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		886D6FF61E9DB4AC00A834E5 /* ChallengeNodes */ = {
+			isa = PBXGroup;
+			children = (
+				886D6FF71E9DB4D100A834E5 /* TapTheVaginaNode.swift */,
+			);
+			name = ChallengeNodes;
 			sourceTree = "<group>";
 		};
 		88924A061E984490004B4998 = {
@@ -128,21 +152,16 @@
 		88924A111E984490004B4998 /* WinkWink_11 */ = {
 			isa = PBXGroup;
 			children = (
-				880E109B1E9C362700F54142 /* Nodes */,
+				88924A121E984490004B4998 /* AppDelegate.swift */,
 				88924A3C1E99FFF1004B4998 /* Extensions */,
-				88924A6E1E9BCF0F004B4998 /* Services */,
+				880E109B1E9C362700F54142 /* Nodes */,
+				884624F11E9E80D00003D556 /* Resources */,
+				88924A331E99C8A8004B4998 /* Scenes */,
 				88924A2A1E997ED0004B4998 /* Sounds */,
 				88924A3F1E9A0589004B4998 /* TileSets */,
 				88924A301E99B013004B4998 /* Utilities */,
-				88924A331E99C8A8004B4998 /* Scenes */,
 				880E10911E9C285D00F54142 /* Views */,
 				88924A2D1E99810D004B4998 /* ViewControllers */,
-				88924A121E984490004B4998 /* AppDelegate.swift */,
-				88924A1C1E984491004B4998 /* Main.storyboard */,
-				88924A1F1E984491004B4998 /* Assets.xcassets */,
-				88924A211E984491004B4998 /* LaunchScreen.storyboard */,
-				88924A241E984491004B4998 /* Info.plist */,
-				880E10941E9C2C4100F54142 /* splash_animation.gif */,
 			);
 			path = WinkWink_11;
 			sourceTree = "<group>";
@@ -160,7 +179,7 @@
 			children = (
 				88924A3A1E99FAE2004B4998 /* AppViewController.swift */,
 				88924A2E1E998123004B4998 /* MainMenuViewController.swift */,
-				88924A1A1E984491004B4998 /* PlayViewController.swift */,
+				88924A1A1E984491004B4998 /* LevelViewController.swift */,
 				88924A381E99ED6F004B4998 /* LevelListViewController.swift */,
 				880E10961E9C2F7200F54142 /* SplashViewController.swift */,
 			);
@@ -184,7 +203,6 @@
 				88924A161E984491004B4998 /* Actions.sks */,
 				88924A6C1E9B4EAE004B4998 /* LevelResultScene.swift */,
 				88924A681E9AC3B1004B4998 /* PlayScene.swift */,
-				88924A181E984491004B4998 /* TrashScene.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -204,13 +222,6 @@
 				88924A401E9A05AC004B4998 /* ObjectTiles.sks */,
 			);
 			name = TileSets;
-			sourceTree = "<group>";
-		};
-		88924A6E1E9BCF0F004B4998 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,10 +286,10 @@
 			files = (
 				88924A2C1E997EE7004B4998 /* beep.wav in Resources */,
 				88924A1E1E984491004B4998 /* Main.storyboard in Resources */,
+				884624F01E9E80CA0003D556 /* splash_animation.gif in Resources */,
 				88924A201E984491004B4998 /* Assets.xcassets in Resources */,
 				88924A411E9A05AC004B4998 /* ObjectTiles.sks in Resources */,
 				88924A231E984491004B4998 /* LaunchScreen.storyboard in Resources */,
-				880E10951E9C2C4100F54142 /* splash_animation.gif in Resources */,
 				88924A171E984491004B4998 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +303,7 @@
 			files = (
 				880E109D1E9C366B00F54142 /* AppLabelNode.swift in Sources */,
 				88924A2F1E998123004B4998 /* MainMenuViewController.swift in Sources */,
+				886D6FF31E9DAC7A00A834E5 /* NavigationView.swift in Sources */,
 				88924A671E9AA188004B4998 /* AppUtilities.swift in Sources */,
 				88AA54EB1E9C3AA10074BD23 /* BoobsPreferenceScene.swift in Sources */,
 				880E10901E9C281400F54142 /* UIKitExtensions.swift in Sources */,
@@ -300,16 +312,16 @@
 				88924A321E99B035004B4998 /* Configuration.swift in Sources */,
 				886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */,
 				880E10971E9C2F7200F54142 /* SplashViewController.swift in Sources */,
+				886D6FF51E9DB2E500A834E5 /* ChallengeNode.swift in Sources */,
 				88924A3B1E99FAE3004B4998 /* AppViewController.swift in Sources */,
 				88924A351E99CBB3004B4998 /* VaginaScene.swift in Sources */,
 				88AA54EF1E9C5EA50074BD23 /* AppSpriteNode.swift in Sources */,
 				88924A391E99ED6F004B4998 /* LevelListViewController.swift in Sources */,
 				886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */,
-				880E10931E9C288500F54142 /* SplashView.swift in Sources */,
 				88924A691E9AC3B1004B4998 /* PlayScene.swift in Sources */,
-				88924A191E984491004B4998 /* TrashScene.swift in Sources */,
 				88AA54ED1E9C46540074BD23 /* BoobsNameScene.swift in Sources */,
-				88924A1B1E984491004B4998 /* PlayViewController.swift in Sources */,
+				886D6FF81E9DB4D100A834E5 /* TapTheVaginaNode.swift in Sources */,
+				88924A1B1E984491004B4998 /* LevelViewController.swift in Sources */,
 				88924A131E984490004B4998 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

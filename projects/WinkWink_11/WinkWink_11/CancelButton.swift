@@ -21,9 +21,10 @@ class CancelButton: UIButton {
         super.init(coder: aDecoder)
         commonInit()
     }
-    
+
     private func commonInit() {
         setImage(UIImage(named: imageFilename), for: .normal)
+        tintColor = Configuration.color.textPrimary
     }
 
 }
