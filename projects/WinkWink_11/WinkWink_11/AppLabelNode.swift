@@ -10,9 +10,6 @@ import SpriteKit
 
 class AppLabelNode: SKLabelNode {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        print("awake")
-    }
+    
 
 }
