@@ -17,16 +17,21 @@ class LevelViewController: AppViewController {
     var playScene: PlayScene?
     var resultScene: LevelResultScene?
     @IBOutlet weak var sceneView: SKView!
+    @IBOutlet weak var navigationView: NavigationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationView.delegate = self
         showPlay()
     }
 
     func showPlay() {
-        playScene = PlayScene(challengeNodes: [], size: sceneView.bounds.size)
+        let challengeNodes = [
+            TapTheVaginaNode()
+        ]
+        playScene = PlayScene(challengeNodes: challengeNodes, size: sceneView.bounds.size)
         sceneView.presentScene(playScene)
-        
+        sceneView.layer.borderWidth = 2
     }
     
     func showResult() {
@@ -36,7 +41,13 @@ class LevelViewController: AppViewController {
     
 }
 
-
+extension LevelViewController: NavigationViewDelegate {
+    
+    func navigationRightCancelTapped() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
 //class LevelViewController: AppViewController {
 //        
 //    @IBOutlet weak var playContainer: SKView!

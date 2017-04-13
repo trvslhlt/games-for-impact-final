@@ -171,6 +171,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="navigationView" destination="yH7-Ir-yJq" id="rUI-GW-zlr"/>
                         <outlet property="sceneView" destination="19L-7a-C1K" id="pOa-Z0-qmV"/>
                     </connections>
                 </viewController>

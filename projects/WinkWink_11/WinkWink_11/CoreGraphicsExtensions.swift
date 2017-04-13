@@ -15,3 +15,13 @@ extension CGPoint {
     }
 
 }
+
+extension CGSize {
+
+    func insetBy(dWidth: CGFloat, dHeight: CGFloat) -> CGSize {
+        let newWidth = max(0, self.width - dWidth)
+        let newHeight = max(0, self.height - dHeight)
+        return CGSize(width: newWidth, height: newHeight)
+    }
+    
+}

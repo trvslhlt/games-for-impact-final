@@ -15,6 +15,7 @@ class Configuration: NSObject {
     static let time = TimePalette()
     static let transition = Transition()
     static let sound = Sound()
+    static let layout = Layout()
 
 }
 
@@ -46,6 +47,13 @@ class Sound {
         case beep = "beep.wav"
     }
     
+}
+
+class Layout {
+
+    let paddingDefault: CGFloat = 8
+    let navigationHeight: CGFloat = 64
+
 }
 
 

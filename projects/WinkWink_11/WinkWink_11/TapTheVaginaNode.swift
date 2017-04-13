@@ -9,5 +9,23 @@
 import SpriteKit
 
 class TapTheVaginaNode: ChallengeNode {
+    
+    let n = AppSpriteNode(color: UIColor.green, size: CGSize(width: 100, height: 400))
+    
+    override func commonInit() {
+        super.commonInit()
+        n.didTap = {
+            self.stop()
+        }
+        addChild(n)
+    }
+    
+    override func start() {
+        print("TapTheVaginaNode:start")
+    }
+    
+    override func stop() {
+        print("TapTheVaginaNode:stop")
+    }
 
 }

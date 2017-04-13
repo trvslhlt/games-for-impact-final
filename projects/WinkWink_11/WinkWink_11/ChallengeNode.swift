@@ -12,7 +12,7 @@ protocol ChallengeNodeDelegate: class {
     func didComplete(points: Float, ofPossible possible: Float)
 }
 
-class ChallengeNode: SKNode {
+class ChallengeNode: AppSpriteNode {
 
     weak var delegate: ChallengeNodeDelegate?
     
@@ -23,12 +23,5 @@ class ChallengeNode: SKNode {
     func stop() {
         assertionFailure("override start in ChallengeNode subclasses")
     }
-//    override init() {
-//        super.init()
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
 }

@@ -18,6 +18,10 @@ class AppSpriteNode: SKSpriteNode {
         commonInit()
     }
     
+    init(color: UIColor, size: CGSize) {
+        super.init(texture: nil, color: color, size: size)
+    }
+    
     init() {
         super.init(texture: nil, color: .clear, size: CGSize.zero)
         commonInit()
@@ -27,7 +31,7 @@ class AppSpriteNode: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func commonInit() {
+    func commonInit() {
         isUserInteractionEnabled = true
     }
     
