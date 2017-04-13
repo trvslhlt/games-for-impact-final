@@ -27,11 +27,11 @@ class LevelViewController: AppViewController {
 
     func showPlay() {
         let challengeNodes = [
+            TapTheVaginaNode(),
             TapTheVaginaNode()
         ]
         playScene = PlayScene(challengeNodes: challengeNodes, size: sceneView.bounds.size)
         sceneView.presentScene(playScene)
-        sceneView.layer.borderWidth = 2
     }
     
     func showResult() {
@@ -48,73 +48,3 @@ extension LevelViewController: NavigationViewDelegate {
     }
     
 }
-//class LevelViewController: AppViewController {
-//        
-//    @IBOutlet weak var playContainer: SKView!
-//    var level = 0
-//    var score: (scored: Float, possible: Float) = (0, 0)
-//    var scenes: [PlayScene] = [VaginaScene(), BoobsNameScene()]
-//    var currentScene: PlayScene?
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        playContainer.backgroundColor = Configuration.color.backgroundPrimary
-//        playContainer.showsFPS = true
-//        playContainer.showsNodeCount = true
-//        playContainer.ignoresSiblingOrder = true
-//
-//        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(LevelViewController.swipedLeft))
-//        swipe.direction = .left
-//        view.addGestureRecognizer(swipe)
-//        showNextScene(transition: nil)
-//    }
-//    
-//    func showNextScene(transition: SKTransition?) {
-//        guard scenes.count > 0 else {
-//            currentScene = nil
-//            showLevelResult()
-//            return
-//        }
-//        self.currentScene = scenes.remove(at: 0)
-//        if let currentScene = self.currentScene {
-//            currentScene.size = playContainer.bounds.size
-//            currentScene.playSceneDelegate = self
-//            if let trans = transition {
-//                playContainer.presentScene(currentScene, transition: trans)
-//            } else {
-//                playContainer.presentScene(currentScene)
-//            }
-//        }
-//    }
-//    
-//    func showLevelResult() {
-//        let scene = LevelResultScene()
-//        scene.level = "\(level)"
-//        scene.score = "\(score.scored) / \(score.possible)"
-//        scene.size = playContainer.bounds.size
-//        playContainer.presentScene(scene, transition: Configuration.transition.defaultTransition)
-//    }
-//    
-//    func swipedLeft() {
-//        if let currentScene = self.currentScene {
-//            currentScene.didReceiveSubmissionEvent()
-//        }
-//    }
-//    
-//    @IBAction func exitTapped(_ sender: Any) {
-//        dismiss(animated: true, completion: nil)
-//    }
-//    
-//}
-//
-//extension LevelViewController: PlaySceneDelegate {
-//
-//    func playSceneDone(scene: SKScene) {
-//        showNextScene(transition: Configuration.transition.defaultTransition)
-//    }
-//    
-//    func playScenePointsScored(points: Float, ofPossible possible: Float) {
-//        self.score = (self.score.scored + points, self.score.possible + possible)
-//    }
-//    
-//}

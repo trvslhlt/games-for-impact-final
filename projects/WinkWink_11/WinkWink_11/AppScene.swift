@@ -21,7 +21,7 @@ class AppScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         backgroundColor = Configuration.color.backgroundPrimary
-        self.scaleMode = .resizeFill
+        scaleMode = .resizeFill
     }
 
 }

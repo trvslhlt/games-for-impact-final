@@ -8,15 +8,15 @@
 
 import SpriteKit
 
-class PlayScene: AppScene {
+class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
 
     private var challengeNodes: [ChallengeNode]
     var currentChallengeNode: ChallengeNode?
+    var challengeResultNode: ChallengeResultNode?
     
     init(challengeNodes: [ChallengeNode], size: CGSize) {
         self.challengeNodes = challengeNodes
         super.init(size: size)
-        view?.layer.borderWidth = 2
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,11 +49,34 @@ class PlayScene: AppScene {
         }
         currentChallengeNode = challengeNodes.remove(at: 0)
         if let node = currentChallengeNode {
-            node.size = self.size
+            node.size = CGSize(width: size.width, height: size.height)
             node.position = CGPoint(x: node.size.width / 2, y: node.size.height / 2)
             addChild(node)
+            node.delegate = self
             node.start()
         }
     }
     
+    private func showChallengeResult(node: ChallengeNode, correct: Bool) {
+        node.stop()
+        challengeResultNode = ChallengeResultNode(correct: correct)
+        challengeResultNode!.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        challengeResultNode?.delegate = self
+        addChild(challengeResultNode!)
+    }
+    
+    private func hideChallengeResult() {
+        challengeResultNode?.removeFromParent()
+    }
+    
+    func challengeNodeDidComplete(node: ChallengeNode, correct: Bool) {
+        print("didcomplete. correct: \(correct). points: \(correct ? node.potentialValue : 0)")
+        showChallengeResult(node: node, correct: correct)
+        
+    }
+    
+    func challengeResultDidComplete() {
+        hideChallengeResult()
+        startNextChallenge()
+    }
 }

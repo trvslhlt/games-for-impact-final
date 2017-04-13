@@ -10,18 +10,35 @@ import SpriteKit
 
 class TapTheVaginaNode: ChallengeNode {
     
-    let n = AppSpriteNode(color: UIColor.green, size: CGSize(width: 100, height: 400))
+    let vulvaNode = AppSpriteNode(imageNamed: "vulvaDrawing")
+    let vaginaNode = AppSpriteNode()
+    let textNode = SKLabelNode(text: "Tap the vagina.")
     
     override func commonInit() {
         super.commonInit()
-        n.didTap = {
-            self.stop()
+        
+        vulvaNode.position = CGPoint.zero
+        vulvaNode.size = CGSize(width: 200, height: 200)
+        vulvaNode.color = .white
+        vulvaNode.didTap = {
+            self.didSubmitAnswer(correct: false)
         }
-        addChild(n)
+
+        vaginaNode.size = CGSize(width: 40, height: 40)
+        vaginaNode.position = CGPoint(x: vulvaNode.position.x, y: vulvaNode.position.y - 40)
+        vaginaNode.didTap = {
+            self.didSubmitAnswer(correct: true)
+        }
+        
+        textNode.position = CGPoint(x: 0, y: 200)
+        
+        addChild(textNode)
+        addChild(vulvaNode)
+        vulvaNode.addChild(vaginaNode)
     }
     
     override func start() {
-        print("TapTheVaginaNode:start")
+        print("TapTheVagina:start")
     }
     
     override func stop() {

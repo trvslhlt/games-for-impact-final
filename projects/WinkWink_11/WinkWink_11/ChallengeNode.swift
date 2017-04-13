@@ -9,12 +9,13 @@
 import SpriteKit
 
 protocol ChallengeNodeDelegate: class {
-    func didComplete(points: Float, ofPossible possible: Float)
+    func challengeNodeDidComplete(node: ChallengeNode, correct: Bool)
 }
 
 class ChallengeNode: AppSpriteNode {
 
     weak var delegate: ChallengeNodeDelegate?
+    var potentialValue: Float = 10
     
     func start() {
         assertionFailure("override start in ChallengeNode subclasses")
@@ -22,6 +23,16 @@ class ChallengeNode: AppSpriteNode {
     
     func stop() {
         assertionFailure("override start in ChallengeNode subclasses")
+    }
+    
+    func didSubmitAnswer(correct: Bool) {
+        disableInteraction()
+        delegate?.challengeNodeDidComplete(node: self, correct: correct)
+    }
+    
+    private func disableInteraction() {
+        let cover = SKSpriteNode(color: .red, size: size)
+        addChild(cover)
     }
     
 }

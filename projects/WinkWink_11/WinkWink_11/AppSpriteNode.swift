@@ -20,6 +20,7 @@ class AppSpriteNode: SKSpriteNode {
     
     init(color: UIColor, size: CGSize) {
         super.init(texture: nil, color: color, size: size)
+        commonInit()
     }
     
     init() {
