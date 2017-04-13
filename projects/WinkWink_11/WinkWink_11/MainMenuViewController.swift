@@ -10,12 +10,17 @@ import UIKit
 
 class MainMenuViewController: AppViewController {
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var levelsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Configuration.color.backgroundPrimary
+        containerView.alpha = 0
         levelsButton.setTitleColor(Configuration.color.textPrimary, for: .normal)
+        UIView.animate(withDuration: Configuration.time.defaultDuration) { 
+            self.containerView.alpha = 1
+        }
     }
 
     @IBAction func playTapped(_ sender: Any) {

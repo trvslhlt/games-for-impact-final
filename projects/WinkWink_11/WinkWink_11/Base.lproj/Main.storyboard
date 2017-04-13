@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7MB-vw-0ii">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_animation.gif" translatesAutoresizingMaskIntoConstraints="NO" id="7MB-vw-0ii">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -56,28 +56,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Is-HA-Yu8">
-                                <rect key="frame" x="110" y="300" width="155" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="LEVELS"/>
-                                <connections>
-                                    <action selector="playTapped:" destination="rjW-bc-fq4" eventType="touchUpInside" id="K2E-ua-PAo"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttV-99-G68">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Is-HA-Yu8">
+                                        <rect key="frame" x="110" y="300" width="155" height="66"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="LEVELS"/>
+                                        <connections>
+                                            <action selector="playTapped:" destination="rjW-bc-fq4" eventType="touchUpInside" id="K2E-ua-PAo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5Is-HA-Yu8" firstAttribute="centerX" secondItem="ttV-99-G68" secondAttribute="centerX" id="7QR-Tb-pvb"/>
+                                    <constraint firstItem="5Is-HA-Yu8" firstAttribute="centerY" secondItem="ttV-99-G68" secondAttribute="centerY" id="inC-7A-9et"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5Is-HA-Yu8" firstAttribute="centerY" secondItem="CRz-rT-anF" secondAttribute="centerY" id="664-LU-TjD"/>
-                            <constraint firstItem="5Is-HA-Yu8" firstAttribute="centerX" secondItem="CRz-rT-anF" secondAttribute="centerX" id="gea-mV-5AV"/>
+                            <constraint firstItem="ttV-99-G68" firstAttribute="leading" secondItem="CRz-rT-anF" secondAttribute="leadingMargin" constant="-16" id="3kL-mS-fOx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ttV-99-G68" secondAttribute="trailing" constant="-16" id="ELO-eH-AdL"/>
+                            <constraint firstItem="ttV-99-G68" firstAttribute="top" secondItem="s1r-rg-9Gk" secondAttribute="bottom" constant="-20" id="Pbp-uj-Plc"/>
+                            <constraint firstItem="g3c-ch-pYp" firstAttribute="top" secondItem="ttV-99-G68" secondAttribute="bottom" id="eqO-q7-DcU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="ttV-99-G68" id="02M-wO-qKa"/>
                         <outlet property="levelsButton" destination="5Is-HA-Yu8" id="djj-wU-9hg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfz-h9-R9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-625" y="139"/>
+            <point key="canvasLocation" x="-626.39999999999998" y="138.98050974512745"/>
         </scene>
         <!--Level List View Controller-->
         <scene sceneID="wdU-Oa-v1U">
@@ -180,4 +193,7 @@
             <point key="canvasLocation" x="736.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash_animation.gif" width="757" height="756"/>
+    </resources>
 </document>
