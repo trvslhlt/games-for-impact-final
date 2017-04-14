@@ -12,6 +12,7 @@
 		880E109D1E9C366B00F54142 /* AppLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880E109C1E9C366B00F54142 /* AppLabelNode.swift */; };
 		884624F01E9E80CA0003D556 /* splash_animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 884624EF1E9E80CA0003D556 /* splash_animation.gif */; };
 		884625191E9F36130003D556 /* ChallengeResultNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884625181E9F36130003D556 /* ChallengeResultNode.swift */; };
+		8846251B1E9F583F0003D556 /* AppGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846251A1E9F583F0003D556 /* AppGlobal.swift */; };
 		886D6FED1E9D53EB00A834E5 /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEC1E9D53EB00A834E5 /* AppScene.swift */; };
 		886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */; };
 		886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FF01E9DA57B00A834E5 /* CancelButton.swift */; };
@@ -44,6 +45,7 @@
 		880E109C1E9C366B00F54142 /* AppLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLabelNode.swift; sourceTree = "<group>"; };
 		884624EF1E9E80CA0003D556 /* splash_animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash_animation.gif; sourceTree = "<group>"; };
 		884625181E9F36130003D556 /* ChallengeResultNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeResultNode.swift; sourceTree = "<group>"; };
+		8846251A1E9F583F0003D556 /* AppGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppGlobal.swift; sourceTree = "<group>"; };
 		886D6FEC1E9D53EB00A834E5 /* AppScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScene.swift; sourceTree = "<group>"; };
 		886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
 		886D6FF01E9DA57B00A834E5 /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				88924A121E984490004B4998 /* AppDelegate.swift */,
+				8846251A1E9F583F0003D556 /* AppGlobal.swift */,
 				88924A3C1E99FFF1004B4998 /* Extensions */,
 				880E109B1E9C362700F54142 /* Nodes */,
 				884624F11E9E80D00003D556 /* Resources */,
@@ -314,6 +317,7 @@
 				886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */,
 				880E10971E9C2F7200F54142 /* SplashViewController.swift in Sources */,
 				886D6FF51E9DB2E500A834E5 /* ChallengeNode.swift in Sources */,
+				8846251B1E9F583F0003D556 /* AppGlobal.swift in Sources */,
 				88924A3B1E99FAE3004B4998 /* AppViewController.swift in Sources */,
 				88AA54EF1E9C5EA50074BD23 /* AppSpriteNode.swift in Sources */,
 				88924A391E99ED6F004B4998 /* LevelListViewController.swift in Sources */,

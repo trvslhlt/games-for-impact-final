@@ -8,8 +8,14 @@
 
 import SpriteKit
 
+protocol AppSceneDelegate: class {
+    func appSceneDidComplete()
+}
+
 class AppScene: SKScene {
 
+    weak var appSceneDelegate: AppSceneDelegate?
+    
     override init(size: CGSize) {
         super.init(size: size)
     }
@@ -22,6 +28,10 @@ class AppScene: SKScene {
         super.didMove(to: view)
         backgroundColor = Configuration.color.backgroundPrimary
         scaleMode = .resizeFill
+    }
+    
+    func didComplete() {
+        appSceneDelegate?.appSceneDidComplete()
     }
 
 }

@@ -8,11 +8,17 @@
 
 import SpriteKit
 
+protocol PlaySceneDelegate: class {
+    func playSceneDidCompleteWithResults(results: LevelResults)
+}
+
 class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
 
     private var challengeNodes: [ChallengeNode]
     var currentChallengeNode: ChallengeNode?
     var challengeResultNode: ChallengeResultNode?
+    var score: (scored: Float, possible: Float) = (0, 0)
+    
     
     init(challengeNodes: [ChallengeNode], size: CGSize) {
         self.challengeNodes = challengeNodes
@@ -39,7 +45,8 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     }
     
     private func stop() {
-        print("need to implement wrapUp in PlayScene")
+        
+        didComplete()
     }
     
     private func startNextChallenge() {
@@ -72,7 +79,6 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     func challengeNodeDidComplete(node: ChallengeNode, correct: Bool) {
         print("didcomplete. correct: \(correct). points: \(correct ? node.potentialValue : 0)")
         showChallengeResult(node: node, correct: correct)
-        
     }
     
     func challengeResultDidComplete() {
