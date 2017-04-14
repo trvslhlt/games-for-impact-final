@@ -9,8 +9,10 @@
 import Foundation
 
 struct Level {
+    let number: Int
     let timeLimit: TimeInterval
     let title: String
+    let challenges: [ChallengeNode]
 }
 
 struct LevelResults {

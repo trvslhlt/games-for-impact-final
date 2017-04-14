@@ -10,7 +10,7 @@ import UIKit
 
 class LevelListViewController: AppViewController {
 
-    let levels = [1, 2, 3, 4, 5]
+    let levelNumbers = [1, 2]
     @IBOutlet weak var levelListView: UITableView!
     
     override func viewDidLoad() {
@@ -20,6 +20,17 @@ class LevelListViewController: AppViewController {
         levelListView.delegate = self
         levelListView.backgroundColor = .clear
         levelListView.separatorStyle = .none
+    }
+    
+    func getLevel(number: Int) -> Level {
+        switch number {
+        case 1:
+            let challenges = [TapTheVaginaNode(), TapTheVaginaNode()]
+            return Level(number: 1, timeLimit: 10, title: "Welcome!", challenges: challenges)
+        default:
+            let challenges = [TapTheVaginaNode(), TapTheVaginaNode()]
+            return Level(number: 0, timeLimit: 5, title: "Welcome!", challenges: challenges)
+        }
     }
 
     @IBAction func exitTapped(_ sender: Any) {
@@ -32,17 +43,19 @@ extension LevelListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
-        vc.level = levels[indexPath.row]
+        let level = getLevel(number: indexPath.row)
+        vc.level = level
         present(vc, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return levels.count
+        return levelNumbers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(levels[indexPath.row])"
+        let level = getLevel(number: indexPath.row)
+        cell.textLabel?.text = "\(level.number): \(level.title)"
         cell.textLabel?.textColor = Configuration.color.textPrimary
         cell.backgroundColor = .clear
         return cell

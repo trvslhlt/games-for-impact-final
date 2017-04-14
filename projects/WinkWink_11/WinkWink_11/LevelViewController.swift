@@ -13,7 +13,7 @@ import GameplayKit
 
 class LevelViewController: AppViewController {
     
-    var level = 0
+    var level: Level!
     var playScene: PlayScene?
     var resultScene: LevelResultScene?
     @IBOutlet weak var sceneView: SKView!
@@ -26,11 +26,7 @@ class LevelViewController: AppViewController {
     }
 
     func showPlay() {
-        let challengeNodes = [
-            TapTheVaginaNode(),
-            TapTheVaginaNode()
-        ]
-        playScene = PlayScene(challengeNodes: challengeNodes, size: sceneView.bounds.size)
+        playScene = PlayScene(challengeNodes: level.challenges, size: sceneView.bounds.size)
         sceneView.presentScene(playScene)
     }
     
