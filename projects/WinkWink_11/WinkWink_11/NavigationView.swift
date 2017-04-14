@@ -12,7 +12,7 @@ protocol NavigationViewDelegate: class {
     func navigationRightCancelTapped()
 }
 
-class NavigationView: UIView {
+class NavigationView: AppView {
     
     weak var delegate: NavigationViewDelegate?
     private let rightControl = CancelButton()
@@ -22,8 +22,8 @@ class NavigationView: UIView {
         commonInit()
     }
     
-    private func commonInit() {
-        backgroundColor = Configuration.color.backgroundSecondary
+    override func commonInit() {
+        super.commonInit()
         rightControl.addTarget(self, action: #selector(NavigationView.didTapRightControl), for: .touchUpInside)
         
         addSubview(rightControl)

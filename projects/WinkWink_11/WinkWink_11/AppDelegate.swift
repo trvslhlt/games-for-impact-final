@@ -12,20 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var timer: LevelTimer?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        timer = LevelTimer()
-        timer?.start()
-        timer?.didUpdateElapsedTime = { elapsed in
-            print(elapsed)
-            if elapsed > 10 {
-                print("done")
-                self.timer?.pause()
-            }
-        }
-        
         return true
     }
 

@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct Level {
+    let timeLimit: TimeInterval
+    let title: String
+}
+
 struct LevelResults {
     let scored: Float
     let possible: Float
