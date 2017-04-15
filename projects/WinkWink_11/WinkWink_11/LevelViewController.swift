@@ -14,6 +14,7 @@ import GameplayKit
 class LevelViewController: AppViewController {
     
     var level: Level!
+    var levelResult: LevelResult?
     var playScene: PlayScene?
     var resultScene: LevelResultScene?
     @IBOutlet weak var sceneView: SKView!
@@ -33,7 +34,8 @@ class LevelViewController: AppViewController {
     }
     
     func showResult() {
-        resultScene = LevelResultScene(size: sceneView.bounds.size)
+        guard let result = levelResult else { fatalError("no level result to present") }
+        resultScene = LevelResultScene(levelResult: result, size: sceneView.bounds.size)
         sceneView.presentScene(resultScene)
     }
     
@@ -49,8 +51,9 @@ extension LevelViewController: NavigationViewDelegate {
 
 extension LevelViewController: PlaySceneDelegate {
     
-    func playSceneDidCompleteWithResults(results: LevelResults) {
-        print("playSceneDidCompleteWithResults")
+    func playSceneDidCompleteWithResult(result: LevelResult) {
+        self.levelResult = result
+        showResult()
     }
     
     func playSceneDidUpdateElapsedTime(progress: Float) {
@@ -58,3 +61,4 @@ extension LevelViewController: PlaySceneDelegate {
     }
     
 }
+

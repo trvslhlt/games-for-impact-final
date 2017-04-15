@@ -9,7 +9,7 @@
 import SpriteKit
 
 protocol PlaySceneDelegate: class {
-    func playSceneDidCompleteWithResults(results: LevelResults)
+    func playSceneDidCompleteWithResult(result: LevelResult)
     func playSceneDidUpdateElapsedTime(progress: Float)
 }
 
@@ -20,6 +20,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     var currentChallengeNode: ChallengeNode?
     var challengeResultNode: ChallengeResultNode?
     var score: (scored: Float, possible: Float) = (0, 0)
+    var elapsedTime: TimeInterval = 0
     let timer = LevelTimer()
     weak var playSceneDelegate: PlaySceneDelegate?
     
@@ -38,6 +39,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
         super.didMove(to: view)
         start()
         timer.didUpdateElapsedTime = { elapsedTime in
+            self.elapsedTime = elapsedTime
             let progress = Float((self.level.timeLimit - elapsedTime) / self.level.timeLimit)
             self.playSceneDelegate?.playSceneDidUpdateElapsedTime(progress: progress)
         }
@@ -54,7 +56,12 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     }
     
     private func stop() {
-        didComplete()
+        let result = LevelResult(
+            level: level,
+            scored: score.scored,
+            possible: score.possible,
+            timeElapsed: elapsedTime)
+        playSceneDelegate?.playSceneDidCompleteWithResult(result: result)
     }
     
     private func startNextChallenge() {

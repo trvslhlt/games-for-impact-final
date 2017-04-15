@@ -15,7 +15,8 @@ struct Level {
     let challenges: [ChallengeNode]
 }
 
-struct LevelResults {
+struct LevelResult {
+    let level: Level
     let scored: Float
     let possible: Float
     let timeElapsed: TimeInterval
