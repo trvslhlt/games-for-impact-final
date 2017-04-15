@@ -10,6 +10,12 @@ import SpriteKit
 
 class AppLabelNode: SKLabelNode {
     
+    var didTap: (() -> ())? {
+        didSet {
+            isUserInteractionEnabled = didTap != nil
+        }
+    }
+    
     override init() {
         super.init()
         commonInit()
@@ -29,6 +35,10 @@ class AppLabelNode: SKLabelNode {
     func commonInit() {
         fontSize = Configuration.font.size.regular
         fontColor = Configuration.color.textPrimary
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        didTap?()
     }
 
 }

@@ -10,7 +10,11 @@ import SpriteKit
 
 class AppSpriteNode: SKSpriteNode {
     
-    var didTap: (() -> ())?
+    var didTap: (() -> ())? {
+        didSet {
+            isUserInteractionEnabled = didTap != nil
+        }
+    }
     
     init(imageNamed name: String) {
         let texture = SKTexture(imageNamed: name)
@@ -32,9 +36,7 @@ class AppSpriteNode: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func commonInit() {
-        isUserInteractionEnabled = true
-    }
+    func commonInit() {}
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         didTap?()

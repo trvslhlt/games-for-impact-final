@@ -10,6 +10,10 @@ import CoreGraphics
 
 extension CGPoint {
     
+    func offset(point: CGPoint) -> CGPoint {
+        return self.offset(x: point.x, y: point.y)
+    }
+    
     func offset(x: CGFloat, y: CGFloat) -> CGPoint {
         return CGPoint(x: self.x + x, y: self.y + y)
     }
