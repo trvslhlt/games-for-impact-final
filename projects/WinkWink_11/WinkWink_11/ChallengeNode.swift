@@ -30,6 +30,10 @@ class ChallengeNode: AppSpriteNode {
         delegate?.challengeNodeDidComplete(node: self, correct: correct)
     }
     
+    func didUpdate(parentSize: CGSize) {
+        size = parentSize
+    }
+    
     private func disableInteraction() {
         let cover = SKSpriteNode(color: Configuration.color.backgroundDisabled, size: size)
         addChild(cover)

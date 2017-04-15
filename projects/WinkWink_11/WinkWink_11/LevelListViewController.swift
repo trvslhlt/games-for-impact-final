@@ -13,7 +13,7 @@ class LevelListViewController: AppViewController {
     let levelNumbers = [1, 2]
     lazy var levels: [Level] = {
         var levels = [Level]()
-        var challenges = [TapTheVaginaNode(), TapTheVaginaNode()]
+        var challenges = [TapTheVaginaNode(), SelectVulvasChallengeNode()]
         var level = Level(number: 1, timeLimit: 20, title: "Know your body", challenges: challenges)
         levels.append(level)
         challenges = [TapTheVaginaNode(), TapTheVaginaNode()]

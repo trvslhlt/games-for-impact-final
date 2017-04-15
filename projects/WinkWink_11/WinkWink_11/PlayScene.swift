@@ -45,6 +45,15 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
         }
     }
     
+    override func didChangeSize(_ oldSize: CGSize) {
+        for node in challengeNodes {
+            node.didUpdate(parentSize: size)
+        }
+        if let node = currentChallengeNode {
+            node.didUpdate(parentSize: size)
+        }
+    }
+    
     private func start() {
         guard currentChallengeNode == nil else { return }
         if challengeNodes.count == 0 {
@@ -72,7 +81,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
         }
         currentChallengeNode = challengeNodes.remove(at: 0)
         if let node = currentChallengeNode {
-            node.size = CGSize(width: size.width, height: size.height)
+            node.size = size
             node.position = CGPoint(x: node.size.width / 2, y: node.size.height / 2)
             addChild(node)
             node.delegate = self
