@@ -10,18 +10,23 @@ import SpriteKit
 
 protocol PlaySceneDelegate: class {
     func playSceneDidCompleteWithResults(results: LevelResults)
+    func playSceneDidUpdateElapsedTime(progress: Float)
 }
 
 class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
 
+    private let level: Level
     private var challengeNodes: [ChallengeNode]
     var currentChallengeNode: ChallengeNode?
     var challengeResultNode: ChallengeResultNode?
     var score: (scored: Float, possible: Float) = (0, 0)
+    let timer = LevelTimer()
+    weak var playSceneDelegate: PlaySceneDelegate?
     
     
-    init(challengeNodes: [ChallengeNode], size: CGSize) {
-        self.challengeNodes = challengeNodes
+    init(level: Level, size: CGSize) {
+        self.challengeNodes = level.challenges
+        self.level = level
         super.init(size: size)
     }
     
@@ -32,6 +37,10 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         start()
+        timer.didUpdateElapsedTime = { elapsedTime in
+            let progress = Float((self.level.timeLimit - elapsedTime) / self.level.timeLimit)
+            self.playSceneDelegate?.playSceneDidUpdateElapsedTime(progress: progress)
+        }
     }
     
     private func start() {
@@ -45,7 +54,6 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     }
     
     private func stop() {
-        
         didComplete()
     }
     
@@ -61,11 +69,13 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
             addChild(node)
             node.delegate = self
             node.start()
+            timer.unpause()
         }
     }
     
     private func showChallengeResult(node: ChallengeNode, correct: Bool) {
         node.stop()
+        timer.pause()
         challengeResultNode = ChallengeResultNode(correct: correct)
         challengeResultNode!.position = CGPoint(x: size.width / 2, y: size.height / 2)
         challengeResultNode?.delegate = self

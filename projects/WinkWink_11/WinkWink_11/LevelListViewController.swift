@@ -26,10 +26,10 @@ class LevelListViewController: AppViewController {
         switch number {
         case 1:
             let challenges = [TapTheVaginaNode(), TapTheVaginaNode()]
-            return Level(number: 1, timeLimit: 10, title: "Welcome!", challenges: challenges)
+            return Level(number: 1, timeLimit: 20, title: "Welcome!", challenges: challenges)
         default:
             let challenges = [TapTheVaginaNode(), TapTheVaginaNode()]
-            return Level(number: 0, timeLimit: 5, title: "Welcome!", challenges: challenges)
+            return Level(number: 2, timeLimit: 30, title: "Some Other Stuff!", challenges: challenges)
         }
     }
 
@@ -54,7 +54,7 @@ extension LevelListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let level = getLevel(number: indexPath.row)
+        let level = getLevel(number: indexPath.row + 1)
         cell.textLabel?.text = "\(level.number): \(level.title)"
         cell.textLabel?.textColor = Configuration.color.textPrimary
         cell.backgroundColor = .clear
