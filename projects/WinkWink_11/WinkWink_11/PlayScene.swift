@@ -47,7 +47,6 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     
     private func start() {
         guard currentChallengeNode == nil else { return }
-        
         if challengeNodes.count == 0 {
             print("no challenges to play")
             return
@@ -56,9 +55,11 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     }
     
     private func stop() {
+        let portionOfTimeRemaining = Float((level.timeLimit - elapsedTime) / level.timeLimit)
+        let timeAdjustedScore = score.scored * portionOfTimeRemaining
         let result = LevelResult(
             level: level,
-            scored: score.scored,
+            scored: timeAdjustedScore,
             possible: score.possible,
             timeElapsed: elapsedTime)
         playSceneDelegate?.playSceneDidCompleteWithResult(result: result)
@@ -94,7 +95,9 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     }
     
     func challengeNodeDidComplete(node: ChallengeNode, correct: Bool) {
-        print("didcomplete. correct: \(correct). points: \(correct ? node.potentialValue : 0)")
+        let challengePossible = node.potentialValue
+        let challengeScored = challengePossible * (correct ? 1 : 0)
+        score = (score.scored + challengeScored, score.possible + challengePossible)
         showChallengeResult(node: node, correct: correct)
     }
     
