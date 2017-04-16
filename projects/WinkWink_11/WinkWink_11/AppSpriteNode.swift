@@ -10,6 +10,8 @@ import SpriteKit
 
 class AppSpriteNode: SKSpriteNode {
     
+    var audioNode: SKAudioNode?
+    
     var didTap: (() -> ())? {
         didSet {
             isUserInteractionEnabled = didTap != nil
@@ -36,10 +38,17 @@ class AppSpriteNode: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func commonInit() {}
-    
+    func commonInit() {
+        audioNode = SoundManager.getSoundNode(filename: Sound.Filename.beep)
+        if let audioNode = audioNode {
+            audioNode.autoplayLooped = false
+            addChild(audioNode)
+        }
+    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         didTap?()
+        audioNode?.run(SKAction.play())
     }
 
 }

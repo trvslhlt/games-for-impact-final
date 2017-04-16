@@ -38,8 +38,8 @@ class Font {
 }
 
 class Sound {
-    let defaultSound = SKAction.playSoundFileNamed(Filenames.beep.rawValue, waitForCompletion: false)
-    enum Filenames: String {
+    let defaultSound = SKAction.playSoundFileNamed(Filename.beep.rawValue, waitForCompletion: false)
+    enum Filename: String {
         case beep = "beep.wav"
     }
 }

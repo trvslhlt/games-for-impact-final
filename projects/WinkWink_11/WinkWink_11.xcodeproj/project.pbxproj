@@ -16,6 +16,7 @@
 		8857E8291EA173C1004EDD34 /* LevelStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E8281EA173C1004EDD34 /* LevelStatusView.swift */; };
 		8857E82B1EA173E9004EDD34 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E82A1EA173E9004EDD34 /* AppView.swift */; };
 		8857E82E1EA299EC004EDD34 /* SelectVulvasChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E82D1EA299EC004EDD34 /* SelectVulvasChallengeNode.swift */; };
+		8857E8321EA2F609004EDD34 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E8311EA2F609004EDD34 /* SoundManager.swift */; };
 		886D6FED1E9D53EB00A834E5 /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEC1E9D53EB00A834E5 /* AppScene.swift */; };
 		886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */; };
 		886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FF01E9DA57B00A834E5 /* CancelButton.swift */; };
@@ -52,6 +53,7 @@
 		8857E8281EA173C1004EDD34 /* LevelStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelStatusView.swift; sourceTree = "<group>"; };
 		8857E82A1EA173E9004EDD34 /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		8857E82D1EA299EC004EDD34 /* SelectVulvasChallengeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectVulvasChallengeNode.swift; sourceTree = "<group>"; };
+		8857E8311EA2F609004EDD34 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		886D6FEC1E9D53EB00A834E5 /* AppScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScene.swift; sourceTree = "<group>"; };
 		886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
 		886D6FF01E9DA57B00A834E5 /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				88924A301E99B013004B4998 /* Utilities */,
 				880E10911E9C285D00F54142 /* Views */,
 				88924A2D1E99810D004B4998 /* ViewControllers */,
+				8857E8311EA2F609004EDD34 /* SoundManager.swift */,
 			);
 			path = WinkWink_11;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				8857E82E1EA299EC004EDD34 /* SelectVulvasChallengeNode.swift in Sources */,
 				886D6FF51E9DB2E500A834E5 /* ChallengeNode.swift in Sources */,
 				8846251B1E9F583F0003D556 /* AppGlobal.swift in Sources */,
+				8857E8321EA2F609004EDD34 /* SoundManager.swift in Sources */,
 				88924A3B1E99FAE3004B4998 /* AppViewController.swift in Sources */,
 				88AA54EF1E9C5EA50074BD23 /* AppSpriteNode.swift in Sources */,
 				88924A391E99ED6F004B4998 /* LevelListViewController.swift in Sources */,
