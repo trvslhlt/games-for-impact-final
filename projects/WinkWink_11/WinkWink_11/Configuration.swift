@@ -41,6 +41,7 @@ class Sound {
     let defaultSound = SKAction.playSoundFileNamed(Filename.beep.rawValue, waitForCompletion: false)
     enum Filename: String {
         case beep = "beep.wav"
+        case defaultLavelBackground = "background_music.mp3"
     }
 }
 

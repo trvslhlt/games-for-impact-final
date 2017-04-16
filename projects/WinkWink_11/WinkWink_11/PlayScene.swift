@@ -71,7 +71,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
             scored: timeAdjustedScore,
             possible: score.possible,
             timeElapsed: elapsedTime)
-        playSceneDelegate?.playSceneDidCompleteWithResult(result: result)
+        self.playSceneDelegate?.playSceneDidCompleteWithResult(result: result)
     }
     
     private func startNextChallenge() {

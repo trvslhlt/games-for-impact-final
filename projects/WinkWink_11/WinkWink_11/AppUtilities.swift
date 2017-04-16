@@ -14,3 +14,7 @@ func delay(duration: TimeInterval, instructions: @escaping () -> ()) {
         instructions()
     }
 }
+
+func bundleContainsFile(withName filename: String) -> Bool {
+    return Bundle.main.path(forResource: filename, ofType: nil) != nil
+}
