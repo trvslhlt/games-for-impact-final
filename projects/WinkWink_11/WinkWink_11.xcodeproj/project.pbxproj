@@ -41,8 +41,6 @@
 		88924A671E9AA188004B4998 /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A661E9AA188004B4998 /* AppUtilities.swift */; };
 		88924A691E9AC3B1004B4998 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A681E9AC3B1004B4998 /* PlayScene.swift */; };
 		88924A6D1E9B4EAE004B4998 /* LevelResultScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88924A6C1E9B4EAE004B4998 /* LevelResultScene.swift */; };
-		88AA54EB1E9C3AA10074BD23 /* BoobsPreferenceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA54EA1E9C3AA10074BD23 /* BoobsPreferenceScene.swift */; };
-		88AA54ED1E9C46540074BD23 /* BoobsNameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA54EC1E9C46540074BD23 /* BoobsNameScene.swift */; };
 		88AA54EF1E9C5EA50074BD23 /* AppSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AA54EE1E9C5EA50074BD23 /* AppSpriteNode.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,8 +81,6 @@
 		88924A661E9AA188004B4998 /* AppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtilities.swift; sourceTree = "<group>"; };
 		88924A681E9AC3B1004B4998 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScene.swift; sourceTree = "<group>"; };
 		88924A6C1E9B4EAE004B4998 /* LevelResultScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelResultScene.swift; sourceTree = "<group>"; };
-		88AA54EA1E9C3AA10074BD23 /* BoobsPreferenceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoobsPreferenceScene.swift; sourceTree = "<group>"; };
-		88AA54EC1E9C46540074BD23 /* BoobsNameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoobsNameScene.swift; sourceTree = "<group>"; };
 		88AA54EE1E9C5EA50074BD23 /* AppSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSpriteNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,15 +105,6 @@
 				8857E8331EA33816004EDD34 /* MainFooterView.swift */,
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		880E10981E9C359D00F54142 /* NEEDTOREPLACE */ = {
-			isa = PBXGroup;
-			children = (
-				88AA54EA1E9C3AA10074BD23 /* BoobsPreferenceScene.swift */,
-				88AA54EC1E9C46540074BD23 /* BoobsNameScene.swift */,
-			);
-			name = NEEDTOREPLACE;
 			sourceTree = "<group>";
 		};
 		880E109B1E9C362700F54142 /* Nodes */ = {
@@ -238,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				886D6FEC1E9D53EB00A834E5 /* AppScene.swift */,
-				880E10981E9C359D00F54142 /* NEEDTOREPLACE */,
 				88924A161E984491004B4998 /* Actions.sks */,
 				88924A6C1E9B4EAE004B4998 /* LevelResultScene.swift */,
 				88924A681E9AC3B1004B4998 /* PlayScene.swift */,
@@ -349,7 +335,6 @@
 				8857E82B1EA173E9004EDD34 /* AppView.swift in Sources */,
 				886D6FF31E9DAC7A00A834E5 /* NavigationView.swift in Sources */,
 				88924A671E9AA188004B4998 /* AppUtilities.swift in Sources */,
-				88AA54EB1E9C3AA10074BD23 /* BoobsPreferenceScene.swift in Sources */,
 				880E10901E9C281400F54142 /* UIKitExtensions.swift in Sources */,
 				8857E8291EA173C1004EDD34 /* LevelStatusView.swift in Sources */,
 				88924A6D1E9B4EAE004B4998 /* LevelResultScene.swift in Sources */,
@@ -367,7 +352,6 @@
 				88924A391E99ED6F004B4998 /* LevelListViewController.swift in Sources */,
 				886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */,
 				88924A691E9AC3B1004B4998 /* PlayScene.swift in Sources */,
-				88AA54ED1E9C46540074BD23 /* BoobsNameScene.swift in Sources */,
 				886D6FF81E9DB4D100A834E5 /* TapTheVaginaNode.swift in Sources */,
 				88924A1B1E984491004B4998 /* LevelViewController.swift in Sources */,
 				88924A131E984490004B4998 /* AppDelegate.swift in Sources */,

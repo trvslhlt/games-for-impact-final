@@ -32,8 +32,12 @@ extension CGSize {
         return CGPoint(x: self.width / 2, y: self.height / 2)
     }
     
-    func portionOf(x: CGFloat, y: CGFloat) -> CGPoint {
+    func pointAtPortion(x: CGFloat, y: CGFloat) -> CGPoint {
         return CGPoint(x: self.width * x, y: self.height * y)
+    }
+    
+    func portionOf(w: CGFloat, h: CGFloat) -> CGSize {
+        return CGSize(width: self.width * w, height: self.height * h)
     }
     
 }

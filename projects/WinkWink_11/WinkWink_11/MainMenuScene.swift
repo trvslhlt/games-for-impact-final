@@ -26,7 +26,7 @@ class MainMenuScene: AppScene {
         addChild(backgroundNode)
         
         let pictureNode = AppSpriteNode(imageNamed: "picture")
-        pictureNode.position = backgroundNode.size.portionOf(x: -0.25, y: 0.35)
+        pictureNode.position = backgroundNode.size.pointAtPortion(x: -0.25, y: 0.35)
         backgroundNode.addChild(pictureNode)
         
         let pictureLabel = AppLabelNode(text: "1")
