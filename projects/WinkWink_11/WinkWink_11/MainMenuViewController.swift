@@ -12,15 +12,23 @@ import SpriteKit
 class MainMenuViewController: AppViewController {
 
     @IBOutlet weak var sceneView: SKView!
+    let levelViewModel = LevelViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let scene = MainMenuScene(size: sceneView.bounds.size)
+        scene.sceneDelegate = self
         sceneView.presentScene(scene)
     }
+    
+}
 
-    @IBAction func playTapped(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LevelListViewController") as! LevelListViewController
+extension MainMenuViewController: MainMenuSceneDelegate {
+
+    func mainMenuSceneDidSelectLevel(number: Int) {
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
+        vc.level = levelViewModel.level(number: number)
         present(vc, animated: true, completion: nil)
     }
     

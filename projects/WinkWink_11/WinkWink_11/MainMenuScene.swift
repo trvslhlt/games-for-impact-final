@@ -9,9 +9,14 @@
 import UIKit
 import SpriteKit
 
+protocol MainMenuSceneDelegate: class {
+    func mainMenuSceneDidSelectLevel(number: Int)
+}
+
 class MainMenuScene: AppScene {
     
     let backgroundNode = AppSpriteNode(imageNamed: "room")
+    weak var sceneDelegate: MainMenuSceneDelegate?
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -26,6 +31,9 @@ class MainMenuScene: AppScene {
         
         let pictureLabel = AppLabelNode(text: "1")
         pictureLabel.verticalAlignmentMode = .center
+        pictureNode.didTap = {
+            self.sceneDelegate?.mainMenuSceneDidSelectLevel(number: 1)
+        }
         pictureNode.addChild(pictureLabel)
         
         let scaleDownAction = SKAction.scale(to: 0.8, duration: 0.2)
