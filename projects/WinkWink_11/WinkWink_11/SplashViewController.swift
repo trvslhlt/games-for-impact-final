@@ -21,7 +21,7 @@ class SplashViewController: AppViewController {
             UIView.animate(withDuration: Configuration.time.defaultDuration, animations: {
                 self.view.backgroundColor = Configuration.color.backgroundPrimary
             }) { _ in
-                self.present(vc, animated: false, completion: nil)
+                self.present(vc, animated: true, completion: nil)
             }
         }
         delay(duration: 2.5) {

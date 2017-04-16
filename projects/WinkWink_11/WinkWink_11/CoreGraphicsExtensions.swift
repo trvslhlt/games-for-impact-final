@@ -28,4 +28,12 @@ extension CGSize {
         return CGSize(width: newWidth, height: newHeight)
     }
     
+    func centerPoint() -> CGPoint {
+        return CGPoint(x: self.width / 2, y: self.height / 2)
+    }
+    
+    func portionOf(x: CGFloat, y: CGFloat) -> CGPoint {
+        return CGPoint(x: self.width * x, y: self.height * y)
+    }
+    
 }

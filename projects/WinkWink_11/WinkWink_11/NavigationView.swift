@@ -24,6 +24,7 @@ class NavigationView: AppView {
     
     override func commonInit() {
         super.commonInit()
+        backgroundColor = Configuration.color.backgroundSecondary
         rightControl.addTarget(self, action: #selector(NavigationView.didTapRightControl), for: .touchUpInside)
         
         addSubview(rightControl)

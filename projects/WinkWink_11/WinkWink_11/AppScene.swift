@@ -11,6 +11,9 @@ import SpriteKit
 
 class AppScene: SKScene {
 
+    override init() {
+        super.init(size: CGSize.zero)
+    }
     
     override init(size: CGSize) {
         super.init(size: size)

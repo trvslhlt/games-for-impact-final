@@ -50,5 +50,29 @@ class AppSpriteNode: SKSpriteNode {
         didTap?()
         audioNode?.run(SKAction.play())
     }
+    
+    func scaleToFit(containerSize: CGSize) {
+        var widthScaleChange = containerSize.width / size.width
+        var heightScaleChange = containerSize.height / size.height
+        
+        if widthScaleChange < 1 && heightScaleChange < 1 {
+            if widthScaleChange > heightScaleChange {
+                heightScaleChange = widthScaleChange
+            } else {
+                widthScaleChange = heightScaleChange
+            }
+        } else if widthScaleChange < 1 {
+            heightScaleChange = widthScaleChange
+        } else if heightScaleChange < 1 {
+            widthScaleChange = heightScaleChange
+        } else {
+            if widthScaleChange < heightScaleChange {
+                widthScaleChange = heightScaleChange
+            } else {
+                heightScaleChange = widthScaleChange
+            }
+        }
+        setScale(widthScaleChange)
+    }
 
 }

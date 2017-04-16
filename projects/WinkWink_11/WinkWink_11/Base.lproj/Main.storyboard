@@ -56,36 +56,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttV-99-G68">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Is-HA-Yu8">
-                                        <rect key="frame" x="110" y="300" width="155" height="66"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                        <state key="normal" title="LEVELS"/>
-                                        <connections>
-                                            <action selector="playTapped:" destination="rjW-bc-fq4" eventType="touchUpInside" id="K2E-ua-PAo"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udu-fa-VOm" customClass="SKView">
+                                <rect key="frame" x="0.0" y="52.5" width="375" height="562.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="5Is-HA-Yu8" firstAttribute="centerX" secondItem="ttV-99-G68" secondAttribute="centerX" id="7QR-Tb-pvb"/>
-                                    <constraint firstItem="5Is-HA-Yu8" firstAttribute="centerY" secondItem="ttV-99-G68" secondAttribute="centerY" id="inC-7A-9et"/>
+                                    <constraint firstAttribute="width" secondItem="udu-fa-VOm" secondAttribute="height" multiplier="4:6" id="Bol-xn-GTb"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ttV-99-G68" firstAttribute="leading" secondItem="CRz-rT-anF" secondAttribute="leadingMargin" constant="-16" id="3kL-mS-fOx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ttV-99-G68" secondAttribute="trailing" constant="-16" id="ELO-eH-AdL"/>
-                            <constraint firstItem="ttV-99-G68" firstAttribute="top" secondItem="s1r-rg-9Gk" secondAttribute="bottom" constant="-20" id="Pbp-uj-Plc"/>
-                            <constraint firstItem="g3c-ch-pYp" firstAttribute="top" secondItem="ttV-99-G68" secondAttribute="bottom" id="eqO-q7-DcU"/>
+                            <constraint firstItem="udu-fa-VOm" firstAttribute="leading" secondItem="CRz-rT-anF" secondAttribute="leading" id="F7O-z6-52r"/>
+                            <constraint firstAttribute="trailing" secondItem="udu-fa-VOm" secondAttribute="trailing" id="IwM-W3-EFP"/>
+                            <constraint firstItem="udu-fa-VOm" firstAttribute="centerY" secondItem="CRz-rT-anF" secondAttribute="centerY" id="uB1-Js-rbe"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="ttV-99-G68" id="02M-wO-qKa"/>
-                        <outlet property="levelsButton" destination="5Is-HA-Yu8" id="djj-wU-9hg"/>
+                        <outlet property="sceneView" destination="udu-fa-VOm" id="SZF-aa-ZWY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfz-h9-R9A" userLabel="First Responder" sceneMemberID="firstResponder"/>

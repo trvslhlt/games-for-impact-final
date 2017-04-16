@@ -17,6 +17,8 @@
 		8857E82B1EA173E9004EDD34 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E82A1EA173E9004EDD34 /* AppView.swift */; };
 		8857E82E1EA299EC004EDD34 /* SelectVulvasChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E82D1EA299EC004EDD34 /* SelectVulvasChallengeNode.swift */; };
 		8857E8321EA2F609004EDD34 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E8311EA2F609004EDD34 /* SoundManager.swift */; };
+		8857E8341EA33816004EDD34 /* MainFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E8331EA33816004EDD34 /* MainFooterView.swift */; };
+		8857E8361EA33D9D004EDD34 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E8351EA33D9D004EDD34 /* MainMenuScene.swift */; };
 		886D6FED1E9D53EB00A834E5 /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEC1E9D53EB00A834E5 /* AppScene.swift */; };
 		886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */; };
 		886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FF01E9DA57B00A834E5 /* CancelButton.swift */; };
@@ -54,6 +56,8 @@
 		8857E82A1EA173E9004EDD34 /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		8857E82D1EA299EC004EDD34 /* SelectVulvasChallengeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectVulvasChallengeNode.swift; sourceTree = "<group>"; };
 		8857E8311EA2F609004EDD34 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		8857E8331EA33816004EDD34 /* MainFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFooterView.swift; sourceTree = "<group>"; };
+		8857E8351EA33D9D004EDD34 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		886D6FEC1E9D53EB00A834E5 /* AppScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScene.swift; sourceTree = "<group>"; };
 		886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
 		886D6FF01E9DA57B00A834E5 /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 				886D6FF21E9DAC7A00A834E5 /* NavigationView.swift */,
 				8857E8281EA173C1004EDD34 /* LevelStatusView.swift */,
 				8857E82A1EA173E9004EDD34 /* AppView.swift */,
+				8857E8331EA33816004EDD34 /* MainFooterView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				88924A161E984491004B4998 /* Actions.sks */,
 				88924A6C1E9B4EAE004B4998 /* LevelResultScene.swift */,
 				88924A681E9AC3B1004B4998 /* PlayScene.swift */,
+				8857E8351EA33D9D004EDD34 /* MainMenuScene.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 				880E109D1E9C366B00F54142 /* AppLabelNode.swift in Sources */,
 				88924A2F1E998123004B4998 /* MainMenuViewController.swift in Sources */,
 				884625191E9F36130003D556 /* ChallengeResultNode.swift in Sources */,
+				8857E8341EA33816004EDD34 /* MainFooterView.swift in Sources */,
 				8857E82B1EA173E9004EDD34 /* AppView.swift in Sources */,
 				886D6FF31E9DAC7A00A834E5 /* NavigationView.swift in Sources */,
 				88924A671E9AA188004B4998 /* AppUtilities.swift in Sources */,
@@ -339,6 +346,7 @@
 				886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */,
 				880E10971E9C2F7200F54142 /* SplashViewController.swift in Sources */,
 				8857E82E1EA299EC004EDD34 /* SelectVulvasChallengeNode.swift in Sources */,
+				8857E8361EA33D9D004EDD34 /* MainMenuScene.swift in Sources */,
 				886D6FF51E9DB2E500A834E5 /* ChallengeNode.swift in Sources */,
 				8846251B1E9F583F0003D556 /* AppGlobal.swift in Sources */,
 				8857E8321EA2F609004EDD34 /* SoundManager.swift in Sources */,
