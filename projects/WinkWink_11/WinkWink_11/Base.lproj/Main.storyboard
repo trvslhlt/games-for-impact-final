@@ -63,11 +63,24 @@
                                     <constraint firstAttribute="width" secondItem="udu-fa-VOm" secondAttribute="height" multiplier="4:6" id="Bol-xn-GTb"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz9-f8-eaI">
+                                <rect key="frame" x="295" y="615" width="80" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="4io-L0-TI5"/>
+                                </constraints>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="settingsTapped:" destination="rjW-bc-fq4" eventType="touchUpInside" id="8ay-o3-Buk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Jz9-f8-eaI" secondAttribute="trailing" id="2pP-ou-jdv"/>
+                            <constraint firstItem="g3c-ch-pYp" firstAttribute="top" secondItem="Jz9-f8-eaI" secondAttribute="bottom" id="4uZ-Tk-xYM"/>
                             <constraint firstItem="udu-fa-VOm" firstAttribute="leading" secondItem="CRz-rT-anF" secondAttribute="leading" id="F7O-z6-52r"/>
                             <constraint firstAttribute="trailing" secondItem="udu-fa-VOm" secondAttribute="trailing" id="IwM-W3-EFP"/>
+                            <constraint firstItem="Jz9-f8-eaI" firstAttribute="top" secondItem="udu-fa-VOm" secondAttribute="bottom" id="Ma0-wv-tsS"/>
                             <constraint firstItem="udu-fa-VOm" firstAttribute="centerY" secondItem="CRz-rT-anF" secondAttribute="centerY" id="uB1-Js-rbe"/>
                         </constraints>
                     </view>
@@ -78,6 +91,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfz-h9-R9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-626.39999999999998" y="138.98050974512745"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="wvP-w7-bvk">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="EB4-vq-2fJ" customClass="SettingsViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kyJ-zL-1g8"/>
+                        <viewControllerLayoutGuide type="bottom" id="VYh-yI-HqR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aKT-7A-VGE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZD-0B-4a2">
+                                <rect key="frame" x="73" y="33" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Luf-eE-2ee">
+                                <rect key="frame" x="16" y="28" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSettingChanged:" destination="EB4-vq-2fJ" eventType="valueChanged" id="w23-lp-NTj"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snu-vt-kBH">
+                                <rect key="frame" x="73" y="72" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ao2-N7-v1v">
+                                <rect key="frame" x="16" y="67" width="51" height="31"/>
+                                <connections>
+                                    <action selector="musicSettingChanged:" destination="EB4-vq-2fJ" eventType="valueChanged" id="GXX-R0-fTI"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkX-qj-4gS" customClass="CancelButton" customModule="WinkWink_11" customModuleProvider="target">
+                                <rect key="frame" x="172" y="617" width="30" height="30"/>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="EB4-vq-2fJ" eventType="touchUpInside" id="HtR-2Q-T08"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YZD-0B-4a2" firstAttribute="leading" secondItem="Luf-eE-2ee" secondAttribute="trailing" constant="8" id="18W-9U-Hl2"/>
+                            <constraint firstItem="Luf-eE-2ee" firstAttribute="top" secondItem="kyJ-zL-1g8" secondAttribute="bottom" constant="8" id="2QO-vI-Blz"/>
+                            <constraint firstItem="VYh-yI-HqR" firstAttribute="top" secondItem="nkX-qj-4gS" secondAttribute="bottom" constant="20" id="4gX-rm-Ixj"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Luf-eE-2ee" secondAttribute="leading" id="4qn-pF-nrx"/>
+                            <constraint firstItem="Ao2-N7-v1v" firstAttribute="leading" secondItem="Luf-eE-2ee" secondAttribute="leading" id="Mzq-iO-rk0"/>
+                            <constraint firstItem="nkX-qj-4gS" firstAttribute="centerX" secondItem="aKT-7A-VGE" secondAttribute="centerX" id="Y2p-VI-FSr"/>
+                            <constraint firstItem="Snu-vt-kBH" firstAttribute="leading" secondItem="Ao2-N7-v1v" secondAttribute="trailing" constant="8" id="hjc-Ng-Mrp"/>
+                            <constraint firstItem="Ao2-N7-v1v" firstAttribute="top" secondItem="Luf-eE-2ee" secondAttribute="bottom" constant="8" id="qaX-nH-e1Q"/>
+                            <constraint firstItem="YZD-0B-4a2" firstAttribute="centerY" secondItem="Luf-eE-2ee" secondAttribute="centerY" id="rCM-2z-cxd"/>
+                            <constraint firstItem="Snu-vt-kBH" firstAttribute="centerY" secondItem="Ao2-N7-v1v" secondAttribute="centerY" id="yP1-zP-40V"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6y-ms-niO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="862"/>
         </scene>
         <!--Level List View Controller-->
         <scene sceneID="wdU-Oa-v1U">

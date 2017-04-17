@@ -21,6 +21,7 @@
 		8857E8361EA33D9D004EDD34 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E8351EA33D9D004EDD34 /* MainMenuScene.swift */; };
 		8857E8391EA3E9D0004EDD34 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E8381EA3E9D0004EDD34 /* LevelViewModel.swift */; };
 		8857E83E1EA418B8004EDD34 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8857E83D1EA418B8004EDD34 /* background_music.mp3 */; };
+		8857E8401EA47589004EDD34 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E83F1EA47589004EDD34 /* SettingsViewController.swift */; };
 		886D6FED1E9D53EB00A834E5 /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEC1E9D53EB00A834E5 /* AppScene.swift */; };
 		886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */; };
 		886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FF01E9DA57B00A834E5 /* CancelButton.swift */; };
@@ -59,6 +60,7 @@
 		8857E8351EA33D9D004EDD34 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		8857E8381EA3E9D0004EDD34 /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		8857E83D1EA418B8004EDD34 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background_music.mp3; sourceTree = "<group>"; };
+		8857E83F1EA47589004EDD34 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		886D6FEC1E9D53EB00A834E5 /* AppScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScene.swift; sourceTree = "<group>"; };
 		886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
 		886D6FF01E9DA57B00A834E5 /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				88924A1A1E984491004B4998 /* LevelViewController.swift */,
 				88924A381E99ED6F004B4998 /* LevelListViewController.swift */,
 				880E10961E9C2F7200F54142 /* SplashViewController.swift */,
+				8857E83F1EA47589004EDD34 /* SettingsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				88924A3B1E99FAE3004B4998 /* AppViewController.swift in Sources */,
 				88AA54EF1E9C5EA50074BD23 /* AppSpriteNode.swift in Sources */,
 				88924A391E99ED6F004B4998 /* LevelListViewController.swift in Sources */,
+				8857E8401EA47589004EDD34 /* SettingsViewController.swift in Sources */,
 				886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */,
 				88924A691E9AC3B1004B4998 /* PlayScene.swift in Sources */,
 				886D6FF81E9DB4D100A834E5 /* TapTheVaginaNode.swift in Sources */,

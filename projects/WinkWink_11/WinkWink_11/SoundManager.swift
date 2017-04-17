@@ -11,34 +11,36 @@ import AVFoundation
 
 class SoundManager {
 
-    static var isSoundEffectOn = true
-    static var isMusicOn = true
-    private static let sharedInstance = SoundManager()
+    private static var isSoundEffectOn = true
+    private static var isMusicOn = true
+    private static let shared = SoundManager()
     private var musicPlayer: AVAudioPlayer?
+    private var soundNodes = [Weak<AppAudioNode>]()
     
     private init() {
         self.musicPlayer = SoundManager.audioPlayer(filename: Sound.Filename.defaultLavelBackground)!
     }
 
     static func backgroundMusicPlay() {
-        SoundManager.sharedInstance.musicPlayer?.play()
+        SoundManager.shared.musicPlayer?.play()
     }
     
     static func backgroundMusicStop() {
-        SoundManager.sharedInstance.musicPlayer?.stop()
+        SoundManager.shared.musicPlayer?.stop()
     }
     
     static func backgroundMusicSetVolume(level: Float) {
-        SoundManager.sharedInstance.musicPlayer?.volume = level
+        SoundManager.shared.musicPlayer?.volume = level
     }
     
-    static func getSoundNode(filename: Sound.Filename) -> SKAudioNode? {
+    static func getSoundNode(filename: Sound.Filename) -> AppAudioNode? {
         guard
             bundleContainsFile(withName: filename.rawValue),
             SoundManager.isSoundEffectOn else { return nil }
-        let node = SKAudioNode(fileNamed: filename.rawValue)
+        let node = AppAudioNode(fileNamed: filename.rawValue)
         node.autoplayLooped = false
         node.isPositional = false
+        SoundManager.shared.soundNodes.append(Weak(value: node))
         return node
     }
     
@@ -62,4 +64,40 @@ class SoundManager {
         }
     }
     
+    static func setSound(on: Bool) {
+        isSoundEffectOn = on
+        let action = isSoundEffectOn ? SKAction.play() : SKAction.pause()
+        for weakNode in shared.soundNodes {
+            if let node = weakNode.value {
+                node.run(action)
+            }
+        }
+    }
+    
+    static func setMusic(on: Bool) {
+        if on {
+            shared.musicPlayer?.play()
+        } else {
+            shared.musicPlayer?.pause()
+        }
+        
+    }
+    
 }
+
+class AppAudioNode: SKAudioNode {}
+
+class Weak<T: AnyObject> {
+    weak var value: T?
+    init(value: T) {
+        self.value = value
+    }
+}
+
+//extension Array where Element: Weak<AnyObject> {
+//    
+//    mutating func reap() {
+//        self = self.filter { nil != $0.value }
+//    }
+//    
+//}
