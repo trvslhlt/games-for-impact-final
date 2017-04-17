@@ -11,6 +11,8 @@ import SpriteKit
 
 protocol MainMenuSceneDelegate: class {
     func mainMenuSceneDidSelectLevel(number: Int)
+    func mainMenuSceneDidSelectLinks()
+    func mainMenuSceneDidSelectSettings()
 }
 
 class MainMenuScene: AppScene {
@@ -41,6 +43,20 @@ class MainMenuScene: AppScene {
         let scaleSequence = SKAction.sequence([scaleDownAction, scaleUpAction])
         let repeatedAction = SKAction.repeatForever(scaleSequence)
         pictureNode.run(repeatedAction)
+        
+        let linksNode = AppSpriteNode(color: .clear, size: CGSize(width: 80, height: 50))
+        linksNode.position = backgroundNode.size.pointAtPortion(x: 0.13, y: -0.46)
+        linksNode.didTap = {
+            self.sceneDelegate?.mainMenuSceneDidSelectLinks()
+        }
+        backgroundNode.addChild(linksNode)
+        
+        let settingsNode = AppSpriteNode(color: .clear, size: CGSize(width: 70, height: 90))
+        settingsNode.position = backgroundNode.size.pointAtPortion(x: 0.25, y: -0.3)
+        settingsNode.didTap = {
+            self.sceneDelegate?.mainMenuSceneDidSelectSettings()
+        }
+        backgroundNode.addChild(settingsNode)
     }
 
 }
