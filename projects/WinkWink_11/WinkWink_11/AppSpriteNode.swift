@@ -10,7 +10,7 @@ import SpriteKit
 
 class AppSpriteNode: SKSpriteNode {
     
-    var audioNode: SKAudioNode?
+    var audioNode: AppAudioNode?
     
     var didTap: (() -> ())? {
         didSet {
@@ -48,7 +48,9 @@ class AppSpriteNode: SKSpriteNode {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         didTap?()
-        audioNode?.run(SKAction.play())
+        if SoundManager.isSoundOn {
+            audioNode?.run(SKAction.play())
+        }
     }
     
     func scaleToFit(containerSize: CGSize) {

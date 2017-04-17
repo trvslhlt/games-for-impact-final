@@ -29,20 +29,16 @@ class SelectVulvasChallengeNode: ChallengeNode {
         challengeLabelContainerNode.addChild(challengeLabelNode)
         addChild(challengeLabelContainerNode)
         
-        for row in 0..<rows {
-            for column in 0..<columns {
-                let vulvaNode = AppSpriteNode(imageNamed: "trash")
-                vulvaNode.didTap = {
-                    let idx = (row * self.columns) + row
-                    print("row: \(row), column: \(column), idx: \(idx)")
-                    self.selectedVulvas.insert(vulvaNode)
-                    if self.selectedVulvas.count == (self.rows * self.columns) {
-                        self.didSubmitAnswer(correct: true)
-                    }
+        for _ in 0..<(rows * columns) {
+            let vulvaNode = AppSpriteNode(imageNamed: "trash")
+            vulvaNode.didTap = {
+                self.selectedVulvas.insert(vulvaNode)
+                if self.selectedVulvas.count == (self.rows * self.columns) {
+                    self.didSubmitAnswer(correct: true)
                 }
-                optionsContainerNode.addChild(vulvaNode)
-                vulvaNodes.append(vulvaNode)
             }
+            optionsContainerNode.addChild(vulvaNode)
+            vulvaNodes.append(vulvaNode)
         }
         addChild(optionsContainerNode)
         
@@ -89,11 +85,11 @@ class SelectVulvasChallengeNode: ChallengeNode {
     }
     
     override func start() {
-        print("TapTheVagina:start")
+        print("Vulva:start")
     }
     
     override func stop() {
-        print("TapTheVaginaNode:stop")
+        print("Vulva:stop")
     }
 
 }

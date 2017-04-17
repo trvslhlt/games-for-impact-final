@@ -18,3 +18,18 @@ func delay(duration: TimeInterval, instructions: @escaping () -> ()) {
 func bundleContainsFile(withName filename: String) -> Bool {
     return Bundle.main.path(forResource: filename, ofType: nil) != nil
 }
+
+//class Weak<T: AnyObject> {
+//    weak var value: T?
+//    init(value: T) {
+//        self.value = value
+//    }
+//}
+
+//extension Array where Element: Weak<AnyObject> {
+//
+//    mutating func reap() {
+//        self = self.filter { nil != $0.value }
+//    }
+//
+//}

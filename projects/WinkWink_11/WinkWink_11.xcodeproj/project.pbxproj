@@ -22,6 +22,8 @@
 		8857E8391EA3E9D0004EDD34 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E8381EA3E9D0004EDD34 /* LevelViewModel.swift */; };
 		8857E83E1EA418B8004EDD34 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8857E83D1EA418B8004EDD34 /* background_music.mp3 */; };
 		8857E8401EA47589004EDD34 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E83F1EA47589004EDD34 /* SettingsViewController.swift */; };
+		8857E8421EA49069004EDD34 /* SpriteKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E8411EA49069004EDD34 /* SpriteKitExtensions.swift */; };
+		8857E8441EA495E1004EDD34 /* AppAudioNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857E8431EA495E1004EDD34 /* AppAudioNode.swift */; };
 		886D6FED1E9D53EB00A834E5 /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEC1E9D53EB00A834E5 /* AppScene.swift */; };
 		886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */; };
 		886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886D6FF01E9DA57B00A834E5 /* CancelButton.swift */; };
@@ -61,6 +63,8 @@
 		8857E8381EA3E9D0004EDD34 /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		8857E83D1EA418B8004EDD34 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background_music.mp3; sourceTree = "<group>"; };
 		8857E83F1EA47589004EDD34 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8857E8411EA49069004EDD34 /* SpriteKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteKitExtensions.swift; sourceTree = "<group>"; };
+		8857E8431EA495E1004EDD34 /* AppAudioNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAudioNode.swift; sourceTree = "<group>"; };
 		886D6FEC1E9D53EB00A834E5 /* AppScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScene.swift; sourceTree = "<group>"; };
 		886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
 		886D6FF01E9DA57B00A834E5 /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				886D6FF61E9DB4AC00A834E5 /* ChallengeNodes */,
+				8857E8431EA495E1004EDD34 /* AppAudioNode.swift */,
 				880E109C1E9C366B00F54142 /* AppLabelNode.swift */,
 				88AA54EE1E9C5EA50074BD23 /* AppSpriteNode.swift */,
 				886D6FF41E9DB2E500A834E5 /* ChallengeNode.swift */,
@@ -241,6 +246,7 @@
 			children = (
 				880E108F1E9C281400F54142 /* UIKitExtensions.swift */,
 				886D6FEE1E9D570900A834E5 /* CoreGraphicsExtensions.swift */,
+				8857E8411EA49069004EDD34 /* SpriteKitExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 				88924A321E99B035004B4998 /* Configuration.swift in Sources */,
 				886D6FF11E9DA57B00A834E5 /* CancelButton.swift in Sources */,
 				880E10971E9C2F7200F54142 /* SplashViewController.swift in Sources */,
+				8857E8421EA49069004EDD34 /* SpriteKitExtensions.swift in Sources */,
 				8857E82E1EA299EC004EDD34 /* SelectVulvasChallengeNode.swift in Sources */,
 				8857E8361EA33D9D004EDD34 /* MainMenuScene.swift in Sources */,
 				886D6FF51E9DB2E500A834E5 /* ChallengeNode.swift in Sources */,
@@ -345,6 +352,7 @@
 				88924A3B1E99FAE3004B4998 /* AppViewController.swift in Sources */,
 				88AA54EF1E9C5EA50074BD23 /* AppSpriteNode.swift in Sources */,
 				88924A391E99ED6F004B4998 /* LevelListViewController.swift in Sources */,
+				8857E8441EA495E1004EDD34 /* AppAudioNode.swift in Sources */,
 				8857E8401EA47589004EDD34 /* SettingsViewController.swift in Sources */,
 				886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */,
 				88924A691E9AC3B1004B4998 /* PlayScene.swift in Sources */,

@@ -48,7 +48,6 @@ class AppLabelNode: SKLabelNode {
             labelTemp.horizontalAlignmentMode = labelInPut.horizontalAlignmentMode
             labelTemp.verticalAlignmentMode = labelInPut.verticalAlignmentMode
             let y:CGFloat = CGFloat(subStringNumber) * labelInPut.fontSize
-            print("y is \(y)")
             if subStringNumber == 0 {
                 labelOutPut = labelTemp
                 subStringNumber += 1

@@ -34,7 +34,6 @@ extension UIImage {
     
     public class func gif(data: Data) -> UIImage? {
         guard let source = CGImageSourceCreateWithData(data as CFData, nil) else {
-            print("SwiftGif: Source for the image does not exist")
             return nil
         }
         return UIImage.animatedImageWithSource(source)
@@ -42,11 +41,9 @@ extension UIImage {
     
     public class func gif(url: String) -> UIImage? {
         guard let bundleURL = URL(string: url) else {
-            print("SwiftGif: This image named \"\(url)\" does not exist")
             return nil
         }
         guard let imageData = try? Data(contentsOf: bundleURL) else {
-            print("SwiftGif: Cannot turn image named \"\(url)\" into NSData")
             return nil
         }
         return gif(data: imageData)
@@ -55,11 +52,9 @@ extension UIImage {
     public class func gif(name: String) -> UIImage? {
         guard let bundleURL = Bundle.main
             .url(forResource: name, withExtension: "gif") else {
-                print("SwiftGif: This image named \"\(name)\" does not exist")
                 return nil
         }
         guard let imageData = try? Data(contentsOf: bundleURL) else {
-            print("SwiftGif: Cannot turn image named \"\(name)\" into NSData")
             return nil
         }
         return gif(data: imageData)
@@ -135,7 +130,6 @@ extension UIImage {
         }
         
         var gcd = array[0]
-        
         for val in array {
             gcd = UIImage.gcdForPair(val, gcd)
         }
@@ -156,19 +150,16 @@ extension UIImage {
             }
             
             // At it's delay in cs
-            let delaySeconds = UIImage.delayForImageAtIndex(Int(i),
-                                                            source: source)
+            let delaySeconds = UIImage.delayForImageAtIndex(Int(i), source: source)
             delays.append(Int(delaySeconds * 1000.0)) // Seconds to ms
         }
         
         // Calculate full duration
         let duration: Int = {
             var sum = 0
-            
             for val: Int in delays {
                 sum += val
             }
-            
             return sum
         }()
         
@@ -187,10 +178,7 @@ extension UIImage {
             }
         }
         
-        // Heyhey
-        let animation = UIImage.animatedImage(with: frames,
-                                              duration: Double(duration) / 1000.0)
-        
+        let animation = UIImage.animatedImage(with: frames, duration: Double(duration) / 1000.0)
         return animation
     }
     

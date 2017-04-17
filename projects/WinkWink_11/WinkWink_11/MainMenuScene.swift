@@ -26,7 +26,7 @@ class MainMenuScene: AppScene {
         addChild(backgroundNode)
         
         let pictureNode = AppSpriteNode(imageNamed: "picture")
-        pictureNode.position = backgroundNode.size.pointAtPortion(x: -0.25, y: 0.35)
+        pictureNode.position = backgroundNode.size.pointAtPortion(x: 0.25, y: 0.35)
         backgroundNode.addChild(pictureNode)
         
         let pictureLabel = AppLabelNode(text: "1")
@@ -36,8 +36,8 @@ class MainMenuScene: AppScene {
         }
         pictureNode.addChild(pictureLabel)
         
-        let scaleDownAction = SKAction.scale(to: 0.8, duration: 0.2)
-        let scaleUpAction = SKAction.scale(to: 1, duration: 0.5)
+        let scaleDownAction = SKAction.scale(to: 0.9, duration: 0.2)
+        let scaleUpAction = SKAction.scale(to: 1, duration: 1)
         let scaleSequence = SKAction.sequence([scaleDownAction, scaleUpAction])
         let repeatedAction = SKAction.repeatForever(scaleSequence)
         pictureNode.run(repeatedAction)

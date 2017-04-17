@@ -57,7 +57,6 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     private func start() {
         guard currentChallengeNode == nil else { return }
         if challengeNodes.count == 0 {
-            print("no challenges to play")
             return
         }
         startNextChallenge()
