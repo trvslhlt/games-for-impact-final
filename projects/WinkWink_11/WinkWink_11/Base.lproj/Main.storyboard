@@ -134,15 +134,31 @@
                                     <action selector="cancelTapped:" destination="EB4-vq-2fJ" eventType="touchUpInside" id="HtR-2Q-T08"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vibration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR9-lq-92h">
+                                <rect key="frame" x="73" y="111" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EVI-Rx-4av">
+                                <rect key="frame" x="16" y="106" width="51" height="31"/>
+                                <connections>
+                                    <action selector="vibrationSettingChanged:" destination="EB4-vq-2fJ" eventType="valueChanged" id="pc4-Eh-IEp"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YZD-0B-4a2" firstAttribute="leading" secondItem="Luf-eE-2ee" secondAttribute="trailing" constant="8" id="18W-9U-Hl2"/>
                             <constraint firstItem="Luf-eE-2ee" firstAttribute="top" secondItem="kyJ-zL-1g8" secondAttribute="bottom" constant="8" id="2QO-vI-Blz"/>
+                            <constraint firstItem="SR9-lq-92h" firstAttribute="centerY" secondItem="EVI-Rx-4av" secondAttribute="centerY" id="4c9-he-kf3"/>
                             <constraint firstItem="VYh-yI-HqR" firstAttribute="top" secondItem="nkX-qj-4gS" secondAttribute="bottom" constant="20" id="4gX-rm-Ixj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Luf-eE-2ee" secondAttribute="leading" id="4qn-pF-nrx"/>
+                            <constraint firstItem="SR9-lq-92h" firstAttribute="leading" secondItem="EVI-Rx-4av" secondAttribute="trailing" constant="8" id="8Ii-yg-kDa"/>
                             <constraint firstItem="Ao2-N7-v1v" firstAttribute="leading" secondItem="Luf-eE-2ee" secondAttribute="leading" id="Mzq-iO-rk0"/>
+                            <constraint firstItem="EVI-Rx-4av" firstAttribute="top" secondItem="Ao2-N7-v1v" secondAttribute="bottom" constant="8" id="SEV-nV-zLO"/>
                             <constraint firstItem="nkX-qj-4gS" firstAttribute="centerX" secondItem="aKT-7A-VGE" secondAttribute="centerX" id="Y2p-VI-FSr"/>
+                            <constraint firstItem="EVI-Rx-4av" firstAttribute="leading" secondItem="Ao2-N7-v1v" secondAttribute="leading" id="cdP-o5-c0l"/>
                             <constraint firstItem="Snu-vt-kBH" firstAttribute="leading" secondItem="Ao2-N7-v1v" secondAttribute="trailing" constant="8" id="hjc-Ng-Mrp"/>
                             <constraint firstItem="Ao2-N7-v1v" firstAttribute="top" secondItem="Luf-eE-2ee" secondAttribute="bottom" constant="8" id="qaX-nH-e1Q"/>
                             <constraint firstItem="YZD-0B-4a2" firstAttribute="centerY" secondItem="Luf-eE-2ee" secondAttribute="centerY" id="rCM-2z-cxd"/>
@@ -175,7 +191,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5PV-ff-bBb" id="9Fj-m9-eUi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>

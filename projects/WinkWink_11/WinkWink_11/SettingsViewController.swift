@@ -26,4 +26,7 @@ class SettingsViewController: UIViewController {
         SoundManager.setMusic(on: sender.isOn)
     }
     
+    @IBAction func vibrationSettingChanged(_ sender: UISwitch) {
+        VibrationManager.setVibration(on: sender.isOn)
+    }
 }

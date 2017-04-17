@@ -26,7 +26,6 @@ class MainMenuViewController: AppViewController {
         present(vc, animated: true, completion: nil)
     }
     
-    
 }
 
 extension MainMenuViewController: MainMenuSceneDelegate {

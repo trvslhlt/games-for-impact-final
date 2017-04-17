@@ -41,6 +41,7 @@ class ChallengeResultNode: AppSpriteNode {
     }
 
     func start() {
+        VibrationManager.good()
         print("ChallengeResultNode: start")
     }
     

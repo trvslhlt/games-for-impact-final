@@ -10,6 +10,7 @@
 		880E10901E9C281400F54142 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880E108F1E9C281400F54142 /* UIKitExtensions.swift */; };
 		880E10971E9C2F7200F54142 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880E10961E9C2F7200F54142 /* SplashViewController.swift */; };
 		880E109D1E9C366B00F54142 /* AppLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880E109C1E9C366B00F54142 /* AppLabelNode.swift */; };
+		881C73B81EA5608B0034FAF5 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73B71EA5608B0034FAF5 /* VibrationManager.swift */; };
 		884624F01E9E80CA0003D556 /* splash_animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 884624EF1E9E80CA0003D556 /* splash_animation.gif */; };
 		884625191E9F36130003D556 /* ChallengeResultNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884625181E9F36130003D556 /* ChallengeResultNode.swift */; };
 		8846251B1E9F583F0003D556 /* AppGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8846251A1E9F583F0003D556 /* AppGlobal.swift */; };
@@ -51,6 +52,7 @@
 		880E108F1E9C281400F54142 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		880E10961E9C2F7200F54142 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		880E109C1E9C366B00F54142 /* AppLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLabelNode.swift; sourceTree = "<group>"; };
+		881C73B71EA5608B0034FAF5 /* VibrationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VibrationManager.swift; sourceTree = "<group>"; };
 		884624EF1E9E80CA0003D556 /* splash_animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash_animation.gif; sourceTree = "<group>"; };
 		884625181E9F36130003D556 /* ChallengeResultNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeResultNode.swift; sourceTree = "<group>"; };
 		8846251A1E9F583F0003D556 /* AppGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppGlobal.swift; sourceTree = "<group>"; };
@@ -126,6 +128,15 @@
 			name = Nodes;
 			sourceTree = "<group>";
 		};
+		881C73B61EA560700034FAF5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8857E8311EA2F609004EDD34 /* SoundManager.swift */,
+				881C73B71EA5608B0034FAF5 /* VibrationManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		884624F11E9E80D00003D556 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +203,7 @@
 		88924A111E984490004B4998 /* WinkWink_11 */ = {
 			isa = PBXGroup;
 			children = (
-				8857E8371EA3E9A5004EDD34 /* ViewModels */,
+				881C73B61EA560700034FAF5 /* Managers */,
 				88924A121E984490004B4998 /* AppDelegate.swift */,
 				8846251A1E9F583F0003D556 /* AppGlobal.swift */,
 				88924A3C1E99FFF1004B4998 /* Extensions */,
@@ -202,7 +213,7 @@
 				88924A301E99B013004B4998 /* Utilities */,
 				880E10911E9C285D00F54142 /* Views */,
 				88924A2D1E99810D004B4998 /* ViewControllers */,
-				8857E8311EA2F609004EDD34 /* SoundManager.swift */,
+				8857E8371EA3E9A5004EDD34 /* ViewModels */,
 			);
 			path = WinkWink_11;
 			sourceTree = "<group>";
@@ -354,6 +365,7 @@
 				88924A391E99ED6F004B4998 /* LevelListViewController.swift in Sources */,
 				8857E8441EA495E1004EDD34 /* AppAudioNode.swift in Sources */,
 				8857E8401EA47589004EDD34 /* SettingsViewController.swift in Sources */,
+				881C73B81EA5608B0034FAF5 /* VibrationManager.swift in Sources */,
 				886D6FEF1E9D570900A834E5 /* CoreGraphicsExtensions.swift in Sources */,
 				88924A691E9AC3B1004B4998 /* PlayScene.swift in Sources */,
 				886D6FF81E9DB4D100A834E5 /* TapTheVaginaNode.swift in Sources */,

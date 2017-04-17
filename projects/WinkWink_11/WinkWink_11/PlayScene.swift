@@ -96,9 +96,11 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
         challengeResultNode!.position = CGPoint(x: size.width / 2, y: size.height / 2)
         challengeResultNode?.delegate = self
         addChild(challengeResultNode!)
+        challengeResultNode?.start()
     }
     
     private func hideChallengeResult() {
+        challengeResultNode?.stop()
         challengeResultNode?.removeFromParent()
     }
     
