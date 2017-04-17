@@ -10,8 +10,11 @@ import UIKit
 
 class ExternalResourcesViewController: AppViewController {
     
+    let linkPaths = ["https://www.plannedparenthood.org/"]
+    
     @IBAction func tappedLink(_ sender: UIButton) {
-        print("implement tappedLink")
+        let url = URL(string: linkPaths[0])!
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 
     @IBAction func cancelTapped(_ sender: Any) {

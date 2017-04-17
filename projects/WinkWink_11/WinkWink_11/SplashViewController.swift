@@ -17,15 +17,8 @@ class SplashViewController: AppViewController {
         view.backgroundColor = .black
         imageView.loadGif(name: "splash_animation")
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainMenuViewController") as! MainMenuViewController
-        let afterWink = {
-            UIView.animate(withDuration: Configuration.time.defaultDuration, animations: {
-                self.view.backgroundColor = Configuration.color.backgroundPrimary
-            }) { _ in
-                self.present(vc, animated: true, completion: nil)
-            }
-        }
         delay(duration: 2.5) {
-            afterWink()
+            self.present(vc, animated: true, completion: nil)
         }
     }
 
