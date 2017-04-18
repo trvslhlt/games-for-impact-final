@@ -14,7 +14,7 @@
         <!--Splash View Controller-->
         <scene sceneID="Dnl-jZ-J0c">
             <objects>
-                <viewController id="ee7-NN-6WY" customClass="SplashViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ee7-NN-6WY" customClass="SplashViewController" customModule="WinkWink" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Zj-J4-p1u"/>
                         <viewControllerLayoutGuide type="bottom" id="HII-VZ-EiD"/>
@@ -47,7 +47,7 @@
         <!--Main Menu View Controller-->
         <scene sceneID="LRC-Ov-BN7">
             <objects>
-                <viewController storyboardIdentifier="MainMenuViewController" id="rjW-bc-fq4" customClass="MainMenuViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenuViewController" id="rjW-bc-fq4" customClass="MainMenuViewController" customModule="WinkWink" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s1r-rg-9Gk"/>
                         <viewControllerLayoutGuide type="bottom" id="g3c-ch-pYp"/>
@@ -82,7 +82,7 @@
         <!--Settings View Controller-->
         <scene sceneID="wvP-w7-bvk">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="EB4-vq-2fJ" customClass="SettingsViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="EB4-vq-2fJ" customClass="SettingsViewController" customModule="WinkWink" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kyJ-zL-1g8"/>
                         <viewControllerLayoutGuide type="bottom" id="VYh-yI-HqR"/>
@@ -115,7 +115,7 @@
                                     <action selector="musicSettingChanged:" destination="EB4-vq-2fJ" eventType="valueChanged" id="GXX-R0-fTI"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkX-qj-4gS" customClass="CancelButton" customModule="WinkWink_11" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkX-qj-4gS" customClass="CancelButton" customModule="WinkWink" customModuleProvider="target">
                                 <rect key="frame" x="172" y="617" width="30" height="30"/>
                                 <connections>
                                     <action selector="cancelTapped:" destination="EB4-vq-2fJ" eventType="touchUpInside" id="HtR-2Q-T08"/>
@@ -152,6 +152,11 @@
                             <constraint firstItem="Snu-vt-kBH" firstAttribute="centerY" secondItem="Ao2-N7-v1v" secondAttribute="centerY" id="yP1-zP-40V"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="musicSwitch" destination="Ao2-N7-v1v" id="4Z0-pe-djU"/>
+                        <outlet property="soundSwitch" destination="Luf-eE-2ee" id="kRi-7F-rBE"/>
+                        <outlet property="vibrationSwitch" destination="EVI-Rx-4av" id="WhN-nh-dqA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6y-ms-niO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +165,7 @@
         <!--External Resources View Controller-->
         <scene sceneID="Oh9-Hu-Uuy">
             <objects>
-                <viewController storyboardIdentifier="ExternalResourcesViewController" id="JzC-VN-9N4" customClass="ExternalResourcesViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExternalResourcesViewController" id="JzC-VN-9N4" customClass="ExternalResourcesViewController" customModule="WinkWink" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0so-Ne-IV6"/>
                         <viewControllerLayoutGuide type="bottom" id="maT-1i-fN3"/>
@@ -176,7 +181,7 @@
                                     <action selector="tappedLink:" destination="JzC-VN-9N4" eventType="touchUpInside" id="rDc-jz-uSM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-cC-O5c" customClass="CancelButton" customModule="WinkWink_11" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-cC-O5c" customClass="CancelButton" customModule="WinkWink" customModuleProvider="target">
                                 <rect key="frame" x="172" y="617" width="30" height="30"/>
                                 <connections>
                                     <action selector="cancelTapped:" destination="JzC-VN-9N4" eventType="touchUpInside" id="W4s-8z-BFE"/>
@@ -199,7 +204,7 @@
         <!--Level List View Controller-->
         <scene sceneID="wdU-Oa-v1U">
             <objects>
-                <viewController storyboardIdentifier="LevelListViewController" id="sc3-Py-X4Y" customClass="LevelListViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LevelListViewController" id="sc3-Py-X4Y" customClass="LevelListViewController" customModule="WinkWink" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="agN-CZ-Pdu"/>
                         <viewControllerLayoutGuide type="bottom" id="Ueh-WH-Thb"/>
@@ -225,7 +230,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ7-Ta-BFK" customClass="CancelButton" customModule="WinkWink_11" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ7-Ta-BFK" customClass="CancelButton" customModule="WinkWink" customModuleProvider="target">
                                 <rect key="frame" x="319" y="28" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eQ7-Ta-BFK" secondAttribute="height" multiplier="1:1" id="HhS-yb-FfS"/>
@@ -257,7 +262,7 @@
         <!--Level View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController storyboardIdentifier="LevelViewController" id="BV1-FR-VrT" customClass="LevelViewController" customModule="WinkWink_11" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LevelViewController" id="BV1-FR-VrT" customClass="LevelViewController" customModule="WinkWink" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -269,14 +274,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19L-7a-C1K" customClass="SKView">
                                 <rect key="frame" x="0.0" y="74" width="375" height="543"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-Ir-yJq" customClass="NavigationView" customModule="WinkWink_11" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-Ir-yJq" customClass="NavigationView" customModule="WinkWink" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="ejk-FR-SMd"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BD-Gx-cDq" customClass="LevelStatusView" customModule="WinkWink_11" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BD-Gx-cDq" customClass="LevelStatusView" customModule="WinkWink" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>

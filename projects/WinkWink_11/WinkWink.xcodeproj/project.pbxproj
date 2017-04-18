@@ -46,6 +46,7 @@
 		881C74081EA5C8120034FAF5 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C74071EA5C8120034FAF5 /* LevelViewModel.swift */; };
 		881C740D1EA5C9E60034FAF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881C74091EA5C9E60034FAF5 /* LaunchScreen.storyboard */; };
 		881C740E1EA5C9E60034FAF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881C740B1EA5C9E60034FAF5 /* Main.storyboard */; };
+		881C74101EA5DD800034FAF5 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C740F1EA5DD800034FAF5 /* Preferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		881C74071EA5C8120034FAF5 /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewModel.swift; path = WinkWink/ViewModels/LevelViewModel.swift; sourceTree = SOURCE_ROOT; };
 		881C740A1EA5C9E60034FAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WinkWink/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		881C740C1EA5C9E60034FAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WinkWink/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		881C740F1EA5DD800034FAF5 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = WinkWink/Managers/Preferences.swift; sourceTree = SOURCE_ROOT; };
 		88924A0F1E984490004B4998 /* WinkWink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkWink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 			children = (
 				881C73C61EA5C60C0034FAF5 /* SoundManager.swift */,
 				881C73C71EA5C60C0034FAF5 /* VibrationManager.swift */,
+				881C740F1EA5DD800034FAF5 /* Preferences.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				881C73F41EA5C7F90034FAF5 /* AppView.swift in Sources */,
 				881C73BD1EA5C59F0034FAF5 /* AppDelegate.swift in Sources */,
 				881C73BE1EA5C59F0034FAF5 /* AppGlobal.swift in Sources */,
+				881C74101EA5DD800034FAF5 /* Preferences.swift in Sources */,
 				881C74051EA5C8090034FAF5 /* SettingsViewController.swift in Sources */,
 				881C73E71EA5C79F0034FAF5 /* AppScene.swift in Sources */,
 				881C74021EA5C8090034FAF5 /* LevelListViewController.swift in Sources */,

@@ -11,17 +11,17 @@ import AudioToolbox
 
 class VibrationManager {
     
+    static var isVibrationOn: Bool { return Preferences.shared.isVibrationOn }
     private static let shared = VibrationManager()
-    private var isVibrationOn = true
     
     static func good() {
-        if shared.isVibrationOn {
+        if isVibrationOn {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
     }
     
     static func setVibration(on: Bool) {
-        shared.isVibrationOn = on
+        Preferences.shared.isVibrationOn = on
     }
 
 }

@@ -11,11 +11,9 @@ import AVFoundation
 
 class SoundManager {
 
-    static var isSoundOn: Bool { return shared.isSoundOn }
-    static var isMusicOn: Bool { return shared.isMusicOn }
+    static var isSoundOn: Bool { return Preferences.shared.isSoundOn }
+    static var isMusicOn: Bool { return Preferences.shared.isMusicOn }
     private static let shared = SoundManager()
-    private var isMusicOn = true
-    private var isSoundOn = true
     private var musicPlayer: AVAudioPlayer?
     
     private init() {
@@ -23,11 +21,15 @@ class SoundManager {
     }
 
     static func backgroundMusicPlay() {
-        shared.musicPlayer?.play()
+        if isMusicOn {
+            shared.musicPlayer?.play()
+        }
     }
     
     static func backgroundMusicStop() {
-        shared.musicPlayer?.stop()
+        if !isMusicOn {
+            shared.musicPlayer?.stop()
+        }
     }
     
     static func backgroundMusicSetVolume(level: Float) {
@@ -63,10 +65,11 @@ class SoundManager {
     }
     
     static func setSound(on: Bool) {
-        shared.isSoundOn = on
+        Preferences.shared.isSoundOn = on
     }
     
     static func setMusic(on: Bool) {
+        Preferences.shared.isMusicOn = on
         if on {
             shared.musicPlayer?.play()
         } else {

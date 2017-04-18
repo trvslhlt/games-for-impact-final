@@ -9,11 +9,18 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    @IBOutlet weak var soundSwitch: UISwitch!
+    @IBOutlet weak var musicSwitch: UISwitch!
+    @IBOutlet weak var vibrationSwitch: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        soundSwitch.isOn = SoundManager.isSoundOn
+        musicSwitch.isOn = SoundManager.isMusicOn
+        vibrationSwitch.isOn = VibrationManager.isVibrationOn
     }
-
+    
     @IBAction func cancelTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -29,4 +36,5 @@ class SettingsViewController: UIViewController {
     @IBAction func vibrationSettingChanged(_ sender: UISwitch) {
         VibrationManager.setVibration(on: sender.isOn)
     }
+
 }
