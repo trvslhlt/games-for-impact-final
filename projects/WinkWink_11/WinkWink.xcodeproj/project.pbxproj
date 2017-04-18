@@ -1,0 +1,549 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		881C73BD1EA5C59F0034FAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73BB1EA5C59F0034FAF5 /* AppDelegate.swift */; };
+		881C73BE1EA5C59F0034FAF5 /* AppGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73BC1EA5C59F0034FAF5 /* AppGlobal.swift */; };
+		881C73C21EA5C5EA0034FAF5 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73BF1EA5C5EA0034FAF5 /* CoreGraphicsExtensions.swift */; };
+		881C73C31EA5C5EA0034FAF5 /* SpriteKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73C01EA5C5EA0034FAF5 /* SpriteKitExtensions.swift */; };
+		881C73C41EA5C5EA0034FAF5 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73C11EA5C5EA0034FAF5 /* UIKitExtensions.swift */; };
+		881C73C81EA5C60C0034FAF5 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73C61EA5C60C0034FAF5 /* SoundManager.swift */; };
+		881C73C91EA5C60C0034FAF5 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73C71EA5C60C0034FAF5 /* VibrationManager.swift */; };
+		881C73CB1EA5C7160034FAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881C73CA1EA5C7160034FAF5 /* Assets.xcassets */; };
+		881C73CE1EA5C7330034FAF5 /* SelectVulvasChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73CC1EA5C7330034FAF5 /* SelectVulvasChallengeNode.swift */; };
+		881C73CF1EA5C7330034FAF5 /* TapTheVaginaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73CD1EA5C7330034FAF5 /* TapTheVaginaNode.swift */; };
+		881C73D31EA5C7440034FAF5 /* AppAudioNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D01EA5C7440034FAF5 /* AppAudioNode.swift */; };
+		881C73D41EA5C7440034FAF5 /* AppLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D11EA5C7440034FAF5 /* AppLabelNode.swift */; };
+		881C73D51EA5C7440034FAF5 /* AppSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D21EA5C7440034FAF5 /* AppSpriteNode.swift */; };
+		881C73D81EA5C7500034FAF5 /* ChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D61EA5C7500034FAF5 /* ChallengeNode.swift */; };
+		881C73D91EA5C7500034FAF5 /* ChallengeResultNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D71EA5C7500034FAF5 /* ChallengeResultNode.swift */; };
+		881C73DC1EA5C7650034FAF5 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 881C73DA1EA5C7650034FAF5 /* background_music.mp3 */; };
+		881C73DD1EA5C7650034FAF5 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 881C73DB1EA5C7650034FAF5 /* beep.wav */; };
+		881C73E21EA5C78B0034FAF5 /* splash_animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 881C73E11EA5C78B0034FAF5 /* splash_animation.gif */; };
+		881C73E71EA5C79F0034FAF5 /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73E31EA5C79F0034FAF5 /* AppScene.swift */; };
+		881C73E81EA5C79F0034FAF5 /* LevelResultScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73E41EA5C79F0034FAF5 /* LevelResultScene.swift */; };
+		881C73E91EA5C79F0034FAF5 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73E51EA5C79F0034FAF5 /* MainMenuScene.swift */; };
+		881C73EA1EA5C79F0034FAF5 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73E61EA5C79F0034FAF5 /* PlayScene.swift */; };
+		881C73ED1EA5C7E90034FAF5 /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73EB1EA5C7E90034FAF5 /* AppUtilities.swift */; };
+		881C73EE1EA5C7E90034FAF5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73EC1EA5C7E90034FAF5 /* Configuration.swift */; };
+		881C73F41EA5C7F90034FAF5 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73EF1EA5C7F90034FAF5 /* AppView.swift */; };
+		881C73F51EA5C7F90034FAF5 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F01EA5C7F90034FAF5 /* CancelButton.swift */; };
+		881C73F61EA5C7F90034FAF5 /* LevelStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F11EA5C7F90034FAF5 /* LevelStatusView.swift */; };
+		881C73F71EA5C7F90034FAF5 /* MainFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F21EA5C7F90034FAF5 /* MainFooterView.swift */; };
+		881C73F81EA5C7F90034FAF5 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F31EA5C7F90034FAF5 /* NavigationView.swift */; };
+		881C74001EA5C8090034FAF5 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F91EA5C8090034FAF5 /* AppViewController.swift */; };
+		881C74011EA5C8090034FAF5 /* ExternalResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FA1EA5C8090034FAF5 /* ExternalResourcesViewController.swift */; };
+		881C74021EA5C8090034FAF5 /* LevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FB1EA5C8090034FAF5 /* LevelListViewController.swift */; };
+		881C74031EA5C8090034FAF5 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FC1EA5C8090034FAF5 /* LevelViewController.swift */; };
+		881C74041EA5C8090034FAF5 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FD1EA5C8090034FAF5 /* MainMenuViewController.swift */; };
+		881C74051EA5C8090034FAF5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FE1EA5C8090034FAF5 /* SettingsViewController.swift */; };
+		881C74061EA5C8090034FAF5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FF1EA5C8090034FAF5 /* SplashViewController.swift */; };
+		881C74081EA5C8120034FAF5 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C74071EA5C8120034FAF5 /* LevelViewModel.swift */; };
+		881C740D1EA5C9E60034FAF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881C74091EA5C9E60034FAF5 /* LaunchScreen.storyboard */; };
+		881C740E1EA5C9E60034FAF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881C740B1EA5C9E60034FAF5 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		881C73BB1EA5C59F0034FAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = WinkWink/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		881C73BC1EA5C59F0034FAF5 /* AppGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppGlobal.swift; path = WinkWink/AppGlobal.swift; sourceTree = SOURCE_ROOT; };
+		881C73BF1EA5C5EA0034FAF5 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreGraphicsExtensions.swift; path = WinkWink/Extensions/CoreGraphicsExtensions.swift; sourceTree = SOURCE_ROOT; };
+		881C73C01EA5C5EA0034FAF5 /* SpriteKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpriteKitExtensions.swift; path = WinkWink/Extensions/SpriteKitExtensions.swift; sourceTree = SOURCE_ROOT; };
+		881C73C11EA5C5EA0034FAF5 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = WinkWink/Extensions/UIKitExtensions.swift; sourceTree = SOURCE_ROOT; };
+		881C73C61EA5C60C0034FAF5 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundManager.swift; path = WinkWink/Managers/SoundManager.swift; sourceTree = SOURCE_ROOT; };
+		881C73C71EA5C60C0034FAF5 /* VibrationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VibrationManager.swift; path = WinkWink/Managers/VibrationManager.swift; sourceTree = SOURCE_ROOT; };
+		881C73CA1EA5C7160034FAF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = WinkWink/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		881C73CC1EA5C7330034FAF5 /* SelectVulvasChallengeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectVulvasChallengeNode.swift; path = WinkWink/Nodes/SelectVulvasChallengeNode.swift; sourceTree = SOURCE_ROOT; };
+		881C73CD1EA5C7330034FAF5 /* TapTheVaginaNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TapTheVaginaNode.swift; path = WinkWink/Nodes/TapTheVaginaNode.swift; sourceTree = SOURCE_ROOT; };
+		881C73D01EA5C7440034FAF5 /* AppAudioNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppAudioNode.swift; path = WinkWink/Nodes/AppAudioNode.swift; sourceTree = SOURCE_ROOT; };
+		881C73D11EA5C7440034FAF5 /* AppLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppLabelNode.swift; path = WinkWink/Nodes/AppLabelNode.swift; sourceTree = SOURCE_ROOT; };
+		881C73D21EA5C7440034FAF5 /* AppSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSpriteNode.swift; path = WinkWink/Nodes/AppSpriteNode.swift; sourceTree = SOURCE_ROOT; };
+		881C73D61EA5C7500034FAF5 /* ChallengeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeNode.swift; path = WinkWink/Nodes/ChallengeNode.swift; sourceTree = SOURCE_ROOT; };
+		881C73D71EA5C7500034FAF5 /* ChallengeResultNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeResultNode.swift; path = WinkWink/Nodes/ChallengeResultNode.swift; sourceTree = SOURCE_ROOT; };
+		881C73DA1EA5C7650034FAF5 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background_music.mp3; path = WinkWink/Resources/Sounds/background_music.mp3; sourceTree = SOURCE_ROOT; };
+		881C73DB1EA5C7650034FAF5 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = beep.wav; path = WinkWink/Resources/Sounds/beep.wav; sourceTree = SOURCE_ROOT; };
+		881C73DE1EA5C76F0034FAF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WinkWink/Info.plist; sourceTree = SOURCE_ROOT; };
+		881C73E11EA5C78B0034FAF5 /* splash_animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = splash_animation.gif; path = WinkWink/Resources/gifs/splash_animation.gif; sourceTree = SOURCE_ROOT; };
+		881C73E31EA5C79F0034FAF5 /* AppScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppScene.swift; path = WinkWink/Scenes/AppScene.swift; sourceTree = SOURCE_ROOT; };
+		881C73E41EA5C79F0034FAF5 /* LevelResultScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelResultScene.swift; path = WinkWink/Scenes/LevelResultScene.swift; sourceTree = SOURCE_ROOT; };
+		881C73E51EA5C79F0034FAF5 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuScene.swift; path = WinkWink/Scenes/MainMenuScene.swift; sourceTree = SOURCE_ROOT; };
+		881C73E61EA5C79F0034FAF5 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayScene.swift; path = WinkWink/Scenes/PlayScene.swift; sourceTree = SOURCE_ROOT; };
+		881C73EB1EA5C7E90034FAF5 /* AppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppUtilities.swift; path = WinkWink/Utilities/AppUtilities.swift; sourceTree = SOURCE_ROOT; };
+		881C73EC1EA5C7E90034FAF5 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = WinkWink/Utilities/Configuration.swift; sourceTree = SOURCE_ROOT; };
+		881C73EF1EA5C7F90034FAF5 /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppView.swift; path = WinkWink/Views/AppView.swift; sourceTree = SOURCE_ROOT; };
+		881C73F01EA5C7F90034FAF5 /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancelButton.swift; path = WinkWink/Views/CancelButton.swift; sourceTree = SOURCE_ROOT; };
+		881C73F11EA5C7F90034FAF5 /* LevelStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelStatusView.swift; path = WinkWink/Views/LevelStatusView.swift; sourceTree = SOURCE_ROOT; };
+		881C73F21EA5C7F90034FAF5 /* MainFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainFooterView.swift; path = WinkWink/Views/MainFooterView.swift; sourceTree = SOURCE_ROOT; };
+		881C73F31EA5C7F90034FAF5 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationView.swift; path = WinkWink/Views/NavigationView.swift; sourceTree = SOURCE_ROOT; };
+		881C73F91EA5C8090034FAF5 /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppViewController.swift; path = WinkWink/ViewControllers/AppViewController.swift; sourceTree = SOURCE_ROOT; };
+		881C73FA1EA5C8090034FAF5 /* ExternalResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalResourcesViewController.swift; path = WinkWink/ViewControllers/ExternalResourcesViewController.swift; sourceTree = SOURCE_ROOT; };
+		881C73FB1EA5C8090034FAF5 /* LevelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelListViewController.swift; path = WinkWink/ViewControllers/LevelListViewController.swift; sourceTree = SOURCE_ROOT; };
+		881C73FC1EA5C8090034FAF5 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewController.swift; path = WinkWink/ViewControllers/LevelViewController.swift; sourceTree = SOURCE_ROOT; };
+		881C73FD1EA5C8090034FAF5 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuViewController.swift; path = WinkWink/ViewControllers/MainMenuViewController.swift; sourceTree = SOURCE_ROOT; };
+		881C73FE1EA5C8090034FAF5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = WinkWink/ViewControllers/SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
+		881C73FF1EA5C8090034FAF5 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = WinkWink/ViewControllers/SplashViewController.swift; sourceTree = SOURCE_ROOT; };
+		881C74071EA5C8120034FAF5 /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewModel.swift; path = WinkWink/ViewModels/LevelViewModel.swift; sourceTree = SOURCE_ROOT; };
+		881C740A1EA5C9E60034FAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WinkWink/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		881C740C1EA5C9E60034FAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WinkWink/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		88924A0F1E984490004B4998 /* WinkWink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkWink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88924A0C1E984490004B4998 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		880E10911E9C285D00F54142 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				881C73EF1EA5C7F90034FAF5 /* AppView.swift */,
+				881C73F01EA5C7F90034FAF5 /* CancelButton.swift */,
+				881C73F11EA5C7F90034FAF5 /* LevelStatusView.swift */,
+				881C73F21EA5C7F90034FAF5 /* MainFooterView.swift */,
+				881C73F31EA5C7F90034FAF5 /* NavigationView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		880E109B1E9C362700F54142 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				881C73D01EA5C7440034FAF5 /* AppAudioNode.swift */,
+				881C73D11EA5C7440034FAF5 /* AppLabelNode.swift */,
+				881C73D21EA5C7440034FAF5 /* AppSpriteNode.swift */,
+				881C73D61EA5C7500034FAF5 /* ChallengeNode.swift */,
+				881C73D71EA5C7500034FAF5 /* ChallengeResultNode.swift */,
+				886D6FF61E9DB4AC00A834E5 /* ChallengeNodes */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		881C73B61EA560700034FAF5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				881C73C61EA5C60C0034FAF5 /* SoundManager.swift */,
+				881C73C71EA5C60C0034FAF5 /* VibrationManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		881C73E01EA5C7800034FAF5 /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				881C73E11EA5C78B0034FAF5 /* splash_animation.gif */,
+			);
+			name = Gifs;
+			sourceTree = "<group>";
+		};
+		884624F11E9E80D00003D556 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				881C74091EA5C9E60034FAF5 /* LaunchScreen.storyboard */,
+				881C740B1EA5C9E60034FAF5 /* Main.storyboard */,
+				881C73E01EA5C7800034FAF5 /* Gifs */,
+				881C73DE1EA5C76F0034FAF5 /* Info.plist */,
+				881C73CA1EA5C7160034FAF5 /* Assets.xcassets */,
+				8857E83C1EA4187B004EDD34 /* Audio */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8857E82C1EA2998B004EDD34 /* Level1 */ = {
+			isa = PBXGroup;
+			children = (
+				881C73CC1EA5C7330034FAF5 /* SelectVulvasChallengeNode.swift */,
+				881C73CD1EA5C7330034FAF5 /* TapTheVaginaNode.swift */,
+			);
+			name = Level1;
+			sourceTree = "<group>";
+		};
+		8857E8371EA3E9A5004EDD34 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				881C74071EA5C8120034FAF5 /* LevelViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		8857E83C1EA4187B004EDD34 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				881C73DA1EA5C7650034FAF5 /* background_music.mp3 */,
+				881C73DB1EA5C7650034FAF5 /* beep.wav */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		886D6FF61E9DB4AC00A834E5 /* ChallengeNodes */ = {
+			isa = PBXGroup;
+			children = (
+				8857E82C1EA2998B004EDD34 /* Level1 */,
+			);
+			name = ChallengeNodes;
+			sourceTree = "<group>";
+		};
+		88924A061E984490004B4998 = {
+			isa = PBXGroup;
+			children = (
+				88924A111E984490004B4998 /* WinkWink */,
+				88924A101E984490004B4998 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88924A101E984490004B4998 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88924A0F1E984490004B4998 /* WinkWink.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88924A111E984490004B4998 /* WinkWink */ = {
+			isa = PBXGroup;
+			children = (
+				881C73BB1EA5C59F0034FAF5 /* AppDelegate.swift */,
+				881C73BC1EA5C59F0034FAF5 /* AppGlobal.swift */,
+				88924A3C1E99FFF1004B4998 /* Extensions */,
+				881C73B61EA560700034FAF5 /* Managers */,
+				880E109B1E9C362700F54142 /* Nodes */,
+				884624F11E9E80D00003D556 /* Resources */,
+				88924A331E99C8A8004B4998 /* Scenes */,
+				88924A301E99B013004B4998 /* Utilities */,
+				880E10911E9C285D00F54142 /* Views */,
+				88924A2D1E99810D004B4998 /* ViewControllers */,
+				8857E8371EA3E9A5004EDD34 /* ViewModels */,
+			);
+			name = WinkWink;
+			path = WinkWink_11;
+			sourceTree = "<group>";
+		};
+		88924A2D1E99810D004B4998 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				881C73F91EA5C8090034FAF5 /* AppViewController.swift */,
+				881C73FA1EA5C8090034FAF5 /* ExternalResourcesViewController.swift */,
+				881C73FB1EA5C8090034FAF5 /* LevelListViewController.swift */,
+				881C73FC1EA5C8090034FAF5 /* LevelViewController.swift */,
+				881C73FD1EA5C8090034FAF5 /* MainMenuViewController.swift */,
+				881C73FE1EA5C8090034FAF5 /* SettingsViewController.swift */,
+				881C73FF1EA5C8090034FAF5 /* SplashViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		88924A301E99B013004B4998 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				881C73EB1EA5C7E90034FAF5 /* AppUtilities.swift */,
+				881C73EC1EA5C7E90034FAF5 /* Configuration.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		88924A331E99C8A8004B4998 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				881C73E31EA5C79F0034FAF5 /* AppScene.swift */,
+				881C73E41EA5C79F0034FAF5 /* LevelResultScene.swift */,
+				881C73E51EA5C79F0034FAF5 /* MainMenuScene.swift */,
+				881C73E61EA5C79F0034FAF5 /* PlayScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		88924A3C1E99FFF1004B4998 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				881C73BF1EA5C5EA0034FAF5 /* CoreGraphicsExtensions.swift */,
+				881C73C01EA5C5EA0034FAF5 /* SpriteKitExtensions.swift */,
+				881C73C11EA5C5EA0034FAF5 /* UIKitExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88924A0E1E984490004B4998 /* WinkWink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88924A271E984491004B4998 /* Build configuration list for PBXNativeTarget "WinkWink" */;
+			buildPhases = (
+				88924A0B1E984490004B4998 /* Sources */,
+				88924A0C1E984490004B4998 /* Frameworks */,
+				88924A0D1E984490004B4998 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WinkWink;
+			productName = WinkWink_11;
+			productReference = 88924A0F1E984490004B4998 /* WinkWink.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88924A071E984490004B4998 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "travis holt";
+				TargetAttributes = {
+					88924A0E1E984490004B4998 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U2FS6H847E;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 88924A0A1E984490004B4998 /* Build configuration list for PBXProject "WinkWink" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88924A061E984490004B4998;
+			productRefGroup = 88924A101E984490004B4998 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88924A0E1E984490004B4998 /* WinkWink */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88924A0D1E984490004B4998 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				881C73DC1EA5C7650034FAF5 /* background_music.mp3 in Resources */,
+				881C73E21EA5C78B0034FAF5 /* splash_animation.gif in Resources */,
+				881C73CB1EA5C7160034FAF5 /* Assets.xcassets in Resources */,
+				881C740E1EA5C9E60034FAF5 /* Main.storyboard in Resources */,
+				881C740D1EA5C9E60034FAF5 /* LaunchScreen.storyboard in Resources */,
+				881C73DD1EA5C7650034FAF5 /* beep.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88924A0B1E984490004B4998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				881C73F61EA5C7F90034FAF5 /* LevelStatusView.swift in Sources */,
+				881C73C31EA5C5EA0034FAF5 /* SpriteKitExtensions.swift in Sources */,
+				881C73CE1EA5C7330034FAF5 /* SelectVulvasChallengeNode.swift in Sources */,
+				881C73F41EA5C7F90034FAF5 /* AppView.swift in Sources */,
+				881C73BD1EA5C59F0034FAF5 /* AppDelegate.swift in Sources */,
+				881C73BE1EA5C59F0034FAF5 /* AppGlobal.swift in Sources */,
+				881C74051EA5C8090034FAF5 /* SettingsViewController.swift in Sources */,
+				881C73E71EA5C79F0034FAF5 /* AppScene.swift in Sources */,
+				881C74021EA5C8090034FAF5 /* LevelListViewController.swift in Sources */,
+				881C73D51EA5C7440034FAF5 /* AppSpriteNode.swift in Sources */,
+				881C73EE1EA5C7E90034FAF5 /* Configuration.swift in Sources */,
+				881C73C81EA5C60C0034FAF5 /* SoundManager.swift in Sources */,
+				881C73F81EA5C7F90034FAF5 /* NavigationView.swift in Sources */,
+				881C73D41EA5C7440034FAF5 /* AppLabelNode.swift in Sources */,
+				881C73C41EA5C5EA0034FAF5 /* UIKitExtensions.swift in Sources */,
+				881C73D81EA5C7500034FAF5 /* ChallengeNode.swift in Sources */,
+				881C73E91EA5C79F0034FAF5 /* MainMenuScene.swift in Sources */,
+				881C73E81EA5C79F0034FAF5 /* LevelResultScene.swift in Sources */,
+				881C73D91EA5C7500034FAF5 /* ChallengeResultNode.swift in Sources */,
+				881C73D31EA5C7440034FAF5 /* AppAudioNode.swift in Sources */,
+				881C74061EA5C8090034FAF5 /* SplashViewController.swift in Sources */,
+				881C73C91EA5C60C0034FAF5 /* VibrationManager.swift in Sources */,
+				881C74031EA5C8090034FAF5 /* LevelViewController.swift in Sources */,
+				881C74041EA5C8090034FAF5 /* MainMenuViewController.swift in Sources */,
+				881C73C21EA5C5EA0034FAF5 /* CoreGraphicsExtensions.swift in Sources */,
+				881C74011EA5C8090034FAF5 /* ExternalResourcesViewController.swift in Sources */,
+				881C74081EA5C8120034FAF5 /* LevelViewModel.swift in Sources */,
+				881C73EA1EA5C79F0034FAF5 /* PlayScene.swift in Sources */,
+				881C73ED1EA5C7E90034FAF5 /* AppUtilities.swift in Sources */,
+				881C73CF1EA5C7330034FAF5 /* TapTheVaginaNode.swift in Sources */,
+				881C74001EA5C8090034FAF5 /* AppViewController.swift in Sources */,
+				881C73F71EA5C7F90034FAF5 /* MainFooterView.swift in Sources */,
+				881C73F51EA5C7F90034FAF5 /* CancelButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		881C74091EA5C9E60034FAF5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				881C740A1EA5C9E60034FAF5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		881C740B1EA5C9E60034FAF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				881C740C1EA5C9E60034FAF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88924A251E984491004B4998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		88924A261E984491004B4998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88924A281E984491004B4998 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U2FS6H847E;
+				INFOPLIST_FILE = WinkWink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.travisholt.winkwink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		88924A291E984491004B4998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U2FS6H847E;
+				INFOPLIST_FILE = WinkWink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.travisholt.winkwink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88924A0A1E984490004B4998 /* Build configuration list for PBXProject "WinkWink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88924A251E984491004B4998 /* Debug */,
+				88924A261E984491004B4998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88924A271E984491004B4998 /* Build configuration list for PBXNativeTarget "WinkWink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88924A281E984491004B4998 /* Debug */,
+				88924A291E984491004B4998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88924A071E984490004B4998 /* Project object */;
+}

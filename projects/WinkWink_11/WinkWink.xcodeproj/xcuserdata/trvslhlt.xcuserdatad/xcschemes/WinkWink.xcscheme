@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "88924A0E1E984490004B4998"
-               BuildableName = "WinkWink_11.app"
-               BlueprintName = "WinkWink_11"
-               ReferencedContainer = "container:WinkWink_11.xcodeproj">
+               BuildableName = "WinkWink.app"
+               BlueprintName = "WinkWink"
+               ReferencedContainer = "container:WinkWink.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "88924A0E1E984490004B4998"
-            BuildableName = "WinkWink_11.app"
-            BlueprintName = "WinkWink_11"
-            ReferencedContainer = "container:WinkWink_11.xcodeproj">
+            BuildableName = "WinkWink.app"
+            BlueprintName = "WinkWink"
+            ReferencedContainer = "container:WinkWink.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -77,16 +77,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "88924A0E1E984490004B4998"
-            BuildableName = "WinkWink_11.app"
-            BlueprintName = "WinkWink_11"
-            ReferencedContainer = "container:WinkWink_11.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
