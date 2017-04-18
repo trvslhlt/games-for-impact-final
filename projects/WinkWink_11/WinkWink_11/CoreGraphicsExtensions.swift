@@ -20,6 +20,10 @@ extension CGPoint {
 
 }
 
+func +(left: CGPoint, right: CGPoint) -> CGPoint {
+    return CGPoint(x: left.x + right.x, y: left.y + right.y)
+}
+
 extension CGSize {
 
     func insetBy(dWidth: CGFloat, dHeight: CGFloat) -> CGSize {

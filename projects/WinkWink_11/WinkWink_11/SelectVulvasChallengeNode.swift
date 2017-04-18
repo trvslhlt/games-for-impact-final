@@ -12,10 +12,10 @@ class SelectVulvasChallengeNode: ChallengeNode {
 
     private let challengeLabelContainerNode = AppSpriteNode()
     private let optionsContainerNode = AppSpriteNode(color: .clear, size: CGSize.zero)
-    private var vulvaNodes = [AppSpriteNode]()
+    private var optionNodes = [AppSpriteNode]()
     private let rows = 2
     private let columns = 3
-    private var selectedVulvas = Set<AppSpriteNode>()
+    private var selectedOptions = Set<AppSpriteNode>()
     private let submitNode = AppSpriteNode()
     private let submitNodeHeight: CGFloat = 50
     
@@ -30,15 +30,9 @@ class SelectVulvasChallengeNode: ChallengeNode {
         addChild(challengeLabelContainerNode)
         
         for _ in 0..<(rows * columns) {
-            let vulvaNode = AppSpriteNode(imageNamed: "trash")
-            vulvaNode.didTap = {
-                self.selectedVulvas.insert(vulvaNode)
-                if self.selectedVulvas.count == (self.rows * self.columns) {
-                    self.didSubmitAnswer(correct: true)
-                }
-            }
-            optionsContainerNode.addChild(vulvaNode)
-            vulvaNodes.append(vulvaNode)
+            let optionNode = getNewOptionNode()
+            optionsContainerNode.addChild(optionNode)
+            optionNodes.append(optionNode)
         }
         addChild(optionsContainerNode)
         
@@ -49,6 +43,21 @@ class SelectVulvasChallengeNode: ChallengeNode {
         submitLabel.verticalAlignmentMode = .center
         submitNode.addChild(submitLabel)
         addChild(submitNode)
+    }
+    
+    private func getNewOptionNode() -> AppSpriteNode {
+        let optionNode = AppSpriteNode(color: .clear, size: CGSize.zero)
+        let vulvaNode = AppSpriteNode(imageNamed: "trash")
+        vulvaNode.position = optionNode.size.centerPoint()
+        optionNode.addChild(vulvaNode)
+        optionNode.didTap = {
+            optionNode.color = Configuration.color.selected
+            self.selectedOptions.insert(vulvaNode)
+            if self.selectedOptions.count == (self.rows * self.columns) {
+                self.didSubmitAnswer(correct: true)
+            }
+        }
+        return optionNode
     }
     
     override func didUpdate(parentSize: CGSize) {
@@ -64,15 +73,16 @@ class SelectVulvasChallengeNode: ChallengeNode {
         submitNode.position = size.pointAtPortion(x: 0, y: -0.4)
         
         let optionNodeSize = self.optionNodeSize()
+        let origin = CGPoint(x: -1 * (optionsContainerNode.size.width / 2), y: -1 * (optionsContainerNode.size.height / 2))
+        let optionNodeCenterInset = CGPoint(x: optionNodeSize.width / 2, y: optionNodeSize.height / 2)
         for row in 0..<rows {
             for column in 0..<columns {
                 let idx = (rows * column) + row
-                let node = vulvaNodes[idx]
+                let node = optionNodes[idx]
                 node.size = optionNodeSize
-                node.anchorPoint = CGPoint(x: 0, y: 0)
-                let nodeX = CGFloat(column) * optionNodeSize.width
-                let nodeY = CGFloat(row) * optionNodeSize.height
-                let nodePosition = CGPoint(x: nodeX, y: nodeY).offset(x: -1 * (optionsContainerNode.size.width / 2), y: -1 * (optionsContainerNode.size.height / 2))
+                let positionalOffset = CGPoint(
+                    x: optionNodeSize.width * CGFloat(column), y: optionNodeSize.height * CGFloat(row))
+                let nodePosition = origin + optionNodeCenterInset + positionalOffset
                 node.position = nodePosition
             }
         }
