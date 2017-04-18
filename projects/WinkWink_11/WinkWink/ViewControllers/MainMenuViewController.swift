@@ -13,13 +13,16 @@ class MainMenuViewController: AppViewController {
 
     @IBOutlet weak var sceneView: SKView!
     let levelViewModel = LevelViewModel()
+    var scene: MainMenuScene?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Configuration.color.backgroundDark
-        let scene = MainMenuScene(size: sceneView.bounds.size)
-        scene.sceneDelegate = self
-        sceneView.presentScene(scene)
+        scene = MainMenuScene(size: sceneView.bounds.size)
+        scene?.sceneDelegate = self
+        if let scene = scene {
+            sceneView.presentScene(scene)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +36,11 @@ class MainMenuViewController: AppViewController {
     @IBAction func settingsTapped(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
         present(vc, animated: true, completion: nil)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scene?.size = sceneView.bounds.size
     }
     
 }

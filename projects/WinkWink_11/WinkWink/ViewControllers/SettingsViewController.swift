@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: AppViewController {
     
     @IBOutlet weak var soundSwitch: UISwitch!
     @IBOutlet weak var musicSwitch: UISwitch!
