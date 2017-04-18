@@ -22,6 +22,14 @@ class MainMenuViewController: AppViewController {
         sceneView.presentScene(scene)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.alpha = 0
+        UIView.animate(withDuration: 1) {
+            self.view.alpha = 1
+        }
+    }
+    
     @IBAction func settingsTapped(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
         present(vc, animated: true, completion: nil)
