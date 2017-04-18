@@ -19,7 +19,8 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     private var challengeNodes: [ChallengeNode]
     var currentChallengeNode: ChallengeNode?
     var challengeResultNode: ChallengeResultNode?
-    var score: (scored: Float, possible: Float) = (0, 0)
+    var score: (earned: Float, possible: Float) = (0, 0)
+    var marks: (correct: Int, possible: Int) = (0, 0)
     var elapsedTime: TimeInterval = 0
     let timer = LevelTimer()
     weak var playSceneDelegate: PlaySceneDelegate?
@@ -64,11 +65,11 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     
     private func stop() {
         let portionOfTimeRemaining = Float((level.timeLimit - elapsedTime) / level.timeLimit)
-        let timeAdjustedScore = score.scored * portionOfTimeRemaining
+        let timeAdjustedScore = score.earned * portionOfTimeRemaining
         let result = LevelResult(
             level: level,
-            scored: timeAdjustedScore,
-            possible: score.possible,
+            score: (timeAdjustedScore, score.possible),
+            marks: marks,
             timeElapsed: elapsedTime)
         self.playSceneDelegate?.playSceneDidCompleteWithResult(result: result)
     }
@@ -106,8 +107,14 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     
     func challengeNodeDidComplete(node: ChallengeNode, correct: Bool) {
         let challengePossible = node.potentialValue
-        let challengeScored = challengePossible * (correct ? 1 : 0)
-        score = (score.scored + challengeScored, score.possible + challengePossible)
+        let challengeEarned = challengePossible * (correct ? 1 : 0)
+        score = (score.earned + challengeEarned, score.possible + challengePossible)
+        marks = (marks.correct + (correct ? 1 : 0), challengeNodes.count)
+        let fade = SKAction.fadeOut(withDuration: Configuration.time.defaultDuration)
+        let remove = SKAction.customAction(withDuration: 0) { _, _ in
+            node.removeFromParent()
+        }
+        node.run(SKAction.sequence([fade, remove]))
         showChallengeResult(node: node, correct: correct)
     }
     

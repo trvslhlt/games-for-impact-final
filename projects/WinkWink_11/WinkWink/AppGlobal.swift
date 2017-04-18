@@ -17,8 +17,8 @@ struct Level {
 
 struct LevelResult {
     let level: Level
-    let scored: Float
-    let possible: Float
+    let score: (earned: Float, possible: Float)
+    let marks: (correct: Int, possible: Int)
     let timeElapsed: TimeInterval
 }
 

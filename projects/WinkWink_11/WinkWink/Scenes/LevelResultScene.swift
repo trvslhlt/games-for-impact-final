@@ -31,15 +31,20 @@ class LevelResultScene: AppScene {
         levelLabel.fontSize = Configuration.font.size.medium
         addChild(levelLabel)
         
+        let marksLabel = AppLabelNode()
+        marksLabel.text = "\(levelResult.marks.correct) / \(levelResult.marks.possible)"
+        marksLabel.position = levelLabel.position.offset(x: 0, y: -50)
+        addChild(marksLabel)
+        
         let scoreLabel = AppLabelNode()
-        scoreLabel.text = "Score: \(levelResult.scored) / \(levelResult.possible)"
-        scoreLabel.position = view.center.offset(x: 0, y: 0)
+        scoreLabel.text = "Score: \(levelResult.score.earned)"
+        scoreLabel.position = marksLabel.position.offset(x: 0, y: -50)
         addChild(scoreLabel)
         
         let timeLabel = AppLabelNode()
         let formattedTime = String(format: "%.1f", levelResult.timeElapsed)
-        timeLabel.text = "Elapsed Time: \(formattedTime)s"
-        timeLabel.position = view.center.offset(x: 0, y: -50)
+        timeLabel.text = "Time Remaining: \(formattedTime)s"
+        timeLabel.position = scoreLabel.position.offset(x: 0, y: -50)
         addChild(timeLabel)
     }
 
