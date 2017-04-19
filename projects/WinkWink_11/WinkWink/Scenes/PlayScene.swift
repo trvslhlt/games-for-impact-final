@@ -11,6 +11,7 @@ import SpriteKit
 protocol PlaySceneDelegate: class {
     func playSceneDidCompleteWithResult(result: LevelResult)
     func playSceneDidUpdateElapsedTime(progress: Float)
+    func playSceneDidBeginChallenge(_ challenge: Int)
 }
 
 class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
@@ -22,6 +23,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     var score: (earned: Float, possible: Float) = (0, 0)
     var marks: (correct: Int, possible: Int) = (0, 0)
     var elapsedTime: TimeInterval = 0
+    var challenge = 0
     let timer = LevelTimer()
     weak var playSceneDelegate: PlaySceneDelegate?
     
@@ -47,9 +49,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     }
     
     override func didChangeSize(_ oldSize: CGSize) {
-        for node in challengeNodes {
-            node.didUpdate(parentSize: size)
-        }
+        challengeNodes.forEach { $0.didUpdate(parentSize: size) }
         if let node = currentChallengeNode {
             node.didUpdate(parentSize: size)
         }
@@ -80,6 +80,8 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
             return
         }
         currentChallengeNode = challengeNodes.remove(at: 0)
+        playSceneDelegate?.playSceneDidBeginChallenge(challenge)
+        challenge += 1
         if let node = currentChallengeNode {
             node.size = size
             node.position = CGPoint(x: node.size.width / 2, y: node.size.height / 2)

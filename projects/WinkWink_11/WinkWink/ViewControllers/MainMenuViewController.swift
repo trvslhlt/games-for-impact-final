@@ -14,7 +14,7 @@ class MainMenuViewController: AppViewController {
     @IBOutlet weak var sceneView: SKView!
     let levelViewModel = LevelViewModel()
     var scene: MainMenuScene?
-    
+    var timer: Timer!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Configuration.color.backgroundDark

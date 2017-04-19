@@ -32,6 +32,7 @@ class LevelViewController: AppViewController {
     func showPlay() {
         playScene = PlayScene(level: level, size: sceneSize)
         playScene?.playSceneDelegate = self
+        statusView.setChallengeCount(level.challenges.count)
         sceneView.presentScene(playScene)
     }
     
@@ -67,5 +68,8 @@ extension LevelViewController: PlaySceneDelegate {
         statusView.set(progress: progress)
     }
     
+    func playSceneDidBeginChallenge(_ challenge: Int) {
+        statusView.setChallenge(number: challenge)
+    }
 }
 

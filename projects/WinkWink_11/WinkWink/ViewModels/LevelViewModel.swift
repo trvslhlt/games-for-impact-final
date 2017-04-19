@@ -23,7 +23,7 @@ class LevelViewModel {
     func level(number: Int) -> Level {
         switch number {
         case 1:
-            let challenges = [TapTheVaginaNode(), SelectVulvasChallengeNode()]
+            let challenges = [TapTheVaginaNode(), SelectVulvasChallengeNode(), TapTheVaginaNode(), TapTheVaginaNode()]
             return Level(number: 1, timeLimit: 20, title: "Know your body", challenges: challenges)
         case 2:
             let challenges = [TapTheVaginaNode(), TapTheVaginaNode()]

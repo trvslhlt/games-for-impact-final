@@ -21,7 +21,7 @@ class Configuration: NSObject {
 }
 
 class ColorPalette {
-    let backgroundPrimary = UIColor(r: 250, g: 252, b: 245, a: 255)
+    let backgroundPrimary = UIColor(r: 239, g: 218, b: 214, a: 255)
     let backgroundSecondary = UIColor(r: 220, g: 150, b: 145, a: 255)
     let backgroundDisabled = UIColor(r: 255, g: 255, b: 255, a: 100)
     let backgroundDark = UIColor.black

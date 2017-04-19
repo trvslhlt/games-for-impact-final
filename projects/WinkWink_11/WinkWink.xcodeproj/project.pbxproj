@@ -47,6 +47,7 @@
 		881C740D1EA5C9E60034FAF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881C74091EA5C9E60034FAF5 /* LaunchScreen.storyboard */; };
 		881C740E1EA5C9E60034FAF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881C740B1EA5C9E60034FAF5 /* Main.storyboard */; };
 		881C74101EA5DD800034FAF5 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C740F1EA5DD800034FAF5 /* Preferences.swift */; };
+		881C744B1EA7263C0034FAF5 /* IncrementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C744A1EA7263B0034FAF5 /* IncrementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		881C740A1EA5C9E60034FAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WinkWink/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		881C740C1EA5C9E60034FAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WinkWink/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		881C740F1EA5DD800034FAF5 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = WinkWink/Managers/Preferences.swift; sourceTree = SOURCE_ROOT; };
+		881C744A1EA7263B0034FAF5 /* IncrementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncrementView.swift; path = WinkWink/Views/IncrementView.swift; sourceTree = SOURCE_ROOT; };
 		88924A0F1E984490004B4998 /* WinkWink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkWink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				881C73F11EA5C7F90034FAF5 /* LevelStatusView.swift */,
 				881C73F21EA5C7F90034FAF5 /* MainFooterView.swift */,
 				881C73F31EA5C7F90034FAF5 /* NavigationView.swift */,
+				881C744A1EA7263B0034FAF5 /* IncrementView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				881C74041EA5C8090034FAF5 /* MainMenuViewController.swift in Sources */,
 				881C73C21EA5C5EA0034FAF5 /* CoreGraphicsExtensions.swift in Sources */,
 				881C74011EA5C8090034FAF5 /* ExternalResourcesViewController.swift in Sources */,
+				881C744B1EA7263C0034FAF5 /* IncrementView.swift in Sources */,
 				881C74081EA5C8120034FAF5 /* LevelViewModel.swift in Sources */,
 				881C73EA1EA5C79F0034FAF5 /* PlayScene.swift in Sources */,
 				881C73ED1EA5C7E90034FAF5 /* AppUtilities.swift in Sources */,
