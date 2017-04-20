@@ -31,6 +31,7 @@ class AppLabelNode: SKLabelNode {
     }
     
     func commonInit() {
+        fontName = Configuration.font.name.main
         fontSize = Configuration.font.size.regular
         fontColor = Configuration.color.textPrimary
     }

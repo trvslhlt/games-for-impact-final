@@ -24,7 +24,7 @@ class ColorPalette {
     let backgroundPrimary = UIColor(r: 239, g: 218, b: 114, a: 255)
     let backgroundDisabled = UIColor(r: 255, g: 255, b: 255, a: 100)
     let backgroundDark = UIColor.black
-    let textPrimary = UIColor.black
+    let textPrimary = UIColor.white
     let selected = UIColor(r: 255, g: 255, b: 255, a: 100)
     let complete = UIColor.white
     let incomplete = UIColor.black
@@ -37,7 +37,11 @@ class Font {
         let regular: CGFloat = 30
         let small: CGFloat = 24
     }
+    class Name {
+        let main = "Avenir-Medium"
+    }
     let size = Size()
+    let name = Name()
 }
 
 class Sound {

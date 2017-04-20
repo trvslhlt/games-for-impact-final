@@ -26,8 +26,8 @@ class LevelStatusView: AppView {
         incrementView = nil
         incrementView = IncrementView(
             increments: count,
-            completeColor: UIColor.white,
-            incompleteColor: UIColor.black)
+            completeColor: Configuration.color.complete,
+            incompleteColor: Configuration.color.incomplete)
         addSubview(incrementView!)
     }
     

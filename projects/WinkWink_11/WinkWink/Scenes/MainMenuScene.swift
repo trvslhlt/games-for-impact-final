@@ -29,14 +29,10 @@ class MainMenuScene: AppScene {
         addChild(backgroundNode)
         
         pictureNode = AppSpriteNode(imageNamed: "picture")
-        backgroundNode.addChild(pictureNode!)
-        
-        let pictureLabel = AppLabelNode(text: "1")
-        pictureLabel.verticalAlignmentMode = .center
         pictureNode?.didTap = {
             self.sceneDelegate?.mainMenuSceneDidSelectLevel(number: 1)
         }
-        pictureNode?.addChild(pictureLabel)
+        backgroundNode.addChild(pictureNode!)
         
         let scaleDownAction = SKAction.scale(to: 0.9, duration: 0.2)
         let scaleUpAction = SKAction.scale(to: 1, duration: 1)
@@ -45,14 +41,12 @@ class MainMenuScene: AppScene {
         pictureNode?.run(repeatedAction)
         
         linksNode = AppSpriteNode(color: .clear, size: CGSize(width: 80, height: 50))
-        
         linksNode?.didTap = {
             self.sceneDelegate?.mainMenuSceneDidSelectLinks()
         }
         backgroundNode.addChild(linksNode!)
         
         settingsNode = AppSpriteNode(color: .clear, size: CGSize(width: 70, height: 90))
-        
         settingsNode?.didTap = {
             self.sceneDelegate?.mainMenuSceneDidSelectSettings()
         }
@@ -70,17 +64,13 @@ class MainMenuScene: AppScene {
                 node.size = newSize
             }
         }
-        
-        
         layoutNodes()
     }
     
     private func layoutNodes() {
         backgroundNode.size = size
         backgroundNode.position = size.centerPoint()
-        
         pictureNode?.position = backgroundNode.size.pointAtPortion(x: 0.25, y: 0.35)
-        
         linksNode?.position = backgroundNode.size.pointAtPortion(x: 0.13, y: -0.46)
         settingsNode?.position = backgroundNode.size.pointAtPortion(x: 0.25, y: -0.3)
         

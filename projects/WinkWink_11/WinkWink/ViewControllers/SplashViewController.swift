@@ -14,7 +14,7 @@ class SplashViewController: AppViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = Configuration.color.backgroundDark
         imageView.loadGif(name: "splash_animation")
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainMenuViewController") as! MainMenuViewController
         

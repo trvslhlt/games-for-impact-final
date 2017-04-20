@@ -6,13 +6,13 @@
 //  Copyright © 2017 travis holt. All rights reserved.
 //
 
-import SpriteKit
+import UIKit
 
 class TapTheVaginaNode: ChallengeNode {
     
     let vulvaNode = AppSpriteNode(imageNamed: "vulvaDrawing")
     let vaginaNode = AppSpriteNode()
-    let textNode = SKLabelNode(text: "Tap the vagina.")
+    let textNode = AppLabelNode(text: "Tap the vagina.")
     
     override func commonInit() {
         super.commonInit()
