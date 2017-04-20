@@ -14,7 +14,7 @@ class IncrementView: AppView {
     private let completeColor: UIColor
     private let incompleteColor: UIColor
     private let separation: CGFloat = 25
-    private let radius: CGFloat = 10
+    private let radius: CGFloat = 8
     private var incrementLayers = [CALayer]()
     private var currentIncrement = 0
     

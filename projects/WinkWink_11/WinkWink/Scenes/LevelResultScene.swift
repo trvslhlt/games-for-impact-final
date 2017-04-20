@@ -8,10 +8,14 @@
 
 import SpriteKit
 
+protocol LevelResultSceneDelegate: class {
+    func levelResultDidComplete()
+}
 
 class LevelResultScene: AppScene {
 
     let levelResult: LevelResult
+    weak var sceneDelegate: LevelResultSceneDelegate?
     
     init(levelResult: LevelResult, size: CGSize) {
         self.levelResult = levelResult
@@ -24,6 +28,12 @@ class LevelResultScene: AppScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+        let backgroundNode = AppSpriteNode(color: .clear, size: view.bounds.size)
+        backgroundNode.didTap = {
+            self.sceneDelegate?.levelResultDidComplete()
+        }
+        backgroundNode.position = view.center
+        addChild(backgroundNode)
         
         let levelLabel = AppLabelNode()
         levelLabel.text = "\(levelResult.level.number): \(levelResult.level.title)"

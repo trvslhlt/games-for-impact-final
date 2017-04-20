@@ -34,7 +34,6 @@
 		881C73F41EA5C7F90034FAF5 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73EF1EA5C7F90034FAF5 /* AppView.swift */; };
 		881C73F51EA5C7F90034FAF5 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F01EA5C7F90034FAF5 /* CancelButton.swift */; };
 		881C73F61EA5C7F90034FAF5 /* LevelStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F11EA5C7F90034FAF5 /* LevelStatusView.swift */; };
-		881C73F71EA5C7F90034FAF5 /* MainFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F21EA5C7F90034FAF5 /* MainFooterView.swift */; };
 		881C73F81EA5C7F90034FAF5 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F31EA5C7F90034FAF5 /* NavigationView.swift */; };
 		881C74001EA5C8090034FAF5 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F91EA5C8090034FAF5 /* AppViewController.swift */; };
 		881C74011EA5C8090034FAF5 /* ExternalResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FA1EA5C8090034FAF5 /* ExternalResourcesViewController.swift */; };
@@ -79,7 +78,6 @@
 		881C73EF1EA5C7F90034FAF5 /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppView.swift; path = WinkWink/Views/AppView.swift; sourceTree = SOURCE_ROOT; };
 		881C73F01EA5C7F90034FAF5 /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancelButton.swift; path = WinkWink/Views/CancelButton.swift; sourceTree = SOURCE_ROOT; };
 		881C73F11EA5C7F90034FAF5 /* LevelStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelStatusView.swift; path = WinkWink/Views/LevelStatusView.swift; sourceTree = SOURCE_ROOT; };
-		881C73F21EA5C7F90034FAF5 /* MainFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainFooterView.swift; path = WinkWink/Views/MainFooterView.swift; sourceTree = SOURCE_ROOT; };
 		881C73F31EA5C7F90034FAF5 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationView.swift; path = WinkWink/Views/NavigationView.swift; sourceTree = SOURCE_ROOT; };
 		881C73F91EA5C8090034FAF5 /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppViewController.swift; path = WinkWink/ViewControllers/AppViewController.swift; sourceTree = SOURCE_ROOT; };
 		881C73FA1EA5C8090034FAF5 /* ExternalResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalResourcesViewController.swift; path = WinkWink/ViewControllers/ExternalResourcesViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -113,7 +111,6 @@
 				881C73EF1EA5C7F90034FAF5 /* AppView.swift */,
 				881C73F01EA5C7F90034FAF5 /* CancelButton.swift */,
 				881C73F11EA5C7F90034FAF5 /* LevelStatusView.swift */,
-				881C73F21EA5C7F90034FAF5 /* MainFooterView.swift */,
 				881C73F31EA5C7F90034FAF5 /* NavigationView.swift */,
 				881C744A1EA7263B0034FAF5 /* IncrementView.swift */,
 			);
@@ -386,7 +383,6 @@
 				881C73ED1EA5C7E90034FAF5 /* AppUtilities.swift in Sources */,
 				881C73CF1EA5C7330034FAF5 /* TapTheVaginaNode.swift in Sources */,
 				881C74001EA5C8090034FAF5 /* AppViewController.swift in Sources */,
-				881C73F71EA5C7F90034FAF5 /* MainFooterView.swift in Sources */,
 				881C73F51EA5C7F90034FAF5 /* CancelButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

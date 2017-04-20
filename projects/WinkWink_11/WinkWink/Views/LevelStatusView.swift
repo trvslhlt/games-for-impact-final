@@ -16,8 +16,8 @@ class LevelStatusView: AppView {
     
     override func commonInit() {
         super.commonInit()
-        progressView.trackTintColor = Configuration.color.backgroundSecondary
-        progressView.progressTintColor = .black
+        progressView.trackTintColor = Configuration.color.incomplete
+        progressView.progressTintColor = Configuration.color.complete
         addSubview(progressView)
     }
     

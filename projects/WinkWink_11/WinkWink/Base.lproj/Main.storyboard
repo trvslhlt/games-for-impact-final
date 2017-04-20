@@ -272,14 +272,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19L-7a-C1K" customClass="SKView">
-                                <rect key="frame" x="0.0" y="74" width="375" height="543"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yH7-Ir-yJq" customClass="NavigationView" customModule="WinkWink" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="ejk-FR-SMd"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BD-Gx-cDq" customClass="LevelStatusView" customModule="WinkWink" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
@@ -292,18 +285,14 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2BD-Gx-cDq" secondAttribute="trailing" id="1GS-bn-Exb"/>
                             <constraint firstAttribute="trailing" secondItem="19L-7a-C1K" secondAttribute="trailing" id="5qH-QV-teX"/>
-                            <constraint firstItem="19L-7a-C1K" firstAttribute="top" secondItem="yH7-Ir-yJq" secondAttribute="bottom" id="6KK-9d-I2H"/>
                             <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="2BD-Gx-cDq" secondAttribute="bottom" id="Kd5-HY-6K3"/>
                             <constraint firstItem="19L-7a-C1K" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="N1D-hs-x5e"/>
-                            <constraint firstItem="yH7-Ir-yJq" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="RK5-Sf-TEL"/>
-                            <constraint firstItem="yH7-Ir-yJq" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="VdB-QA-Hwf"/>
                             <constraint firstItem="2BD-Gx-cDq" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="a4Y-3S-NOj"/>
-                            <constraint firstAttribute="trailing" secondItem="yH7-Ir-yJq" secondAttribute="trailing" id="vhx-Fi-342"/>
+                            <constraint firstItem="19L-7a-C1K" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="qJc-H2-2hI"/>
                             <constraint firstItem="2BD-Gx-cDq" firstAttribute="top" secondItem="19L-7a-C1K" secondAttribute="bottom" id="vke-Ii-5tT"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="navigationView" destination="yH7-Ir-yJq" id="rUI-GW-zlr"/>
                         <outlet property="sceneView" destination="19L-7a-C1K" id="pOa-Z0-qmV"/>
                         <outlet property="statusView" destination="2BD-Gx-cDq" id="DMr-KQ-PqF"/>
                     </connections>

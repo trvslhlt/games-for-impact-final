@@ -43,7 +43,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
         start()
         timer.didUpdateElapsedTime = { elapsedTime in
             self.elapsedTime = elapsedTime
-            let progress = Float((self.level.timeLimit - elapsedTime) / self.level.timeLimit)
+            let progress = Float(elapsedTime / self.level.timeLimit)
             self.playSceneDelegate?.playSceneDidUpdateElapsedTime(progress: progress)
         }
     }
@@ -75,13 +75,13 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     }
     
     private func startNextChallenge() {
+        playSceneDelegate?.playSceneDidBeginChallenge(challenge)
+        challenge += 1
         guard challengeNodes.count > 0 else {
             stop()
             return
         }
         currentChallengeNode = challengeNodes.remove(at: 0)
-        playSceneDelegate?.playSceneDidBeginChallenge(challenge)
-        challenge += 1
         if let node = currentChallengeNode {
             node.size = size
             node.position = CGPoint(x: node.size.width / 2, y: node.size.height / 2)

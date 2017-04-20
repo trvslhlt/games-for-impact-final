@@ -18,14 +18,12 @@ class LevelViewController: AppViewController {
     var playScene: PlayScene?
     var resultScene: LevelResultScene?
     @IBOutlet weak var sceneView: SKView!
-    @IBOutlet weak var navigationView: NavigationView!
     @IBOutlet weak var statusView: LevelStatusView!
     
     var sceneSize: CGSize { return sceneView.bounds.size }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationView.delegate = self
         showPlay()
     }
 
@@ -39,6 +37,7 @@ class LevelViewController: AppViewController {
     func showResult() {
         guard let result = levelResult else { fatalError("no level result to present") }
         resultScene = LevelResultScene(levelResult: result, size: sceneSize)
+        resultScene?.sceneDelegate = self
         sceneView.presentScene(resultScene)
     }
     
@@ -49,9 +48,9 @@ class LevelViewController: AppViewController {
     
 }
 
-extension LevelViewController: NavigationViewDelegate {
-    
-    func navigationRightCancelTapped() {
+extension LevelViewController: LevelResultSceneDelegate {
+
+    func levelResultDidComplete() {
         dismiss(animated: true, completion: nil)
     }
     
