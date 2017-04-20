@@ -28,13 +28,6 @@ class LevelResultScene: AppScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        let backgroundNode = AppSpriteNode(color: .clear, size: view.bounds.size)
-        backgroundNode.didTap = {
-            self.sceneDelegate?.levelResultDidComplete()
-        }
-        backgroundNode.position = view.center
-        addChild(backgroundNode)
-        
         let levelLabel = AppLabelNode()
         levelLabel.text = "\(levelResult.level.number): \(levelResult.level.title)"
         levelLabel.position = view.center.offset(x: 0, y: 50)
@@ -56,6 +49,13 @@ class LevelResultScene: AppScene {
         timeLabel.text = "Time Remaining: \(formattedTime)s"
         timeLabel.position = scoreLabel.position.offset(x: 0, y: -50)
         addChild(timeLabel)
+        
+        let backgroundNode = AppSpriteNode(color: .clear, size: view.bounds.size)
+        backgroundNode.didTap = {
+            self.sceneDelegate?.levelResultDidComplete()
+        }
+        backgroundNode.position = view.center
+        addChild(backgroundNode)
     }
 
 }

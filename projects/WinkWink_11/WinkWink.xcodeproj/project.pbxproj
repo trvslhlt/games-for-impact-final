@@ -22,7 +22,6 @@
 		881C73D51EA5C7440034FAF5 /* AppSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D21EA5C7440034FAF5 /* AppSpriteNode.swift */; };
 		881C73D81EA5C7500034FAF5 /* ChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D61EA5C7500034FAF5 /* ChallengeNode.swift */; };
 		881C73D91EA5C7500034FAF5 /* ChallengeResultNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D71EA5C7500034FAF5 /* ChallengeResultNode.swift */; };
-		881C73DC1EA5C7650034FAF5 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 881C73DA1EA5C7650034FAF5 /* background_music.mp3 */; };
 		881C73DD1EA5C7650034FAF5 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 881C73DB1EA5C7650034FAF5 /* beep.wav */; };
 		881C73E21EA5C78B0034FAF5 /* splash_animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 881C73E11EA5C78B0034FAF5 /* splash_animation.gif */; };
 		881C73E71EA5C79F0034FAF5 /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73E31EA5C79F0034FAF5 /* AppScene.swift */; };
@@ -47,6 +46,7 @@
 		881C740E1EA5C9E60034FAF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881C740B1EA5C9E60034FAF5 /* Main.storyboard */; };
 		881C74101EA5DD800034FAF5 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C740F1EA5DD800034FAF5 /* Preferences.swift */; };
 		881C744B1EA7263C0034FAF5 /* IncrementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C744A1EA7263B0034FAF5 /* IncrementView.swift */; };
+		881C744D1EA913790034FAF5 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 881C744C1EA913790034FAF5 /* background_music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +65,6 @@
 		881C73D21EA5C7440034FAF5 /* AppSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSpriteNode.swift; path = WinkWink/Nodes/AppSpriteNode.swift; sourceTree = SOURCE_ROOT; };
 		881C73D61EA5C7500034FAF5 /* ChallengeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeNode.swift; path = WinkWink/Nodes/ChallengeNode.swift; sourceTree = SOURCE_ROOT; };
 		881C73D71EA5C7500034FAF5 /* ChallengeResultNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeResultNode.swift; path = WinkWink/Nodes/ChallengeResultNode.swift; sourceTree = SOURCE_ROOT; };
-		881C73DA1EA5C7650034FAF5 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background_music.mp3; path = WinkWink/Resources/Sounds/background_music.mp3; sourceTree = SOURCE_ROOT; };
 		881C73DB1EA5C7650034FAF5 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = beep.wav; path = WinkWink/Resources/Sounds/beep.wav; sourceTree = SOURCE_ROOT; };
 		881C73DE1EA5C76F0034FAF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WinkWink/Info.plist; sourceTree = SOURCE_ROOT; };
 		881C73E11EA5C78B0034FAF5 /* splash_animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = splash_animation.gif; path = WinkWink/Resources/gifs/splash_animation.gif; sourceTree = SOURCE_ROOT; };
@@ -91,6 +90,7 @@
 		881C740C1EA5C9E60034FAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WinkWink/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		881C740F1EA5DD800034FAF5 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = WinkWink/Managers/Preferences.swift; sourceTree = SOURCE_ROOT; };
 		881C744A1EA7263B0034FAF5 /* IncrementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncrementView.swift; path = WinkWink/Views/IncrementView.swift; sourceTree = SOURCE_ROOT; };
+		881C744C1EA913790034FAF5 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background_music.mp3; sourceTree = SOURCE_ROOT; };
 		88924A0F1E984490004B4998 /* WinkWink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkWink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -181,7 +181,7 @@
 		8857E83C1EA4187B004EDD34 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				881C73DA1EA5C7650034FAF5 /* background_music.mp3 */,
+				881C744C1EA913790034FAF5 /* background_music.mp3 */,
 				881C73DB1EA5C7650034FAF5 /* beep.wav */,
 			);
 			name = Audio;
@@ -334,7 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				881C73DC1EA5C7650034FAF5 /* background_music.mp3 in Resources */,
+				881C744D1EA913790034FAF5 /* background_music.mp3 in Resources */,
 				881C73E21EA5C78B0034FAF5 /* splash_animation.gif in Resources */,
 				881C73CB1EA5C7160034FAF5 /* Assets.xcassets in Resources */,
 				881C740E1EA5C9E60034FAF5 /* Main.storyboard in Resources */,
