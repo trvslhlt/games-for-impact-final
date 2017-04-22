@@ -49,6 +49,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     }
     
     override func didChangeSize(_ oldSize: CGSize) {
+        super.didChangeSize(oldSize)
         challengeNodes.forEach { $0.didUpdate(parentSize: size) }
         if let node = currentChallengeNode {
             node.didUpdate(parentSize: size)

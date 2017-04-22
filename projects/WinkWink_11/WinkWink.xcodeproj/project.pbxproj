@@ -16,7 +16,6 @@
 		881C73C91EA5C60C0034FAF5 /* VibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73C71EA5C60C0034FAF5 /* VibrationManager.swift */; };
 		881C73CB1EA5C7160034FAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 881C73CA1EA5C7160034FAF5 /* Assets.xcassets */; };
 		881C73CE1EA5C7330034FAF5 /* SelectVulvasChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73CC1EA5C7330034FAF5 /* SelectVulvasChallengeNode.swift */; };
-		881C73CF1EA5C7330034FAF5 /* TapTheVaginaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73CD1EA5C7330034FAF5 /* TapTheVaginaNode.swift */; };
 		881C73D31EA5C7440034FAF5 /* AppAudioNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D01EA5C7440034FAF5 /* AppAudioNode.swift */; };
 		881C73D41EA5C7440034FAF5 /* AppLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D11EA5C7440034FAF5 /* AppLabelNode.swift */; };
 		881C73D51EA5C7440034FAF5 /* AppSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D21EA5C7440034FAF5 /* AppSpriteNode.swift */; };
@@ -36,7 +35,6 @@
 		881C73F81EA5C7F90034FAF5 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F31EA5C7F90034FAF5 /* NavigationView.swift */; };
 		881C74001EA5C8090034FAF5 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73F91EA5C8090034FAF5 /* AppViewController.swift */; };
 		881C74011EA5C8090034FAF5 /* ExternalResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FA1EA5C8090034FAF5 /* ExternalResourcesViewController.swift */; };
-		881C74021EA5C8090034FAF5 /* LevelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FB1EA5C8090034FAF5 /* LevelListViewController.swift */; };
 		881C74031EA5C8090034FAF5 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FC1EA5C8090034FAF5 /* LevelViewController.swift */; };
 		881C74041EA5C8090034FAF5 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FD1EA5C8090034FAF5 /* MainMenuViewController.swift */; };
 		881C74051EA5C8090034FAF5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73FE1EA5C8090034FAF5 /* SettingsViewController.swift */; };
@@ -46,7 +44,8 @@
 		881C740E1EA5C9E60034FAF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 881C740B1EA5C9E60034FAF5 /* Main.storyboard */; };
 		881C74101EA5DD800034FAF5 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C740F1EA5DD800034FAF5 /* Preferences.swift */; };
 		881C744B1EA7263C0034FAF5 /* IncrementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C744A1EA7263B0034FAF5 /* IncrementView.swift */; };
-		881C744D1EA913790034FAF5 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 881C744C1EA913790034FAF5 /* background_music.mp3 */; };
+		882F6D281EAAD288004EEE36 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 882F6D271EAAD288004EEE36 /* background_music.mp3 */; };
+		882F6D2A1EAAD2D6004EEE36 /* TapThePartChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F6D291EAAD2D6004EEE36 /* TapThePartChallengeNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +58,6 @@
 		881C73C71EA5C60C0034FAF5 /* VibrationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VibrationManager.swift; path = WinkWink/Managers/VibrationManager.swift; sourceTree = SOURCE_ROOT; };
 		881C73CA1EA5C7160034FAF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = WinkWink/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		881C73CC1EA5C7330034FAF5 /* SelectVulvasChallengeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectVulvasChallengeNode.swift; path = WinkWink/Nodes/SelectVulvasChallengeNode.swift; sourceTree = SOURCE_ROOT; };
-		881C73CD1EA5C7330034FAF5 /* TapTheVaginaNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TapTheVaginaNode.swift; path = WinkWink/Nodes/TapTheVaginaNode.swift; sourceTree = SOURCE_ROOT; };
 		881C73D01EA5C7440034FAF5 /* AppAudioNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppAudioNode.swift; path = WinkWink/Nodes/AppAudioNode.swift; sourceTree = SOURCE_ROOT; };
 		881C73D11EA5C7440034FAF5 /* AppLabelNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppLabelNode.swift; path = WinkWink/Nodes/AppLabelNode.swift; sourceTree = SOURCE_ROOT; };
 		881C73D21EA5C7440034FAF5 /* AppSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSpriteNode.swift; path = WinkWink/Nodes/AppSpriteNode.swift; sourceTree = SOURCE_ROOT; };
@@ -80,7 +78,6 @@
 		881C73F31EA5C7F90034FAF5 /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationView.swift; path = WinkWink/Views/NavigationView.swift; sourceTree = SOURCE_ROOT; };
 		881C73F91EA5C8090034FAF5 /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppViewController.swift; path = WinkWink/ViewControllers/AppViewController.swift; sourceTree = SOURCE_ROOT; };
 		881C73FA1EA5C8090034FAF5 /* ExternalResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalResourcesViewController.swift; path = WinkWink/ViewControllers/ExternalResourcesViewController.swift; sourceTree = SOURCE_ROOT; };
-		881C73FB1EA5C8090034FAF5 /* LevelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelListViewController.swift; path = WinkWink/ViewControllers/LevelListViewController.swift; sourceTree = SOURCE_ROOT; };
 		881C73FC1EA5C8090034FAF5 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelViewController.swift; path = WinkWink/ViewControllers/LevelViewController.swift; sourceTree = SOURCE_ROOT; };
 		881C73FD1EA5C8090034FAF5 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuViewController.swift; path = WinkWink/ViewControllers/MainMenuViewController.swift; sourceTree = SOURCE_ROOT; };
 		881C73FE1EA5C8090034FAF5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = WinkWink/ViewControllers/SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -90,7 +87,8 @@
 		881C740C1EA5C9E60034FAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WinkWink/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		881C740F1EA5DD800034FAF5 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = WinkWink/Managers/Preferences.swift; sourceTree = SOURCE_ROOT; };
 		881C744A1EA7263B0034FAF5 /* IncrementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncrementView.swift; path = WinkWink/Views/IncrementView.swift; sourceTree = SOURCE_ROOT; };
-		881C744C1EA913790034FAF5 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background_music.mp3; sourceTree = SOURCE_ROOT; };
+		882F6D271EAAD288004EEE36 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background_music.mp3; path = WinkWink/Resources/Sounds/background_music.mp3; sourceTree = SOURCE_ROOT; };
+		882F6D291EAAD2D6004EEE36 /* TapThePartChallengeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TapThePartChallengeNode.swift; path = WinkWink/Nodes/TapThePartChallengeNode.swift; sourceTree = SOURCE_ROOT; };
 		88924A0F1E984490004B4998 /* WinkWink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkWink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				881C73CC1EA5C7330034FAF5 /* SelectVulvasChallengeNode.swift */,
-				881C73CD1EA5C7330034FAF5 /* TapTheVaginaNode.swift */,
+				882F6D291EAAD2D6004EEE36 /* TapThePartChallengeNode.swift */,
 			);
 			name = Level1;
 			sourceTree = "<group>";
@@ -181,7 +179,7 @@
 		8857E83C1EA4187B004EDD34 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				881C744C1EA913790034FAF5 /* background_music.mp3 */,
+				882F6D271EAAD288004EEE36 /* background_music.mp3 */,
 				881C73DB1EA5C7650034FAF5 /* beep.wav */,
 			);
 			name = Audio;
@@ -235,7 +233,6 @@
 			children = (
 				881C73F91EA5C8090034FAF5 /* AppViewController.swift */,
 				881C73FA1EA5C8090034FAF5 /* ExternalResourcesViewController.swift */,
-				881C73FB1EA5C8090034FAF5 /* LevelListViewController.swift */,
 				881C73FC1EA5C8090034FAF5 /* LevelViewController.swift */,
 				881C73FD1EA5C8090034FAF5 /* MainMenuViewController.swift */,
 				881C73FE1EA5C8090034FAF5 /* SettingsViewController.swift */,
@@ -334,9 +331,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				881C744D1EA913790034FAF5 /* background_music.mp3 in Resources */,
 				881C73E21EA5C78B0034FAF5 /* splash_animation.gif in Resources */,
 				881C73CB1EA5C7160034FAF5 /* Assets.xcassets in Resources */,
+				882F6D281EAAD288004EEE36 /* background_music.mp3 in Resources */,
 				881C740E1EA5C9E60034FAF5 /* Main.storyboard in Resources */,
 				881C740D1EA5C9E60034FAF5 /* LaunchScreen.storyboard in Resources */,
 				881C73DD1EA5C7650034FAF5 /* beep.wav in Resources */,
@@ -352,6 +349,7 @@
 			files = (
 				881C73F61EA5C7F90034FAF5 /* LevelStatusView.swift in Sources */,
 				881C73C31EA5C5EA0034FAF5 /* SpriteKitExtensions.swift in Sources */,
+				882F6D2A1EAAD2D6004EEE36 /* TapThePartChallengeNode.swift in Sources */,
 				881C73CE1EA5C7330034FAF5 /* SelectVulvasChallengeNode.swift in Sources */,
 				881C73F41EA5C7F90034FAF5 /* AppView.swift in Sources */,
 				881C73BD1EA5C59F0034FAF5 /* AppDelegate.swift in Sources */,
@@ -359,7 +357,6 @@
 				881C74101EA5DD800034FAF5 /* Preferences.swift in Sources */,
 				881C74051EA5C8090034FAF5 /* SettingsViewController.swift in Sources */,
 				881C73E71EA5C79F0034FAF5 /* AppScene.swift in Sources */,
-				881C74021EA5C8090034FAF5 /* LevelListViewController.swift in Sources */,
 				881C73D51EA5C7440034FAF5 /* AppSpriteNode.swift in Sources */,
 				881C73EE1EA5C7E90034FAF5 /* Configuration.swift in Sources */,
 				881C73C81EA5C60C0034FAF5 /* SoundManager.swift in Sources */,
@@ -381,7 +378,6 @@
 				881C74081EA5C8120034FAF5 /* LevelViewModel.swift in Sources */,
 				881C73EA1EA5C79F0034FAF5 /* PlayScene.swift in Sources */,
 				881C73ED1EA5C7E90034FAF5 /* AppUtilities.swift in Sources */,
-				881C73CF1EA5C7330034FAF5 /* TapTheVaginaNode.swift in Sources */,
 				881C74001EA5C8090034FAF5 /* AppViewController.swift in Sources */,
 				881C73F51EA5C7F90034FAF5 /* CancelButton.swift in Sources */,
 			);
