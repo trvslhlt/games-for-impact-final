@@ -14,7 +14,7 @@ class SelectVulvasChallengeNode: ChallengeNode {
     private let optionsContainerNode = AppSpriteNode(color: .clear, size: CGSize.zero)
     private var optionNodes = [AppSpriteNode]()
     private let rows = 2
-    private let columns = 3
+    private let columns = 2
     private var selectedOptions = Set<AppSpriteNode>()
     private let submitNode = AppSpriteNode()
     private let submitNodeHeight: CGFloat = 50
@@ -29,8 +29,8 @@ class SelectVulvasChallengeNode: ChallengeNode {
         challengeLabelContainerNode.addChild(challengeLabelNode)
         addChild(challengeLabelContainerNode)
         
-        for _ in 0..<(rows * columns) {
-            let optionNode = getNewOptionNode()
+        for i in 0..<(rows * columns) {
+            let optionNode = getNewOptionNode(imageName: "normal_vulva_0\(i)" )
             optionsContainerNode.addChild(optionNode)
             optionNodes.append(optionNode)
         }
@@ -45,13 +45,19 @@ class SelectVulvasChallengeNode: ChallengeNode {
         addChild(submitNode)
     }
     
-    private func getNewOptionNode() -> AppSpriteNode {
+    private func getNewOptionNode(imageName: String?) -> AppSpriteNode {
         let optionNode = AppSpriteNode(color: .clear, size: CGSize.zero)
-        let vulvaNode = AppSpriteNode(imageNamed: "trash")
+        
+        let vulvaNode: AppSpriteNode
+        if let name = imageName {
+            vulvaNode = AppSpriteNode(imageNamed: name)
+        } else {
+            vulvaNode = AppSpriteNode(color: .green, size: CGSize(width: 50, height: 50))
+        }
         vulvaNode.position = optionNode.size.centerPoint()
         optionNode.addChild(vulvaNode)
         optionNode.didTap = {
-            optionNode.color = Configuration.color.selected
+            optionNode.alpha = 0.5
             self.selectedOptions.insert(vulvaNode)
             if self.selectedOptions.count == (self.rows * self.columns) {
                 self.didSubmitAnswer(correct: true)
@@ -65,7 +71,7 @@ class SelectVulvasChallengeNode: ChallengeNode {
         size = parentSize
         
         challengeLabelContainerNode.size = size.portionOf(w: 1, h: 0.2)
-        optionsContainerNode.size = size.portionOf(w: 1, h: 0.6)
+        optionsContainerNode.size = size.portionOf(w: 0.8, h: 0.6)
         submitNode.size = size.portionOf(w: 1, h: 0.2)
         
         challengeLabelContainerNode.position = size.pointAtPortion(x: 0, y: 0.4)

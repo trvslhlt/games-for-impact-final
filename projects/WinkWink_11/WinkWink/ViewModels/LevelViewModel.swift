@@ -37,11 +37,13 @@ class LevelViewModel {
                     correctTapRects: [
                         CGRect(x: -70,y: 0, width: 70, height: 400),
                         CGRect(x: 70,y: 0, width: 70, height: 400)])
+            let normalVulvaChallenge = SelectVulvasChallengeNode()
             let challenges = [
                     clitorisChallenge,
                     vaginaChallenge,
                     urethraChallenge,
-                    labiaChallenge]
+                    labiaChallenge,
+                    normalVulvaChallenge]
             return Level(number: 1, timeLimit: 20, title: "Know your body", challenges: challenges)
         case 2:
             let challenges = [SelectVulvasChallengeNode()]
