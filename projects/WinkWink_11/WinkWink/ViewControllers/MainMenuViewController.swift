@@ -23,6 +23,8 @@ class MainMenuViewController: AppViewController {
         if let scene = scene {
             sceneView.presentScene(scene)
         }
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

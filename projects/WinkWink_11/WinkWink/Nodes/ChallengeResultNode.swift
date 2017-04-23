@@ -27,14 +27,14 @@ class ChallengeResultNode: AppSpriteNode {
     }
     
     override func commonInit() {
-        let container = AppSpriteNode(color: Configuration.color.backgroundDark, size: CGSize(width: 250, height: 250))
+        let container = AppSpriteNode(color: .clear, size: CGSize(width: 250, height: 250))
         container.position = CGPoint(x: size.width / 2, y: size.height / 2)
         container.didTap = {
             self.delegate?.challengeResultDidComplete()
         }
         addChild(container)
         
-        let resultText = AppLabelNode(text: correct ? "GREAT!" : "NOPE")
+        let resultText = AppLabelNode(text: correct ? "YUP!" : "NOPE")
         resultText.fontSize = Configuration.font.size.big
         resultText.position = CGPoint.zero
         container.addChild(resultText)
