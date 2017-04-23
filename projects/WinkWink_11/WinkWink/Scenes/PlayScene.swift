@@ -19,7 +19,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     private let level: Level
     private var challengeNodes: [ChallengeNode]
     var currentChallengeNode: ChallengeNode?
-    var challengeResultNode: ChallengeResultNode?
+    var challengeResultNode: AppSpriteNode?
     var score: (earned: Float, possible: Float) = (0, 0)
     var marks: (correct: Int, possible: Int) = (0, 0)
     var elapsedTime: TimeInterval = 0
@@ -96,15 +96,32 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     private func showChallengeResult(node: ChallengeNode, correct: Bool) {
         node.stop()
         timer.pause()
-        challengeResultNode = ChallengeResultNode(correct: correct)
-        challengeResultNode!.position = CGPoint(x: size.width / 2, y: size.height / 2)
-        challengeResultNode?.delegate = self
-        addChild(challengeResultNode!)
-        challengeResultNode?.start()
+        if let _ = self.currentChallengeNode as? SelectVulvasChallengeNode {
+            challengeResultNode = ChallengeResultInformationNode(information: "Even though today's beauty\nstandards may make you\nthink differently, there are\nmillions of \"normal\" vulvas\nout there, including yours!")
+            if let crn = challengeResultNode as? ChallengeResultInformationNode {
+                crn.position = CGPoint(x: size.width / 2, y: size.height / 2)
+                crn.delegate = self
+                addChild(crn)
+                crn.start()
+            }
+        } else {
+            challengeResultNode = ChallengeResultNode(correct: correct)
+            if let crn = challengeResultNode as? ChallengeResultNode {
+                crn.position = CGPoint(x: size.width / 2, y: size.height / 2)
+                crn.delegate = self
+                addChild(crn)
+                crn.start()
+            }
+        }
     }
     
     private func hideChallengeResult() {
-        challengeResultNode?.stop()
+        if let crn = self.challengeResultNode as? ChallengeResultNode {
+            crn.stop()
+        }
+        if let crn = self.challengeResultNode as? ChallengeResultInformationNode {
+            crn.stop()
+        }
         challengeResultNode?.removeFromParent()
     }
     

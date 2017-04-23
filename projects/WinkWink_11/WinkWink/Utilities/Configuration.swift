@@ -35,7 +35,7 @@ class Font {
         let big: CGFloat = 72
         let medium: CGFloat = 44
         let regular: CGFloat = 30
-        let small: CGFloat = 24
+        let small: CGFloat = 22
     }
     class Name {
         let main = "AvenirNext-Bold"
