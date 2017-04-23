@@ -12,6 +12,7 @@ class TrophyRoomViewController: AppViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(r: 247, g: 181, b: 180, a: 255)
     }
     
     @IBAction func tappedCancel(_ sender: Any) {

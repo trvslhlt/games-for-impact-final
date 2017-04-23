@@ -364,30 +364,34 @@ Contact:
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eeo-nt-FM9" customClass="CancelButton" customModule="WinkWink" customModuleProvider="target">
-                                <rect key="frame" x="172" y="617" width="30" height="30"/>
+                                <rect key="frame" x="165" y="603" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="2Pu-P3-ExO"/>
+                                    <constraint firstAttribute="height" constant="44" id="syr-KY-DBE"/>
+                                </constraints>
                                 <connections>
                                     <action selector="tappedCancel:" destination="cNM-je-zXf" eventType="touchUpInside" id="BBc-99-nbs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trophy Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwa-MK-Zgq">
-                                <rect key="frame" x="136.5" y="323" width="102" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trophy_room_standin" highlightedImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="tmI-Ls-HOj">
+                                <rect key="frame" x="16" y="20" width="343" height="575"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.70980392156862748" blue="0.70588235294117652" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="tmI-Ls-HOj" secondAttribute="leading" id="98c-cn-ib9"/>
                             <constraint firstItem="tvL-vz-NLX" firstAttribute="top" secondItem="Eeo-nt-FM9" secondAttribute="bottom" constant="20" id="DQO-id-TOF"/>
-                            <constraint firstItem="Lwa-MK-Zgq" firstAttribute="centerX" secondItem="fmN-ts-IoQ" secondAttribute="centerX" id="hDm-ND-D22"/>
+                            <constraint firstItem="tmI-Ls-HOj" firstAttribute="top" secondItem="QYZ-VM-uxA" secondAttribute="bottom" id="YHt-eW-FjT"/>
+                            <constraint firstItem="Eeo-nt-FM9" firstAttribute="top" secondItem="tmI-Ls-HOj" secondAttribute="bottom" constant="8" id="ZOp-sw-cJD"/>
                             <constraint firstItem="Eeo-nt-FM9" firstAttribute="centerX" secondItem="fmN-ts-IoQ" secondAttribute="centerX" id="ooz-69-qtC"/>
-                            <constraint firstItem="Lwa-MK-Zgq" firstAttribute="centerY" secondItem="fmN-ts-IoQ" secondAttribute="centerY" id="vpZ-hP-CW2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tmI-Ls-HOj" secondAttribute="trailing" id="t33-2b-5v1"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24M-VM-dpz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="753" y="860"/>
+            <point key="canvasLocation" x="752.79999999999995" y="859.52023988005999"/>
         </scene>
         <!--Level View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -433,7 +437,9 @@ Contact:
         </scene>
     </scenes>
     <resources>
+        <image name="I" width="16" height="16"/>
         <image name="splash" width="750" height="750"/>
         <image name="splash_logo.gif" width="750" height="750"/>
+        <image name="trophy_room_standin" width="371" height="559"/>
     </resources>
 </document>
