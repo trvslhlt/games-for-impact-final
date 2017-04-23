@@ -32,7 +32,8 @@ class TapTheVulvaPartChallengeNode: ChallengeNode {
     override func commonInit() {
         super.commonInit()
         
-        totalNode.position = CGPoint.zero
+        let totalNodeOffset = CGPoint(x: 0, y: -50)
+        totalNode.position = totalNodeOffset
         totalNode.didTap = {
             self.didSubmitAnswer(correct: false)
         }
@@ -47,7 +48,7 @@ class TapTheVulvaPartChallengeNode: ChallengeNode {
         }
         
         instructionsNode = AppLabelNode(text: challengeInstructions)
-        instructionsNode.position = CGPoint(x: 0, y: 240)
+        instructionsNode.position = totalNodeOffset.offset(point: CGPoint(x: 0, y: 240))
         
         addChild(instructionsNode)
         addChild(totalNode)   

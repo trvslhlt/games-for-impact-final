@@ -28,7 +28,7 @@ class ChallengeResultNode: AppSpriteNode {
     
     override func commonInit() {
         let container = AppSpriteNode(color: .clear, size: CGSize(width: 250, height: 250))
-        container.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        container.position = CGPoint(x: size.width / 2, y: size.height / 2 - 50)
         container.didTap = {
             self.delegate?.challengeResultDidComplete()
         }
