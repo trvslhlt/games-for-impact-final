@@ -47,6 +47,9 @@
 		882F6D2A1EAAD2D6004EEE36 /* TapThePartChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F6D291EAAD2D6004EEE36 /* TapThePartChallengeNode.swift */; };
 		882F6D2E1EAD190D004EEE36 /* splash_logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 882F6D2D1EAD190D004EEE36 /* splash_logo.gif */; };
 		882F6D301EAD20B8004EEE36 /* ChallengeResultInformationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F6D2F1EAD20B8004EEE36 /* ChallengeResultInformationNode.swift */; };
+		8897E6821EAD45960096E69F /* ExternalResourceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897E6811EAD45960096E69F /* ExternalResourceCollectionViewCell.swift */; };
+		8897E6841EAD4AC30096E69F /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897E6831EAD4AC30096E69F /* AppLabel.swift */; };
+		8897E6861EAD4ED20096E69F /* AppTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897E6851EAD4ED20096E69F /* AppTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +95,9 @@
 		882F6D2D1EAD190D004EEE36 /* splash_logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = splash_logo.gif; path = WinkWink/Resources/gifs/splash_logo.gif; sourceTree = SOURCE_ROOT; };
 		882F6D2F1EAD20B8004EEE36 /* ChallengeResultInformationNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeResultInformationNode.swift; path = WinkWink/Nodes/ChallengeResultInformationNode.swift; sourceTree = SOURCE_ROOT; };
 		88924A0F1E984490004B4998 /* WinkWink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkWink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8897E6811EAD45960096E69F /* ExternalResourceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalResourceCollectionViewCell.swift; path = WinkWink/Views/ExternalResourceCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		8897E6831EAD4AC30096E69F /* AppLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppLabel.swift; path = WinkWink/Views/AppLabel.swift; sourceTree = SOURCE_ROOT; };
+		8897E6851EAD4ED20096E69F /* AppTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppTextView.swift; path = WinkWink/Views/AppTextView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,9 @@
 				881C73F11EA5C7F90034FAF5 /* LevelStatusView.swift */,
 				881C73F31EA5C7F90034FAF5 /* NavigationView.swift */,
 				881C744A1EA7263B0034FAF5 /* IncrementView.swift */,
+				8897E6811EAD45960096E69F /* ExternalResourceCollectionViewCell.swift */,
+				8897E6831EAD4AC30096E69F /* AppLabel.swift */,
+				8897E6851EAD4ED20096E69F /* AppTextView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -360,6 +369,7 @@
 				881C74101EA5DD800034FAF5 /* Preferences.swift in Sources */,
 				881C74051EA5C8090034FAF5 /* SettingsViewController.swift in Sources */,
 				881C73E71EA5C79F0034FAF5 /* AppScene.swift in Sources */,
+				8897E6841EAD4AC30096E69F /* AppLabel.swift in Sources */,
 				881C73D51EA5C7440034FAF5 /* AppSpriteNode.swift in Sources */,
 				881C73EE1EA5C7E90034FAF5 /* Configuration.swift in Sources */,
 				881C73C81EA5C60C0034FAF5 /* SoundManager.swift in Sources */,
@@ -370,10 +380,12 @@
 				881C73E91EA5C79F0034FAF5 /* MainMenuScene.swift in Sources */,
 				881C73E81EA5C79F0034FAF5 /* LevelResultScene.swift in Sources */,
 				881C73D91EA5C7500034FAF5 /* ChallengeResultNode.swift in Sources */,
+				8897E6821EAD45960096E69F /* ExternalResourceCollectionViewCell.swift in Sources */,
 				881C73D31EA5C7440034FAF5 /* AppAudioNode.swift in Sources */,
 				882F6D301EAD20B8004EEE36 /* ChallengeResultInformationNode.swift in Sources */,
 				881C74061EA5C8090034FAF5 /* SplashViewController.swift in Sources */,
 				881C73C91EA5C60C0034FAF5 /* VibrationManager.swift in Sources */,
+				8897E6861EAD4ED20096E69F /* AppTextView.swift in Sources */,
 				881C74031EA5C8090034FAF5 /* LevelViewController.swift in Sources */,
 				881C74041EA5C8090034FAF5 /* MainMenuViewController.swift in Sources */,
 				881C73C21EA5C5EA0034FAF5 /* CoreGraphicsExtensions.swift in Sources */,
