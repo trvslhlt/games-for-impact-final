@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_animation.gif" translatesAutoresizingMaskIntoConstraints="NO" id="7MB-vw-0ii">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo.gif" translatesAutoresizingMaskIntoConstraints="NO" id="7MB-vw-0ii">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -245,6 +245,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash_animation.gif" width="757" height="756"/>
+        <image name="splash_logo.gif" width="750" height="750"/>
     </resources>
 </document>

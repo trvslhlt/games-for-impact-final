@@ -14,8 +14,8 @@ class SplashViewController: AppViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Configuration.color.backgroundDark
-        imageView.loadGif(name: "splash_animation")
+        view.backgroundColor = UIColor(r: 183, g: 255, b: 220, a: 255)
+        imageView.loadGif(name: "splash_logo")
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainMenuViewController") as! MainMenuViewController
         
         let afterWink = {
@@ -25,7 +25,7 @@ class SplashViewController: AppViewController {
                 self.present(vc, animated: false, completion: nil)
             })
         }
-        delay(duration: 2.5) {
+        delay(duration: 5) {
             afterWink()
         }
     }

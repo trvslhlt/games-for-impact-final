@@ -17,7 +17,7 @@ class MainMenuViewController: AppViewController {
     var timer: Timer!
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Configuration.color.backgroundDark
+        view.backgroundColor = UIColor(r: 183, g: 255, b: 220, a: 255)
         scene = MainMenuScene(size: sceneView.bounds.size)
         scene?.sceneDelegate = self
         if let scene = scene {
@@ -29,9 +29,9 @@ class MainMenuViewController: AppViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        view.alpha = 0
+        sceneView.alpha = 0
         UIView.animate(withDuration: 1) {
-            self.view.alpha = 1
+            self.sceneView.alpha = 1
         }
     }
     

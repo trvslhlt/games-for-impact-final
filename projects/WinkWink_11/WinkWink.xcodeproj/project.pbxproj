@@ -22,7 +22,6 @@
 		881C73D81EA5C7500034FAF5 /* ChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D61EA5C7500034FAF5 /* ChallengeNode.swift */; };
 		881C73D91EA5C7500034FAF5 /* ChallengeResultNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73D71EA5C7500034FAF5 /* ChallengeResultNode.swift */; };
 		881C73DD1EA5C7650034FAF5 /* beep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 881C73DB1EA5C7650034FAF5 /* beep.wav */; };
-		881C73E21EA5C78B0034FAF5 /* splash_animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 881C73E11EA5C78B0034FAF5 /* splash_animation.gif */; };
 		881C73E71EA5C79F0034FAF5 /* AppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73E31EA5C79F0034FAF5 /* AppScene.swift */; };
 		881C73E81EA5C79F0034FAF5 /* LevelResultScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73E41EA5C79F0034FAF5 /* LevelResultScene.swift */; };
 		881C73E91EA5C79F0034FAF5 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C73E51EA5C79F0034FAF5 /* MainMenuScene.swift */; };
@@ -46,6 +45,7 @@
 		881C744B1EA7263C0034FAF5 /* IncrementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C744A1EA7263B0034FAF5 /* IncrementView.swift */; };
 		882F6D281EAAD288004EEE36 /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 882F6D271EAAD288004EEE36 /* background_music.mp3 */; };
 		882F6D2A1EAAD2D6004EEE36 /* TapThePartChallengeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F6D291EAAD2D6004EEE36 /* TapThePartChallengeNode.swift */; };
+		882F6D2E1EAD190D004EEE36 /* splash_logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 882F6D2D1EAD190D004EEE36 /* splash_logo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +65,6 @@
 		881C73D71EA5C7500034FAF5 /* ChallengeResultNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeResultNode.swift; path = WinkWink/Nodes/ChallengeResultNode.swift; sourceTree = SOURCE_ROOT; };
 		881C73DB1EA5C7650034FAF5 /* beep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = beep.wav; path = WinkWink/Resources/Sounds/beep.wav; sourceTree = SOURCE_ROOT; };
 		881C73DE1EA5C76F0034FAF5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WinkWink/Info.plist; sourceTree = SOURCE_ROOT; };
-		881C73E11EA5C78B0034FAF5 /* splash_animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = splash_animation.gif; path = WinkWink/Resources/gifs/splash_animation.gif; sourceTree = SOURCE_ROOT; };
 		881C73E31EA5C79F0034FAF5 /* AppScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppScene.swift; path = WinkWink/Scenes/AppScene.swift; sourceTree = SOURCE_ROOT; };
 		881C73E41EA5C79F0034FAF5 /* LevelResultScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelResultScene.swift; path = WinkWink/Scenes/LevelResultScene.swift; sourceTree = SOURCE_ROOT; };
 		881C73E51EA5C79F0034FAF5 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuScene.swift; path = WinkWink/Scenes/MainMenuScene.swift; sourceTree = SOURCE_ROOT; };
@@ -89,6 +88,7 @@
 		881C744A1EA7263B0034FAF5 /* IncrementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncrementView.swift; path = WinkWink/Views/IncrementView.swift; sourceTree = SOURCE_ROOT; };
 		882F6D271EAAD288004EEE36 /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background_music.mp3; path = WinkWink/Resources/Sounds/background_music.mp3; sourceTree = SOURCE_ROOT; };
 		882F6D291EAAD2D6004EEE36 /* TapThePartChallengeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TapThePartChallengeNode.swift; path = WinkWink/Nodes/TapThePartChallengeNode.swift; sourceTree = SOURCE_ROOT; };
+		882F6D2D1EAD190D004EEE36 /* splash_logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = splash_logo.gif; path = WinkWink/Resources/gifs/splash_logo.gif; sourceTree = SOURCE_ROOT; };
 		88924A0F1E984490004B4998 /* WinkWink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkWink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,7 +141,7 @@
 		881C73E01EA5C7800034FAF5 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
-				881C73E11EA5C78B0034FAF5 /* splash_animation.gif */,
+				882F6D2D1EAD190D004EEE36 /* splash_logo.gif */,
 			);
 			name = Gifs;
 			sourceTree = "<group>";
@@ -331,12 +331,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				881C73E21EA5C78B0034FAF5 /* splash_animation.gif in Resources */,
 				881C73CB1EA5C7160034FAF5 /* Assets.xcassets in Resources */,
 				882F6D281EAAD288004EEE36 /* background_music.mp3 in Resources */,
 				881C740E1EA5C9E60034FAF5 /* Main.storyboard in Resources */,
 				881C740D1EA5C9E60034FAF5 /* LaunchScreen.storyboard in Resources */,
 				881C73DD1EA5C7650034FAF5 /* beep.wav in Resources */,
+				882F6D2E1EAD190D004EEE36 /* splash_logo.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
