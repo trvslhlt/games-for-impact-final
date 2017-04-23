@@ -35,7 +35,7 @@ class ChallengeNode: AppSpriteNode {
     }
     
     private func disableInteraction() {
-        let cover = SKSpriteNode(color: Configuration.color.backgroundDisabled, size: size)
+        let cover = SKSpriteNode(color: .clear, size: size)
         addChild(cover)
     }
     

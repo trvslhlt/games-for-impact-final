@@ -22,7 +22,7 @@ class MainMenuScene: AppScene {
     var pictureNode: AppSpriteNode?
     var linksNode: AppSpriteNode?
     var settingsNode: AppSpriteNode?
-    var trinketNode: AppSpriteNode?
+    var medalsNode: AppSpriteNode?
     var lampNode: AppSpriteNode?
     
     override func didMove(to view: SKView) {
@@ -65,14 +65,14 @@ class MainMenuScene: AppScene {
         }
         backgroundNode.addChild(settingsNode!)
         
-        trinketNode = AppSpriteNode(imageNamed: "menu_slay")
-        let swingAction = SKAction.rotate(toAngle: 0.05, duration: 1)
-        let unswingAction = SKAction.rotate(toAngle: -0.05, duration: 1)
+        medalsNode = AppSpriteNode(imageNamed: "menu_medals")
+        let swingAction = SKAction.rotate(toAngle: 0.06, duration: 1)
+        let unswingAction = SKAction.rotate(toAngle: -0.01, duration: 1)
         let swingSequence = SKAction.sequence([swingAction, unswingAction])
         let repeatedSwingAction = SKAction.repeatForever(swingSequence)
-        trinketNode?.run(repeatedSwingAction)
-        trinketNode?.anchorPoint = CGPoint(x: 0.5, y: 1)
-        backgroundNode.addChild(trinketNode!)
+        medalsNode?.run(repeatedSwingAction)
+        medalsNode?.anchorPoint = CGPoint(x: 0.5, y: 1)
+        backgroundNode.addChild(medalsNode!)
         
         lampNode = AppSpriteNode(imageNamed: "menu_lava_lamp")
         let rockAction = SKAction.rotate(toAngle: 0.05, duration: 2.2)
@@ -104,7 +104,7 @@ class MainMenuScene: AppScene {
         pictureNode?.position = backgroundNode.size.pointAtPortion(x: 0.25, y: 0.35)
         linksNode?.position = backgroundNode.size.pointAtPortion(x: 0.10, y: -0.46)
         settingsNode?.position = backgroundNode.size.pointAtPortion(x: 0.27, y: -0.26)
-        trinketNode?.position = backgroundNode.size.pointAtPortion(x: 0.23, y: 0.21)
+        medalsNode?.position = backgroundNode.size.pointAtPortion(x: 0.24, y: 0.24)
         lampNode?.position = backgroundNode.size.pointAtPortion(x: 0, y: -0.05)
     }
     
