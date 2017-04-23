@@ -18,6 +18,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
 
     private let level: Level
     private var challengeNodes: [ChallengeNode]
+    private var totalChallengeNodeCount: Int
     var currentChallengeNode: ChallengeNode?
     var challengeResultNode: AppSpriteNode?
     var score: (earned: Float, possible: Float) = (0, 0)
@@ -30,6 +31,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
     
     init(level: Level, size: CGSize) {
         self.challengeNodes = level.challenges
+        self.totalChallengeNodeCount = level.challenges.count
         self.level = level
         super.init(size: size)
     }
@@ -129,7 +131,7 @@ class PlayScene: AppScene, ChallengeNodeDelegate, ChallengeResultNodeDelegate {
         let challengePossible = node.potentialValue
         let challengeEarned = challengePossible * (correct ? 1 : 0)
         score = (score.earned + challengeEarned, score.possible + challengePossible)
-        marks = (marks.correct + (correct ? 1 : 0), challengeNodes.count)
+        marks = (marks.correct + (correct ? 1 : 0), totalChallengeNodeCount)
         let fade = SKAction.fadeOut(withDuration: Configuration.time.defaultDuration)
         let remove = SKAction.customAction(withDuration: 0) { _, _ in
             node.removeFromParent()

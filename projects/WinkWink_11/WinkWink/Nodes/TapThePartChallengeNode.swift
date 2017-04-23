@@ -40,7 +40,6 @@ class TapTheVulvaPartChallengeNode: ChallengeNode {
         for rect in correctTapRects {
             let node = AppSpriteNode(color: .clear, size: rect.size)
             node.position = rect.origin
-            node.color = .black
             node.didTap = {
                 self.didSubmitAnswer(correct: true)
             }

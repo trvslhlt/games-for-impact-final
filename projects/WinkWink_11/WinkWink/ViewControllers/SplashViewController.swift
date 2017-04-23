@@ -25,7 +25,7 @@ class SplashViewController: AppViewController {
                 self.present(vc, animated: false, completion: nil)
             })
         }
-        delay(duration: 5) {
+        delay(duration: 2.5) {
             afterWink()
         }
     }

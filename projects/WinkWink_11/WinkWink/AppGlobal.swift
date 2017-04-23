@@ -20,6 +20,10 @@ struct LevelResult {
     let score: (earned: Float, possible: Float)
     let marks: (correct: Int, possible: Int)
     let timeElapsed: TimeInterval
+    
+    func success() -> Bool {
+        return marks.correct == marks.possible
+    }
 }
 
 class LevelTimer {

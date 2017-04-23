@@ -28,26 +28,32 @@ class LevelResultScene: AppScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-        let levelLabel = AppLabelNode()
-        levelLabel.text = "\(levelResult.level.number): \(levelResult.level.title)"
-        levelLabel.position = view.center.offset(x: 0, y: 50)
+        let successLabel = AppLabelNode(text: levelResult.success() ? "SLAY!" : "DRAT")
+        successLabel.fontSize = Configuration.font.size.big
+        successLabel.position = view.center.offset(x: 0, y: 0)
+        successLabel.verticalAlignmentMode = .center
+        addChild(successLabel)
+        
+        let ll = AppLabelNode(text: "Level \(levelResult.level.number)\n\(levelResult.level.title)")
+        let levelLabel = AppLabelNode.multipleLineText(labelInPut: ll)
+        levelLabel.position = successLabel.position.offset(x: 0, y: 180)
         levelLabel.fontSize = Configuration.font.size.medium
         addChild(levelLabel)
         
         let marksLabel = AppLabelNode()
         marksLabel.text = "\(levelResult.marks.correct) / \(levelResult.marks.possible)"
-        marksLabel.position = levelLabel.position.offset(x: 0, y: -50)
+        marksLabel.position = successLabel.position.offset(x: 0, y: -150)
         addChild(marksLabel)
         
         let scoreLabel = AppLabelNode()
         scoreLabel.text = "Score: \(levelResult.score.earned)"
-        scoreLabel.position = marksLabel.position.offset(x: 0, y: -50)
+        scoreLabel.position = marksLabel.position.offset(x: 0, y: -30)
         addChild(scoreLabel)
         
         let timeLabel = AppLabelNode()
         let formattedTime = String(format: "%.1f", levelResult.timeElapsed)
         timeLabel.text = "Time Remaining: \(formattedTime)s"
-        timeLabel.position = scoreLabel.position.offset(x: 0, y: -50)
+        timeLabel.position = scoreLabel.position.offset(x: 0, y: -30)
         addChild(timeLabel)
         
         let backgroundNode = AppSpriteNode(color: .clear, size: view.bounds.size)
