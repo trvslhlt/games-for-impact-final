@@ -13,12 +13,16 @@ class SettingsViewController: AppViewController {
     @IBOutlet weak var soundSwitch: UISwitch!
     @IBOutlet weak var musicSwitch: UISwitch!
     @IBOutlet weak var vibrationSwitch: UISwitch!
-
+    @IBOutlet var settingsLabels: [AppLabel]!
+    @IBOutlet var aboutTextViews: [AppTextView]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         soundSwitch.isOn = SoundManager.isSoundOn
         musicSwitch.isOn = SoundManager.isMusicOn
         vibrationSwitch.isOn = VibrationManager.isVibrationOn
+        settingsLabels.forEach { $0.textColor = .black }
+        aboutTextViews.forEach { $0.textColor = .black }
     }
     
     @IBAction func cancelTapped(_ sender: Any) {

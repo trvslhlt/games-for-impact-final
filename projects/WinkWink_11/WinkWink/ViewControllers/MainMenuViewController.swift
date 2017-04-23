@@ -65,4 +65,9 @@ extension MainMenuViewController: MainMenuSceneDelegate {
         present(vc, animated: true, completion: nil)
     }
     
+    func mainMenuSceneDidSelectTrophies() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TrophyRoomViewController") as! TrophyRoomViewController
+        present(vc, animated: true, completion: nil)
+    }
+    
 }

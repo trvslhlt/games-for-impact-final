@@ -13,6 +13,7 @@ protocol MainMenuSceneDelegate: class {
     func mainMenuSceneDidSelectLevel(number: Int)
     func mainMenuSceneDidSelectLinks()
     func mainMenuSceneDidSelectSettings()
+    func mainMenuSceneDidSelectTrophies()
 }
 
 class MainMenuScene: AppScene {
@@ -72,6 +73,9 @@ class MainMenuScene: AppScene {
         let repeatedSwingAction = SKAction.repeatForever(swingSequence)
         medalsNode?.run(repeatedSwingAction)
         medalsNode?.anchorPoint = CGPoint(x: 0.5, y: 1)
+        medalsNode?.didTap = {
+            self.sceneDelegate?.mainMenuSceneDidSelectTrophies()
+        }
         backgroundNode.addChild(medalsNode!)
         
         lampNode = AppSpriteNode(imageNamed: "menu_lava_lamp")

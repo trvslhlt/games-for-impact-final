@@ -50,6 +50,7 @@
 		8897E6821EAD45960096E69F /* ExternalResourceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897E6811EAD45960096E69F /* ExternalResourceCollectionViewCell.swift */; };
 		8897E6841EAD4AC30096E69F /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897E6831EAD4AC30096E69F /* AppLabel.swift */; };
 		8897E6861EAD4ED20096E69F /* AppTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897E6851EAD4ED20096E69F /* AppTextView.swift */; };
+		8897E6881EAD56670096E69F /* TrophyRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897E6871EAD56670096E69F /* TrophyRoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		8897E6811EAD45960096E69F /* ExternalResourceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExternalResourceCollectionViewCell.swift; path = WinkWink/Views/ExternalResourceCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		8897E6831EAD4AC30096E69F /* AppLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppLabel.swift; path = WinkWink/Views/AppLabel.swift; sourceTree = SOURCE_ROOT; };
 		8897E6851EAD4ED20096E69F /* AppTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppTextView.swift; path = WinkWink/Views/AppTextView.swift; sourceTree = SOURCE_ROOT; };
+		8897E6871EAD56670096E69F /* TrophyRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrophyRoomViewController.swift; path = WinkWink/ViewControllers/TrophyRoomViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 				881C73FD1EA5C8090034FAF5 /* MainMenuViewController.swift */,
 				881C73FE1EA5C8090034FAF5 /* SettingsViewController.swift */,
 				881C73FF1EA5C8090034FAF5 /* SplashViewController.swift */,
+				8897E6871EAD56670096E69F /* TrophyRoomViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				881C74081EA5C8120034FAF5 /* LevelViewModel.swift in Sources */,
 				881C73EA1EA5C79F0034FAF5 /* PlayScene.swift in Sources */,
 				881C73ED1EA5C7E90034FAF5 /* AppUtilities.swift in Sources */,
+				8897E6881EAD56670096E69F /* TrophyRoomViewController.swift in Sources */,
 				881C74001EA5C8090034FAF5 /* AppViewController.swift in Sources */,
 				881C73F51EA5C7F90034FAF5 /* CancelButton.swift in Sources */,
 			);
