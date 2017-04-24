@@ -32,6 +32,7 @@ class LevelViewController: AppViewController {
         playScene?.playSceneDelegate = self
         statusView.setChallengeCount(level.challenges.count)
         sceneView.presentScene(playScene)
+        view.setNeedsDisplay()
     }
     
     func showResult() {
@@ -39,6 +40,7 @@ class LevelViewController: AppViewController {
         resultScene = LevelResultScene(levelResult: result, size: sceneSize)
         resultScene?.sceneDelegate = self
         sceneView.presentScene(resultScene)
+        view.setNeedsDisplay()
     }
     
     override func viewDidLayoutSubviews() {
